@@ -17,6 +17,7 @@ class Welcome extends CI_Controller {
   }
   
 
+
   // 正则过滤功能特殊符号
   public function reg_test($str){
     $reg = /^[A-Za-z0-9\u4e00-\u9fa5]+$/g //全局匹配所有的大小写字母，十进制证书，汉字
