@@ -61,7 +61,7 @@
 
 ### API
 
-#### LoginService::login()
+#### LoginService::login() 
 
 该静态方法用于处理用户登录。
 
