@@ -9,10 +9,10 @@
     </swiper> 
 
 <view class='h1'>比赛推送</view>
-<image src='http://mt1.baidu.com/timg?shitu&quality=100&sharpen=100&er=&imgtype=0&wh_rate=null&size=h120&sec=1527595801&di=a308ac12ff022d4a9642b105aff71ded&src=http%3A%2F%2Fg.hiphotos.baidu.com%2Fimage%2F%2570%2569%2563%2Fitem%2F7acb0a46f21fbe09859dbd8067600c338644ad67.jpg' class='tu'></image>
+<image src='../image/game.png' class='tu'></image>
 
 <view class='h1'>奖品推送</view>
-<image src='http://mt1.baidu.com/timg?shitu&quality=100&sharpen=100&er=&imgtype=0&wh_rate=null&size=h120&sec=1527595829&di=0bebbe366cac3c152aedb96f160f9129&src=http%3A%2F%2Fd.hiphotos.baidu.com%2Fimage%2F%2570%2569%2563%2Fitem%2Fc8ea15ce36d3d539b5c671573687e950342ab0ae.jpg' class='tu'></image>
+<image src='../image/award.png' class='tu'></image>
 
 
 </view>
