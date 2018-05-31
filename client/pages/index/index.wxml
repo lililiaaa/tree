@@ -5,23 +5,23 @@
     <view class='habit'>
       <navigator hover-class="none" url='../morning/morning' >
       <view class='zao'>
-        <image src='http://mt1.baidu.com/timg?shitu&quality=100&sharpen=100&er=&imgtype=0&wh_rate=null&size=h120&sec=1527595684&di=4e4857d7ed2777974bda452b35c22372&src=http%3A%2F%2Fa.hiphotos.baidu.com%2Fimage%2F%2570%2569%2563%2Fitem%2F3c6d55fbb2fb43168d0404ee2ca4462309f7d30f.jpg' class='img'></image>
+        <image src='../image/word.png' class='img'></image>
         <view class='text'>早起签到</view>
       </view>
       </navigator>
       <navigator hover-class="none">
       <view class='zao'>
-        <image src='http://mt1.baidu.com/timg?shitu&quality=100&sharpen=100&er=&imgtype=0&wh_rate=null&size=h120&sec=1527595655&di=e141d1a063eead9d17c575486f890c8c&src=http%3A%2F%2Fb.hiphotos.baidu.com%2Fimage%2F%2570%2569%2563%2Fitem%2F4034970a304e251ff44e9b6cab86c9177e3e53ec.jpg' class='img'></image>
+        <image src='../image/knl.png' class='img'></image>
         <view class='text'>知识问答</view>
       </view>
       </navigator>
       <navigator hover-class="none">
       <view class='zao'>
-        <image src='http://mt1.baidu.com/timg?shitu&quality=100&sharpen=100&er=&imgtype=0&wh_rate=null&size=h120&sec=1527595616&di=1065bfd208a45e1ece535cdd25ec4192&src=http%3A%2F%2Fg.hiphotos.baidu.com%2Fimage%2F%2570%2569%2563%2Fitem%2Fcdbf6c81800a19d8ea6efb913ffa828ba61e4630.jpg' class='img'></image>
+        <image src='../image/run.png' class='img'></image>
         <view class='text'>运动步数</view>
       </view>
       </navigator>
-      <navigator hover-class="none">
+      <navigator hover-class="none" url="../word/word">
       <view class='zao'>
         <image src='http://p2.so.qhimgs1.com/bdr/_240_/t01407754e95f7f791e.jpg' class='img'></image>
         <view class='text'>单词积累</view>
@@ -29,7 +29,7 @@
       </navigator>
       <navigator hover-class="none">
       <view class='zao'>
-        <image src='http://mt1.baidu.com/timg?shitu&quality=100&sharpen=100&er=&imgtype=0&wh_rate=null&size=h120&sec=1527595720&di=c442fe68eb1d5375bbde5d4c6d35444e&src=http%3A%2F%2Fc.hiphotos.baidu.com%2Fimage%2F%2570%2569%2563%2Fitem%2F72f082025aafa40fd1c5b049a764034f78f01926.jpg' class='img'></image>
+        <image src='../image/happy.png' class='img'></image>
         <view class='text'>心情果实</view>
       </view>
       </navigator>
@@ -38,7 +38,7 @@
 
 
 <view>树屋商城</view>
-<navigator hover-class="none"><image src='http://mt1.baidu.com/timg?shitu&quality=100&sharpen=100&er=&imgtype=0&wh_rate=null&size=h120&sec=1527595755&di=c1ab7550e23855684f1188d90a03c0ed&src=http%3A%2F%2Fe.hiphotos.baidu.com%2Fimage%2F%2570%2569%2563%2Fitem%2Fc75c10385343fbf2be7ad8b7bc7eca8064388fcb.jpg' class='tu'> </image></navigator>
+<navigator hover-class="none"><image src='../image/tree.png' class='tu'> </image></navigator>
 
 <view>坚持情况</view>
   <view class='qk'>

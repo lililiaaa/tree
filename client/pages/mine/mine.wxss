@@ -4,19 +4,27 @@
   width: 100%;
   border-bottom: 5rpx #f1c55a solid;
 }
-.text{
+.top{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  margin-top: -140rpx;
+}
+.userinfo-nickname{
   color: white;
-  margin-top: -100rpx;
-  font-size: 55rpx;
-  margin-left: 87rpx;
+  font-size: 1.4rem;
+ 
+}
+.yi{
+  margin-top: -50rpx;
 }
 .tu{
   width: 180rpx;
   height: 180rpx;
   border: 8rpx solid #f1c55a;
   border-radius: 50%;
-  margin-top: -123rpx;
-  margin-left: 497rpx;
+ 
 }
 .body{
   margin: 0rpx 20rpx 20rpx 15rpx;

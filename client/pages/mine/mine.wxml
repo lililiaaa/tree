@@ -1,9 +1,14 @@
 <!--pages/mine/mine.wxml-->
-
-<view class='top'>
+<view>
   <image src='http://p0.so.qhimgs1.com/bdr/_240_/t01811180decdc7556a.jpg' class='img'></image>
-  <view class='text'>John Smith </view>
-  <image src='http://www.qqc5.com/uploads/allimg/140726/1-140H6103113.jpg' class='tu'></image>
+  <view bindtap="login" class='top' >
+  
+  <view class='yi'>
+   <text class="userinfo-nickname">{{logged ? userInfo.nickName : '点击登录'}}</text>
+   <text class="userinfo-nickname" wx:if="{{logged}}">{{userInfo.lastLoginTime}}</text>
+   </view>
+   <image src="{{logged ? userInfo.avatarUrl : '../image/user-unlogin.png'}}" class='tu' background-size="cover"></image>
+  </view>
 </view>
 <view class='body'>
 <view class='nav'>
