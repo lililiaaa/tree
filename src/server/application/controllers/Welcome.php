@@ -11,39 +11,13 @@ class Welcome extends CI_Controller {
     $this->load->model("Welcome_model");
   } 
 
-  public function index() {
-    $result = LoginService::login();           
-    if ($result['loginState'] === Constants::S_AUTH) {
-      $this->json([
-          'code' => 0,
-          'data' => $result['userinfo']
-      ]);
-    } else {
-      $this->json([
-          'code' => -1,
-          'error' => $result['error']
-      ]);
-    }
-  }
-
-
   //默认载入
 	public function index()
 	{
 		$this->load->view('welcome_message');
   }
   
-  // https://api.weixin.qq.com/sns/jscode2session?appid=APPID&secret=SECRET&js_code=JSCODE&grant_type=authorization_code
 
-  public function login(){
-    $code = $this->input->post('code');
-    $url = 'https://api.weixin.qq.com/sns/jscode2session?appid='.$appid.'&secret='.$secret.'&js_code='.$code.'&grant_type=authorization_code';
-    $result = $this->Welcome_model->curl_get_https($url); //获得返回的字符串
-    if()
-    $this->session->set_userdata(array(
-      '3rd_session' => $result->openid.$result->session_key;
-    ));
-  }
 
 
   // 正则过滤功能特殊符号
