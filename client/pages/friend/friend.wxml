@@ -1,0 +1,91 @@
+<!--pages/friend/friend.wxml-->
+<view class='body'>
+  <view class='friend'>
+    <view class='icon'>
+      <image class='img' src='http://img5.imgtn.bdimg.com/it/u=2869031647,3499077470&fm=27&gp=0.jpg'></image>
+    </view>
+  <view class='you'>
+  <view class='shu'>
+  <view class='h'>夏天的风In</view>
+    <view class='text'>fdhgfdjkbhf vbfcfb</view></view>
+    <view class='dian'>1</view>
+  </view>
+  </view>
+
+   <view class='friend'>
+    <view class='icon'>
+      <image class='img' src='http://img5.imgtn.bdimg.com/it/u=2869031647,3499077470&fm=27&gp=0.jpg'></image>
+    </view>
+  <view class='you'>
+  <view class='shu'>
+  <view class='h'>夏天的风In</view>
+    <view class='text'>fdhgfdjkbhf vbfcfb</view></view>
+    <view class='dian'>1</view>
+  </view>
+  </view>
+
+    <view class='friend'>
+    <view class='icon'>
+      <image class='img' src='http://img5.imgtn.bdimg.com/it/u=2869031647,3499077470&fm=27&gp=0.jpg'></image>
+    </view>
+  <view class='you'>
+  <view class='shu'>
+  <view class='h'>夏天的风In</view>
+    <view class='text'>fdhgfdjkbhf vbfcfb</view></view>
+    <view class='dian'>1</view>
+  </view>
+  </view>
+
+
+    <view class='friend'>
+    <view class='icon'>
+      <image class='img' src='http://img5.imgtn.bdimg.com/it/u=2869031647,3499077470&fm=27&gp=0.jpg'></image>
+    </view>
+  <view class='you'>
+  <view class='shu'>
+  <view class='h'>夏天的风In</view>
+    <view class='text'>fdhgfdjkbhf vbfcfb</view></view>
+    <view class='dian'>1</view>
+  </view>
+  </view>
+
+    <view class='friend'>
+    <view class='icon'>
+      <image class='img' src='http://img5.imgtn.bdimg.com/it/u=2869031647,3499077470&fm=27&gp=0.jpg'></image>
+    </view>
+  <view class='you'>
+  <view class='shu'>
+  <view class='h'>夏天的风In</view>
+    <view class='text'>fdhgfdjkbhf vbfcfb</view></view>
+    <view class='dian'>1</view>
+  </view>
+  </view>
+
+
+    <view class='friend'>
+    <view class='icon'>
+      <image class='img' src='http://img5.imgtn.bdimg.com/it/u=2869031647,3499077470&fm=27&gp=0.jpg'></image>
+    </view>
+  <view class='you'>
+  <view class='shu'>
+  <view class='h'>夏天的风In</view>
+    <view class='text'>fdhgfdjkbhf vbfcfb</view></view>
+    <view class='dian'>1</view>
+  </view>
+  </view>
+
+
+
+  
+    <view class='friend'>
+    <view class='icon'>
+      <image class='img' src='http://img5.imgtn.bdimg.com/it/u=2869031647,3499077470&fm=27&gp=0.jpg'></image>
+    </view>
+  <view class='you'>
+  <view class='shu'>
+  <view class='h'>夏天的风In</view>
+    <view class='text'>fdhgfdjkbhf vbfcfb</view></view>
+    <view class='dian'>1</view>
+  </view>
+  </view>
+</view>

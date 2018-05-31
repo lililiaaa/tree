@@ -1,0 +1,115 @@
+<!--pages/mine/mine.wxml-->
+
+<view class='top'>
+  <image src='http://p0.so.qhimgs1.com/bdr/_240_/t01811180decdc7556a.jpg' class='img'></image>
+  <view class='text'>John Smith </view>
+  <image src='http://www.qqc5.com/uploads/allimg/140726/1-140H6103113.jpg' class='tu'></image>
+</view>
+<view class='body'>
+<view class='nav'>
+<view class='kuai'>
+<view class='h1'>2</view>
+<view class='zi'>排行榜</view>
+</view>
+
+
+<view class='kuai'>
+<view class='h1'>889</view>
+<view class='zi'>叶子币</view>
+</view>
+
+<view class='kuai'>
+<view class='h1'>6</view>
+<view class='zi'>我的树屋</view>
+</view>
+
+
+<view class='kuai'>
+<view class='h1'>5</view>
+<view class='zi'>我的精灵</view>
+</view>
+
+</view>
+
+</view>
+
+<view class='buttom'>
+  <view class='in'>
+    <view class='friend'>
+      <view class='icon'>
+        <image class='buttom-img' src='http://img5.imgtn.bdimg.com/it/u=2869031647,3499077470&fm=27&gp=0.jpg'></image>
+      </view>
+    <view class='you'>
+    
+      <view class='shu'>
+      <view class='h'>夏天的风In</view>
+      <view class='buttom-text'>叶子币数：5200</view>
+        <view class='dian'>1</view>
+        
+        </view>
+      
+        
+    </view>
+    <button>加为好友</button>
+    </view>
+  </view>
+
+  <view class='in'>
+    <view class='friend'>
+      <view class='icon'>
+        <image class='buttom-img' src='http://img5.imgtn.bdimg.com/it/u=2869031647,3499077470&fm=27&gp=0.jpg'></image>
+      </view>
+    <view class='you'>
+      <view class='shu'>
+      <view class='h'>夏天的风In</view>
+      <view class='buttom-text'>叶子币数：5200</view>
+        <view class='dian'>1</view>
+        </view>
+    </view>
+    <button>加为好友</button>
+    </view>
+  </view>
+
+
+
+  <view class='in'>
+    <view class='friend'>
+      <view class='icon'>
+        <image class='buttom-img' src='http://img5.imgtn.bdimg.com/it/u=2869031647,3499077470&fm=27&gp=0.jpg'></image>
+      </view>
+    <view class='you'>
+      <view class='shu'>
+      <view class='h'>夏天的风In</view>
+      <view class='buttom-text'>叶子币数：5200</view>
+        <view class='dian'>1</view>
+        </view>
+    </view>
+    <button>加为好友</button>
+    </view>
+  </view>
+
+
+
+
+
+
+  <view class='in'>
+    <view class='friend'>
+      <view class='icon'>
+        <image class='buttom-img' src='http://img5.imgtn.bdimg.com/it/u=2869031647,3499077470&fm=27&gp=0.jpg'></image>
+      </view>
+    <view class='you'>
+      <view class='shu'>
+      <view class='h'>夏天的风In</view>
+      <view class='buttom-text'>叶子币数：5200</view>
+        <view class='dian'>1</view>
+        </view>
+    </view>
+    <button>加为好友</button>
+    </view>
+  </view>
+
+
+
+
+</view>

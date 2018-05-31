@@ -1,0 +1,94 @@
+/* pages/mine/mine.wxss */
+.img{
+  height: 400rpx;
+  width: 100%;
+  border-bottom: 5rpx #f1c55a solid;
+}
+.text{
+  color: white;
+  margin-top: -100rpx;
+  font-size: 55rpx;
+  margin-left: 87rpx;
+}
+.tu{
+  width: 180rpx;
+  height: 180rpx;
+  border: 8rpx solid #f1c55a;
+  border-radius: 50%;
+  margin-top: -123rpx;
+  margin-left: 497rpx;
+}
+.body{
+  margin: 0rpx 20rpx 20rpx 15rpx;
+}
+.nav{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-left: -5rpx;
+  margin-bottom: 10rpx;
+}
+.h1{
+  font-size: 50rpx;
+}
+.kuai{
+  margin-left: 40rpx;
+}
+.h1{
+  text-align: center;
+}
+.buttom{
+  border-top: 2rpx #d2d2d2 solid;
+}
+.in{
+  margin: 50rpx;
+}
+.friend{
+ display: flex;
+ margin-top: 30rpx;
+border-bottom: 1rpx solid #d7d7d7;
+}
+.buttom-img{
+  width: 110rpx;
+  height: 110rpx;
+  border: 8rpx solid #f1c55a;
+  border-radius: 50%;
+}
+.you{
+  margin-left: 30rpx;
+  
+  width: 100%;
+  display: flex;
+}
+.h{
+  font-size: 32rpx;
+  margin-bottom: 25rpx;
+  margin-top: 10rpx;
+ font-family: "微软雅黑"
+
+}
+.buttom-text{
+  font-size: 25rpx;
+  color: black;
+  
+  }
+.dian{
+  text-align: center;
+  background-color:#f1c55a;
+  height: 45rpx;
+  width: 45rpx;
+  border-radius: 50%;
+  margin-top: -15rpx;
+  margin-left: -75rpx;
+  color: white
+}
+button{
+  border-radius: 30rpx;
+  background-color: #f4d280;
+  color: white;
+  width: 365rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  margin-top: 25rpx;
+  font-size: 30rpx;
+}

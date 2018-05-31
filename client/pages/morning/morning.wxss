@@ -1,0 +1,14 @@
+/* pages/morning/morning.wxss */
+.morning{
+  margin: 40rpx;
+}
+image{
+  height: 1038rpx;
+  width: 100%;
+  border-radius: 50rpx;
+}
+.tip{
+  color: #f4ba3d;
+  font-size: 35rpx;
+}
+
