@@ -20,15 +20,18 @@ class Vocabulary extends CI_Controller {
     }else{
       echo "no data"
     }
-    
   }
   // 返回叶子钱币的数量
   
 
   // https://api.weixin.qq.com/sns/jscode2session?appid=APPID&secret=SECRET&js_code=JSCODE&grant_type=authorization_code
+
+
+
+
   // 更新数据库正确单词的数量
   public function update_word_num(){
-    $open_id = $this->input->post('open_id');
+    // $open_id = $this->input->post('open_id');
     $words = $this->input->post('words_number');
     $result = $this->Welcome_model->update_word($open_id,$words);
     if($result>0){
@@ -39,25 +42,5 @@ class Vocabulary extends CI_Controller {
   }
 
   // by 袁庆龙 end
-
-
-
-  //检查页面的登录状态
-    // public function index() {
-    //     $result = LoginService::check();
-
-    //     if ($result['loginState'] === Constants::S_AUTH) {
-    //         $this->json([
-    //             'code' => 0,
-    //             'data' => $result['userinfo']
-    //         ]);
-    //     } else {
-    //         $this->json([
-    //             'code' => -1,
-    //             'data' => []
-    //         ]);
-    //     }
-    // }
-  
 
 }
