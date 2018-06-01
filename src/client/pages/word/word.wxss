@@ -1,6 +1,12 @@
 /* pages/word/word.wxss */
 Page{
   background-color: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+
 }
 .word{
   margin: 20rpx 40rpx 40rpx  ;
@@ -68,4 +74,36 @@ button{
   text-align: center;
   font-size: 35rpx;
   margin-top: 30rpx;
+}
+.right {
+   background-color: #f3f3f3;
+  border: 2rpx solid #dbdbdb;
+  border-radius: 30rpx;
+  box-shadow: 5rpx 5rpx 3rpx #d6d6d6;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  width: 500rpx;
+  margin-top: 260rpx;
+}
+.right button{
+  width: 225rpx;
+  background-color: #f4b942;
+  color: white;
+}
+.right .text{
+  color: #767676;
+  margin-bottom: 30rpx;
+}
+.right image{
+  height: 200rpx;
+  width: 200rpx;
+  margin: 40rpx 0;
+  
+}
+.retext{
+  color: #767676;
 }

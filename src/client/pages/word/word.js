@@ -16,6 +16,35 @@ Page({
     hidecuo: false,
     right: ''
   },
+  
+
+  right: function () {
+
+    this.setData({
+      hidedui: this.data.hidedui = false,
+      show: this.data.show = false,
+      hidecuo: this.data.hidedui = true,
+    })
+
+  },
+
+
+  re: function () {
+
+    this.setData({
+      hidedui: this.data.hidedui = false,
+      show: this.data.show = true,
+      hidecuo: this.data.hidedui = false,
+    })
+
+  },
+
+
+
+
+
+
+
 
   // 自定义的方法，加载数据
   loadData: function () {
