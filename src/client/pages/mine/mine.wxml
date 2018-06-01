@@ -12,34 +12,34 @@
   </view>
 </view>
 <view class='body'>
-<view class='nav'>
-<view class='kuai'>
-<view class='h1'>2</view>
-<view class='zi'>排行榜</view>
+  <view class='nav'>
+  <view class='kuai'>
+  <view class='h1'>2</view>
+  <view class='zi'>排行榜</view>
+  </view>
+
+
+  <view class='kuai'>
+  <view class='h1'>889</view>
+  <view class='zi'>叶子币</view>
+  </view>
+
+  <view class='kuai'>
+  <view class='h1'>6</view>
+  <view class='zi'>我的树屋</view>
+  </view>
+
+
+  <view class='kuai'>
+  <view class='h1'>5</view>
+  <view class='zi'>我的精灵</view>
+  </view>
+
+  </view>
+
 </view>
 
-
-<view class='kuai'>
-<view class='h1'>889</view>
-<view class='zi'>叶子币</view>
-</view>
-
-<view class='kuai'>
-<view class='h1'>6</view>
-<view class='zi'>我的树屋</view>
-</view>
-
-
-<view class='kuai'>
-<view class='h1'>5</view>
-<view class='zi'>我的精灵</view>
-</view>
-
-</view>
-
-</view>
-
-<view class='buttom'>
+<view class='buttom'   >
   <view class='in'>
     <view class='friend'>
       <view class='icon'>
@@ -118,4 +118,37 @@
 
 
 
+</view>
+
+<view class='money'  wx:if='{{hide}}' >
+  <view class='hh'>充值</view>
+  <view class='h1'>选择套餐</view>
+  <view class='change'>
+    <view class='re'>
+    <view class='money1'>60币</view>
+    <view class='money2'>6元</view>
+    </view>
+
+      <view class='rechange'>
+    <view class='money1'>150币</view>
+    <view class='money2'>15元</view>
+    </view>
+    
+     <view class='rechange'>
+    <view class='money1'>500币</view>
+    <view class='money2'>48元</view>
+    </view>
+    
+     <view class='rechange'>
+    <view class='money1'>800币</view>
+    <view class='money2'>75元</view>
+    </view>
+    
+    
+  </view>
+  <button>确认支付</button>
+  <view class='xia'>
+    <text>合作商家：微信</text> 
+    <image src='../image/wx.png'></image>
+      </view>
 </view>
