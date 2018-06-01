@@ -1,11 +1,12 @@
 {
   "pages":[
+    "pages/word/word",
     "pages/index/index",
     "pages/friend/friend",
     "pages/mine/mine",
     "pages/find/find",
-    "pages/morning/morning",
-    "pages/word/word"
+    "pages/morning/morning"
+   
   ],
   "window":{
     "backgroundColor":"#F6F6F6",

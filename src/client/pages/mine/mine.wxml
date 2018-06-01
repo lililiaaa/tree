@@ -4,7 +4,8 @@
   <view bindtap="login" class='top' >
   
   <view class='yi'>
-   <text class="userinfo-nickname">{{logged ? userInfo.nickName : '点击登录'}}</text>
+   
+   <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" class="userinfo-nickname">{{logged ? userInfo.nickName : '点击登录'}}</button>
    <text class="userinfo-nickname" wx:if="{{logged}}">{{userInfo.lastLoginTime}}</text>
    </view>
    <image src="{{logged ? userInfo.avatarUrl : '../image/user-unlogin.png'}}" class='tu' background-size="cover"></image>
@@ -55,7 +56,7 @@
       
         
     </view>
-    <button>加为好友</button>
+    <button class='button'>加为好友</button>
     </view>
   </view>
 
@@ -71,7 +72,7 @@
         <view class='dian'>1</view>
         </view>
     </view>
-    <button>加为好友</button>
+    <button class='button'>加为好友</button>
     </view>
   </view>
 
@@ -89,7 +90,7 @@
         <view class='dian'>1</view>
         </view>
     </view>
-    <button>加为好友</button>
+    <button class='button'>加为好友</button>
     </view>
   </view>
 
@@ -110,7 +111,7 @@
         <view class='dian'>1</view>
         </view>
     </view>
-    <button>加为好友</button>
+    <button class='button'>加为好友</button>
     </view>
   </view>
 

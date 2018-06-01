@@ -1,4 +1,41 @@
-<view class='word'>
-<view class='num'>
+<view class='word' >
+<view class='num'>叶子币数：520</view>
+<view class='question'>
+<view class='class'>四级词汇</view>
+<view class='q-word'>symphony</view>
+<view class='tip'>答对10题即可获得3个叶子币哦</view>
 </view>
+
+<view class='answer'>
+<radio-group class="radio-group" bindchange="radioChange">
+  <label class="radio" wx:for="{{items}}" wx:key="{{index}}">
+    <button value="{{item.name}}" >{{item.value}}</button>
+  </label>
+</radio-group>
+</view>
+
+
+<view class='situation'>
+<view class='sum'>答题总数：50</view>
+<view class='sum'>答对题数：40</view>
+</view>
+</view>
+
+
+
+<view class='right'>
+<view>恭喜你！</view>
+<image src='../image/right.png'></image>
+<view>答对啦</view>
+<button>下一题</button>
+</view>
+
+
+
+<view class='wrong'>
+<view>很遗憾！</view>
+<image src='../image/wrong.png'></image>
+<view>正确答案</view>
+<view>交响乐，交响曲，谐音</view>
+<button>下一题</button>
 </view>

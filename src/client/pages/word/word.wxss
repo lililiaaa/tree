@@ -1,1 +1,71 @@
 /* pages/word/word.wxss */
+Page{
+  background-color: #f6f6f6;
+}
+.word{
+  margin: 20rpx 40rpx 40rpx  ;
+}
+.num{
+  width: 276rpx;
+  border: 2rpx solid #dbdbdb;
+  margin-left: 378rpx;
+  border-radius: 50rpx;
+  text-align: center;
+ color: #adadad;
+}
+.question{
+  background-color: white;
+  border: 2rpx solid #dbdbdb;
+  border-radius: 30rpx;
+  box-shadow: 5rpx 5rpx 3rpx #d6d6d6;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+.class{
+  color: #f4b942;
+  margin-bottom: 100rpx;
+  margin-top: 40rpx;
+}
+.q-word{
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 130rpx;
+}
+.tip{
+  color:#aaaaaa;
+  margin-bottom: 60rpx;
+  font-size: 35rpx;
+}
+.answer{
+  margin-top: 65rpx;
+
+}
+button{
+  margin-bottom: 30rpx;
+  border-radius: 50rpx;
+  box-shadow: 5rpx 5rpx 3rpx #d6d6d6;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 65rpx;
+  height: 75rpx;
+  line-height: 75rpx;
+  background-color: white;
+}
+.situation{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+.sum{
+  border-radius: 30rpx;
+  border: 2rpx solid #dbdbdb;
+  color: #adadad;
+  width: 250rpx;
+  text-align: center;
+  font-size: 35rpx;
+  margin-top: 30rpx;
+}
