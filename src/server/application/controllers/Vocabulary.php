@@ -5,7 +5,7 @@ use \QCloud_WeApp_SDK\Auth\LoginService as LoginService;
 use QCloud_WeApp_SDK\Constants as Constants;
 
 class Vocabulary extends CI_Controller {
-  
+
   public function __construct(){
     parent::__construct();
     $this->load->model("vocabulary_model");
@@ -21,13 +21,14 @@ class Vocabulary extends CI_Controller {
       echo "no data"
     }
   }
-  // 返回叶子钱币的数量
 
-  // 更新数据库正确单词的数量
+  // ability： 更新数据库正确单词的数量
+  // params： openid， words_number
+  // http:  post
   public function update_word_num(){
-    // $open_id = $this->input->post('open_id');
+    $u_id = $this->input->post('u_id');
     $words = $this->input->post('words_number');
-    $result = $this->Welcome_model->update_word($open_id,$words);
+    $result = $this->Welcome_model->update_word($u_id,$words);
     if($result>0){
       echo 'success';
     }else{

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2018-06-02 13:13:30
+Date: 2018-06-02 17:19:03
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -40,9 +40,9 @@ CREATE TABLE `car` (
 DROP TABLE IF EXISTS `friend`;
 CREATE TABLE `friend` (
   `friend_id` int(11) NOT NULL,
-  `open_id` varchar(255) NOT NULL DEFAULT '' COMMENT '用户自己的OpenID ',
-  `f_open_id` varchar(255) NOT NULL DEFAULT '' COMMENT '朋友的OpenID ',
-  PRIMARY KEY (`friend_id`,`open_id`)
+  `u_id` varchar(255) NOT NULL DEFAULT '' COMMENT '用户自己的OpenID ',
+  `f_u_id` varchar(255) NOT NULL DEFAULT '' COMMENT '朋友的OpenID ',
+  PRIMARY KEY (`friend_id`,`u_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -55,11 +55,11 @@ CREATE TABLE `friend` (
 DROP TABLE IF EXISTS `f_share`;
 CREATE TABLE `f_share` (
   `f_share_id` int(11) NOT NULL AUTO_INCREMENT,
-  `open_id` varchar(255) NOT NULL DEFAULT '' COMMENT 'OpenID ',
+  `u_id` varchar(255) NOT NULL DEFAULT '' COMMENT 'uid',
   `f_share_title` varchar(255) DEFAULT NULL COMMENT '分享标题',
   `f_share_content` varchar(255) DEFAULT NULL COMMENT '内容',
   `img` varchar(255) DEFAULT NULL COMMENT '配图',
-  PRIMARY KEY (`f_share_id`,`open_id`)
+  PRIMARY KEY (`f_share_id`,`u_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -105,9 +105,9 @@ CREATE TABLE `joke` (
 DROP TABLE IF EXISTS `mind_fruit`;
 CREATE TABLE `mind_fruit` (
   `fruit_id` int(11) NOT NULL AUTO_INCREMENT,
-  `open_id` varchar(255) NOT NULL DEFAULT '' COMMENT 'OpenID ',
+  `u_id` varchar(255) NOT NULL DEFAULT '' COMMENT 'OpenID ',
   `status` varchar(255) NOT NULL COMMENT '状态',
-  PRIMARY KEY (`fruit_id`,`open_id`)
+  PRIMARY KEY (`fruit_id`,`u_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -173,7 +173,9 @@ CREATE TABLE `sprite_dialog` (
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
-  `open_id` varchar(255) NOT NULL DEFAULT '' COMMENT 'OpenID ',
+  `u_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'uid',
+  `open_id` varchar(255) NOT NULL COMMENT 'OpenID ',
+  `name` varchar(255) NOT NULL DEFAULT '用户' COMMENT '用户名',
   `sex` varchar(8) NOT NULL DEFAULT 'man' COMMENT 'man/woman 性别',
   `intro` varchar(255) DEFAULT NULL COMMENT '介绍',
   `avatarUrl` varchar(255) NOT NULL COMMENT '头像',
@@ -181,8 +183,7 @@ CREATE TABLE `user` (
   `desire` varchar(255) DEFAULT NULL COMMENT '愿望',
   `leaves` int(255) NOT NULL DEFAULT '0' COMMENT '金叶子数',
   `words` int(255) NOT NULL DEFAULT '0' COMMENT '单词积累数',
-  `name` varchar(255) NOT NULL DEFAULT '用户' COMMENT '用户名',
-  PRIMARY KEY (`open_id`)
+  PRIMARY KEY (`u_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -194,9 +195,9 @@ CREATE TABLE `user` (
 -- ----------------------------
 DROP TABLE IF EXISTS `user_car`;
 CREATE TABLE `user_car` (
-  `open_id` varchar(255) NOT NULL COMMENT '用户的openid',
+  `u_id` varchar(255) NOT NULL COMMENT '用户的openid',
   `car_id` int(11) NOT NULL COMMENT '车的id',
-  PRIMARY KEY (`open_id`,`car_id`)
+  PRIMARY KEY (`u_id`,`car_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -208,9 +209,9 @@ CREATE TABLE `user_car` (
 -- ----------------------------
 DROP TABLE IF EXISTS `user_competition`;
 CREATE TABLE `user_competition` (
-  `open_id` varchar(255) NOT NULL DEFAULT '' COMMENT '参与比赛的用户的OpenID ',
+  `u_id` varchar(255) NOT NULL DEFAULT '' COMMENT '参与比赛的用户的u_id',
   `competition_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '用户参与的比赛',
-  PRIMARY KEY (`competition_id`,`open_id`)
+  PRIMARY KEY (`competition_id`,`u_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -222,9 +223,9 @@ CREATE TABLE `user_competition` (
 -- ----------------------------
 DROP TABLE IF EXISTS `user_house`;
 CREATE TABLE `user_house` (
-  `open_id` varchar(255) NOT NULL COMMENT '用户的openid',
+  `u_id` varchar(255) NOT NULL COMMENT '用户的u_id',
   `house_id` int(11) NOT NULL COMMENT '屋子id',
-  PRIMARY KEY (`open_id`,`house_id`)
+  PRIMARY KEY (`u_id`,`house_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -236,10 +237,10 @@ CREATE TABLE `user_house` (
 -- ----------------------------
 DROP TABLE IF EXISTS `user_sprite`;
 CREATE TABLE `user_sprite` (
-  `open_id` varchar(255) NOT NULL COMMENT '用户id',
+  `u_id` varchar(255) NOT NULL COMMENT '用户u_id',
   `sprite_id` int(11) NOT NULL COMMENT '使用中的精灵ID',
   `status` varchar(255) NOT NULL DEFAULT 'false' COMMENT '是否结婚',
-  PRIMARY KEY (`open_id`,`sprite_id`)
+  PRIMARY KEY (`u_id`,`sprite_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
