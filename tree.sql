@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2018-05-25 20:48:42
+Date: 2018-06-02 13:13:30
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -72,11 +72,12 @@ CREATE TABLE `f_share` (
 DROP TABLE IF EXISTS `house`;
 CREATE TABLE `house` (
   `house_id` int(11) NOT NULL AUTO_INCREMENT,
-  `intro` varchar(255) DEFAULT NULL COMMENT '树屋介绍',
-  `price` int(11) DEFAULT '0' COMMENT '价格',
+  `house_name` varchar(255) NOT NULL,
+  `intro` varchar(255) NOT NULL COMMENT '树屋介绍',
+  `price` int(11) NOT NULL DEFAULT '0' COMMENT '价格',
   `img_inside` varchar(255) NOT NULL COMMENT '内图',
   `img_outside` varchar(255) NOT NULL COMMENT '外图',
-  `kind` varchar(255) DEFAULT NULL COMMENT '屋子分类',
+  `kind` varchar(255) NOT NULL COMMENT '屋子分类',
   PRIMARY KEY (`house_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -178,9 +179,9 @@ CREATE TABLE `user` (
   `avatarUrl` varchar(255) NOT NULL COMMENT '头像',
   `mark` int(11) NOT NULL DEFAULT '0' COMMENT '签到情况',
   `desire` varchar(255) DEFAULT NULL COMMENT '愿望',
-  `gold_leaves` int(255) NOT NULL DEFAULT '0' COMMENT '金叶子数',
-  `silver_leaves` int(255) NOT NULL DEFAULT '0' COMMENT '银叶子数',
+  `leaves` int(255) NOT NULL DEFAULT '0' COMMENT '金叶子数',
   `words` int(255) NOT NULL DEFAULT '0' COMMENT '单词积累数',
+  `name` varchar(255) NOT NULL DEFAULT '用户' COMMENT '用户名',
   PRIMARY KEY (`open_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

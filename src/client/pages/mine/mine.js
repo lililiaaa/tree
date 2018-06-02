@@ -7,9 +7,15 @@ Page({
     userInfo: {},
     logged: false,
     takeSession: false,
-    requestResult: ''
+    requestResult: '',
+    code:'',
+    openid:'',
+    hide:false,
+
   },
+  
     // 用户登录示例
+ 
   login: function () {
     if (this.data.logged) return
 
@@ -52,6 +58,7 @@ Page({
       }
     })
   },
+  
   /**
    * 生命周期函数--监听页面加载
    */

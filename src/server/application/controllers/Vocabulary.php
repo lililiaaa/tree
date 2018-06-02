@@ -5,12 +5,12 @@ use \QCloud_WeApp_SDK\Auth\LoginService as LoginService;
 use QCloud_WeApp_SDK\Constants as Constants;
 
 class Vocabulary extends CI_Controller {
-
-  // by 袁庆龙 start
+  
   public function __construct(){
     parent::__construct();
     $this->load->model("vocabulary_model");
   } 
+  // by 袁庆龙 start
 
   //获取单词id，词汇文本和正确、错误选项
   public function get_vocabulary(){
@@ -22,12 +22,6 @@ class Vocabulary extends CI_Controller {
     }
   }
   // 返回叶子钱币的数量
-  
-
-  // https://api.weixin.qq.com/sns/jscode2session?appid=APPID&secret=SECRET&js_code=JSCODE&grant_type=authorization_code
-
-
-
 
   // 更新数据库正确单词的数量
   public function update_word_num(){
