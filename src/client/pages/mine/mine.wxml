@@ -5,7 +5,7 @@
   
   <view class='yi'>
    
-   <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo" class="userinfo-nickname">{{logged ? userInfo.nickName : '点击登录'}}</button>
+   <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="login" class="userinfo-nickname">{{logged ? userInfo.nickName : '点击登录'}}</button>
    <text class="userinfo-nickname" wx:if="{{logged}}">{{userInfo.lastLoginTime}}</text>
    </view>
    <image src="{{logged ? userInfo.avatarUrl : '../image/user-unlogin.png'}}" class='tu' background-size="cover"></image>

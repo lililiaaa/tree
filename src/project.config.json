@@ -4,9 +4,13 @@
 	"miniprogramRoot": "./client",
 	"qcloudRoot": "./server",
 	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
 		"newFeature": true
 	},
-	"appid": "wx6e98c307c624eca9",
-	"projectname": "tree",
+	"appid": "wxdc3e0648f98f4400",
+	"projectname": "daima",
 	"condition": {}
 }
