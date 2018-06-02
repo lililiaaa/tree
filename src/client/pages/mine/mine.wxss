@@ -142,11 +142,12 @@ border-bottom: 1rpx solid #d7d7d7;
   border-left: 2rpx solid #dbdbdb;
 padding-left: 18rpx;
   height: 100rpx;
-  
+  opacity: 0.5
 }
 .re{
   text-align: center;
   font-size: 40rpx;
+  opacity: 0.5
 }
 .money2{
   color: #f1c55a;
@@ -176,4 +177,26 @@ padding-left: 18rpx;
 .money image{
   height: 40rpx;
   width: 40rpx;
+}
+.after{
+  opacity: 1
+}
+.myhouse{
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.myhouse button{
+  border-radius: 30rpx;
+  background-color: #f4d280;
+  color: white;
+  width: 365rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  margin-top: 25rpx;
+  font-size: 30rpx;
 }

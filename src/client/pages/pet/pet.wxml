@@ -1,0 +1,65 @@
+
+  <view class='body'>
+    <view class='xiao' wx:if='{{xiao}}' >
+
+    <view class='pet'>
+    <view class='timu'>洛神</view>
+    <image src='http://p3.so.qhimgs1.com/bdr/_240_/t01baccea1e61a9cf23.jpg' class='tu'></image>
+    </view>
+    <view class='bg'>
+    <view class='wenzi'>提示：喂养一次需要花费60叶子币哦！长大以后就可以对话喽！</view> 
+    <view class='progress' wx:if='{{show}}'><progress percent="0" color="#f4ba3d" show-info class='jingdu' /><button bindtap='one'>喂养</button></view>
+    <view class='progress' wx:if='{{hideone}}'><progress percent="20" color="#f4ba3d" show-info class='jingdu'/><button bindtap='two'>喂养</button></view>
+     <view class='progress' wx:if='{{hidetwo}}'><progress percent="40" color="#f4ba3d" show-info class='jingdu'/><button bindtap='three'>喂养</button></view>
+    <view class='progress' wx:if='{{hideth}}'><progress percent="60" color="#f4ba3d" show-info class='jingdu'/><button bindtap='four'>喂养</button></view>
+    <view class='progress' wx:if='{{hidefo}}'><progress percent="80" color="#f4ba3d" show-info class='jingdu'/><button bindtap='five'>喂养</button></view>
+    <view class='progress' wx:if='{{hidefive}}'><progress percent="100" color="#f4ba3d" show-info class='jingdu'/><button bindtap='success'>成长</button></view> 
+    
+    </view>
+</view>
+
+
+   <view class='zhong' wx:if='{{zhong}}' >
+   <view class='pet'>
+    <view class='timu'>洛神</view>
+    <image src='http://p0.so.qhimgs1.com/bdr/_240_/t01efa6052f1e0b80f0.jpg' class='tu'></image>
+    </view>
+    <view class='bg'>
+    <view class='wenzi'>提示：喂养一次需要花费60叶子币哦！长大以后就可以结婚喽！</view> 
+    <view class='progress' wx:if='{{show}}'><progress percent="0" color="#f4ba3d" show-info class='jingdu' /><button bindtap='one'>喂养</button></view>
+    <view class='progress' wx:if='{{hideone}}'><progress percent="20" color="#f4ba3d" show-info class='jingdu'/><button bindtap='two'>喂养</button></view>
+     <view class='progress' wx:if='{{hidetwo}}'><progress percent="40" color="#f4ba3d" show-info class='jingdu'/><button bindtap='three'>喂养</button></view>
+    <view class='progress' wx:if='{{hideth}}'><progress percent="60" color="#f4ba3d" show-info class='jingdu'/><button bindtap='four'>喂养</button></view>
+    <view class='progress' wx:if='{{hidefo}}'><progress percent="80" color="#f4ba3d" show-info class='jingdu'/><button bindtap='five'>喂养</button></view>
+    <view class='progress' wx:if='{{hidefive}}'><progress percent="100" color="#f4ba3d" show-info class='jingdu'/><button bindtap='grow'>成长</button></view> 
+     <view class='anniu'>
+    
+    <button bindtap='duihua' >对话</button>
+    </view>
+    </view>
+
+</view>
+
+<view class='zhong' wx:if='{{da}}' >
+<view class='pet'>
+<view class='timu'>洛神花仙</view>
+    <image src='../image/woman.png' class='tu'></image>
+     
+    </view>
+    <view class='bg'>
+    <view class='wenzi'>提示：喂养一次需要花费60叶子币哦！长大以后就可以获奖喽！</view> 
+    <view class='progress' wx:if='{{show}}'><progress percent="0" color="#f4ba3d" show-info class='jingdu' /><button bindtap='one'>喂养</button></view>
+    <view class='progress' wx:if='{{hideone}}'><progress percent="20" color="#f4ba3d" show-info class='jingdu'/><button bindtap='two'>喂养</button></view>
+     <view class='progress' wx:if='{{hidetwo}}'><progress percent="40" color="#f4ba3d" show-info class='jingdu'/><button bindtap='three'>喂养</button></view>
+    <view class='progress' wx:if='{{hideth}}'><progress percent="60" color="#f4ba3d" show-info class='jingdu'/><button bindtap='four'>喂养</button></view>
+    <view class='progress' wx:if='{{hidefo}}'><progress percent="80" color="#f4ba3d" show-info class='jingdu'/><button bindtap='five'>喂养</button></view>
+    <view class='progress' wx:if='{{hidefive}}'><progress percent="100" color="#f4ba3d" show-info class='jingdu'/><button bindtap='duihuan'>兑换</button></view> 
+    <view class='anniu'>
+   
+    <button bindtap='duihua' >对话</button>
+    <button>婚配</button>
+    </view>
+    </view>
+
+    </view>
+  </view>
