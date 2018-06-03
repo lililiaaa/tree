@@ -58,11 +58,6 @@ class Welcome extends CI_Controller {
 	//代理请求 
 	// http: post
 	// way:post
-	// 		//正常返回的JSON数据包
-	// {
-	//       "openid": "OPENID",
-	//       "session_key": "SESSIONKEY",
-	// }
 	public function askweixin(){
 		$code = $this->input->post('code');
 		$url = 'https://api.weixin.qq.com/sns/jscode2session?appid='.$app_id.'&secret='.$secret.'&js_code='.$code.'&grant_type=authorization_code';

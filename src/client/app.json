@@ -1,7 +1,6 @@
 {
   "pages":[
     
-    "pages/moodFruit/moodFruit",
     "pages/index/index",
     "pages/friend/friend",
     "pages/mine/mine",
