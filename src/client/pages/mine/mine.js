@@ -31,7 +31,6 @@ Page({
         if (res.code) {
           //发起网络请求
           wx.request({
-            // url: 'https://api.weixin.qq.com/sns/jscode2session?appid=' + appId + '&secret=' + secret + '&js_code=' + res.code + '&grant_type=authorization_code',
             url:'https://stnr2jjf.qcloud.la/../welcome/askweixin',
             method: POST,
             data: {
@@ -39,10 +38,6 @@ Page({
             },
             success: function (res2) {
               console.log(res2.data);
-              // {
-              //   uid:12
-              //   session_key:shdfj
-              // }
             }
           });
         } else {
