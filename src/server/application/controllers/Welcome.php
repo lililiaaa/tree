@@ -2,51 +2,80 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
-  // by 袁庆龙 start
-  
-  public function __construct(){
-    parent::__construct();
-    $appid = 'wx6e98c307c624eca9';
-    $secret = '3aa44ccc5933f57504c83c121ef45928';
-    $this->load->model("Welcome_model");
-  } 
 
-  //默认载入
-	public function index()
+	/**
+	 * Index Page for this controller.
+	 *
+	 * Maps to the following URL
+	 * 		http://example.com/index.php/welcome
+	 *	- or -
+	 * 		http://example.com/index.php/welcome/index
+	 *	- or -
+	 * Since this controller is set as the default controller in
+	 * config/routes.php, it's displayed at http://example.com/
+	 *
+	 * So any other public methods not prefixed with an underscore will
+	 * map to /index.php/welcome/<method_name>
+	 * @see https://codeigniter.com/user_guide/general/urls.html
+	 */
+	
+
+	//  by 袁庆龙 start
+	public function __construct()
 	{
-		$this->load->view('welcome_message');
-  }
-  
+		parent::__construct();
+		//Do your magic here
+		$this->load->model("Welcome_model");
+		$app_id = 'wxdc3e0648f98f4400';
+		$secret = '3d5b400d1cf6ddf856e671c03c2a08ac';
+	}
 
+	//http ： get
+	//模拟请求
+	public function doGet($url)
+    {
+        //初始化
+        $ch = curl_init();
 
+        curl_setopt($ch, CURLOPT_URL,$url);
+        // 执行后不直接打印出来
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        // 跳过证书检查
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        // 不从证书中检查SSL加密算法是否存在
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
 
-  // 正则过滤功能特殊符号
-  public function reg_test($str){
-    $reg = /^[A-Za-z0-9\u4e00-\u9fa5]+$/g //全局匹配所有的大小写字母，十进制整数，汉字
-    if(preg_match($reg,$str,$res)){
-      return true;
-    }else{
-      return false;
-    }
-  }
+        //执行并获取HTML文档内容
+        $output = curl_exec($ch);
 
-  //搜索功能，
-  public function search(){
-    $search_words = $this->input->get('search_words');
-    $tf = $this->reg_test($search_words);
-    if($tf==true){ //如果正则的匹配结果返回的是true
-      $result = $this->Welcome_model->search_all($search_words);
-      if(count($result)>0){  //如果查询结果大于0，则返回查询结果
-        echo json_encode($result);
-      }else{
-        echo "not exist";//不存在结果
-      }
-    }else{
-      echo "input error ";//输入非法
-    }
-  }
+        //释放curl句柄
+        curl_close($ch);
+        
+        return $output;
+	
+	}
+	
+	//代理请求 
+	// http: post
+	// way:post
+	public function ask_weixin(){
+		$code = $this->input->post('code');
+		$url = 'https://api.weixin.qq.com/sns/jscode2session?appid='.$app_id.'&secret='.$secret.'&js_code='.$code.'&grant_type=authorization_code';
+		$res = doGet($url); //获得微信的反馈结果
+// 		//正常返回的JSON数据包
+// {
+//       "openid": "OPENID",
+//       "session_key": "SESSIONKEY",
+// }	
+		$row = $this->Welcome_model->user_exist($res->openid);
+		if($row>0){
+			
+		}
+		$this->Welcome_model->set_user($res->openid);
 
-
-  // by 袁庆龙 end
-  
+		
+	}
+	
+	// by 袁庆龙 start
 }

@@ -1,4 +1,4 @@
-S_AUTH# Wafer 服务端 SDK - PHP
+# Wafer 服务端 SDK - PHP
 
 [![Latest Stable Version][packagist-image]][packagist-url]
 [![License][license-image]][license-url]
@@ -115,7 +115,6 @@ if ($result['loginState'] === Constants::E_AUTH) {
 // 使用微信用户信息（`$result['userinfo']['userinfo']`）处理其它业务逻辑
 // ...
 ```
-
 
 ### 使用信道服务
 

@@ -2,12 +2,93 @@
 var qcloud = require('../../vendor/wafer2-client-sdk/index')
 var config = require('../../config')
 var util = require('../../utils/util.js')
+var appId = 'wxdc3e0648f98f4400'; //填写微信小程序appid 
+var secret = '4cff70639c92bbefc5a47859c41cd6a3'; //填写微信小程序secret 
 Page({
   data: {
     userInfo: {},
     logged: false,
     takeSession: false,
-    requestResult: ''
+    requestResult: '',
+    code:'',
+    openid:'',
+    hide:false,
+    show:true,
+    hide1:false,
+    hide2:false
+  },
+  rechange:function(){
+    this.setData({
+      hide: this.data.hide = false,
+      show: this.data.show = true,
+
+    })
+  },
+  getOpenId: function () {
+    wx.login({
+      success: function (res) {
+        
+
+        if (res.code) {
+          //发起网络请求
+          wx.request({
+            url: 'https://api.weixin.qq.com/sns/jscode2session?appid=' + appId + '&secret=' + secret + '&js_code=' + res.code + '&grant_type=authorization_code',
+            data: {
+
+            },
+            success: function (res2) {
+              console.log(res2.data);
+            }
+          });
+        } else {
+          console.log('登录失败！' + res.errMsg)
+        }
+      }
+    });
+  },
+  change:function(){
+    this.setData({
+      hide: this.data.hide = true,
+      show: this.data.show = false,
+      hide1: this.data.hide1 = false,
+      hide2: this.data.hide2 = false,
+    })
+
+  },
+  
+
+  change1: function () {
+    this.setData({
+      hide: this.data.hide = false,
+      show: this.data.show = false,
+      hide1: this.data.hide1 = true,
+      hide2: this.data.hide2 = false,
+    })
+
+  },
+
+  buy: function () {
+    wx.showToast({
+      title: '添加成功',
+      icon: 'warn',
+      duration: 2000
+    })
+  },
+  buybuy: function () {
+    wx.showToast({
+      title: '支付成功',
+      icon: 'warn',
+      duration: 2000
+    })
+  },
+  change2: function () {
+    this.setData({
+      hide: this.data.hide = false,
+      show: this.data.show = false,
+      hide1: this.data.hide1 = false,
+      hide2: this.data.hide2 = true,
+    })
+
   },
     // 用户登录示例
   login: function () {
@@ -56,14 +137,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
-  },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+     
   },
 
   /**
