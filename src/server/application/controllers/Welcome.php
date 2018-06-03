@@ -19,7 +19,6 @@ class Welcome extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	
-
 	//  by 袁庆龙 start
 	public function __construct()
 	{
@@ -59,28 +58,36 @@ class Welcome extends CI_Controller {
 	//代理请求 
 	// http: post
 	// way:post
-	public function ask_weixin(){
+	// 		//正常返回的JSON数据包
+	// {
+	//       "openid": "OPENID",
+	//       "session_key": "SESSIONKEY",
+	// }
+	public function askweixin(){
 		$code = $this->input->post('code');
 		$url = 'https://api.weixin.qq.com/sns/jscode2session?appid='.$app_id.'&secret='.$secret.'&js_code='.$code.'&grant_type=authorization_code';
-		$res = doGet($url); //获得微信的反馈结果
-// 		//正常返回的JSON数据包
-// {
-//       "openid": "OPENID",
-//       "session_key": "SESSIONKEY",
-// }	
+		$res = doGet($url); 	//获得微信的反馈结果	
 		$row = $this->Welcome_model->user_select($res->openid);//查询用户侧是否存在
-		if($row>0){
-			$arr = array(
-				'uid'=>$row->u_id,
-				'session_key'=>$row->session_key
-			);
+		if($row != 'FALSE'){ //user中存在记录
+			$arr = [
+				'uid'=>$row['u_id'],
+				'session_key'=>$row['session_key']
+			];
 			echo json_encode($arr);
 		}else{
-			$this->Welcome_model->set_user($res->openid);
-			echo '未查询到此用户'
+			$res_set = $this->Welcome_model->user_set($res->openid);
+			if($res_set>0){
+				$row_2 = $this->Welcome_model->user_select($res->openid);
+				$arr = [
+					'uid'=>$row_2['u_id'],
+					'session_key'=>$row_2['session_key']
+				];
+				echo json_encode($arr);
+			
+			}
 		}
 		
 	}
 	
-	// by 袁庆龙 start
+	// by 袁庆龙 end
 }

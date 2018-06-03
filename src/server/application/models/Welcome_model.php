@@ -1,17 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('NO direct stcript access allowed');
 class Welcome_model extends CI_Model{
-    // by 袁庆龙 start
 
-    //搜索商品——车，屋子，精灵
-    public function search_all($search_word){
-        $sql = 'SELECT  * FROM  `car`,`house`,`sprite`
-                WHERE `car`.car_name in ('.$search_word.
-                ') OR `house`.house_name in ('.$search_word.
-                ') OR `sprite`.sprite_name  in ('.$search_word.')';
-        $query = $this->db->query($sql);
-        return $query->result();
-    } 
+    public function __construct()
+    {
+        parent::__construct();
+        //Do your magic here
+        $pdo = new PDO("localhost","cAuth","wxdc3e0648f98f4400");  
+    }
+    
+    // by 袁庆龙 start
 
     //查找是否存在该用户，不存在则存储该用户
     public function exist_or_storage($u_id,$openid){
@@ -20,13 +18,26 @@ class Welcome_model extends CI_Model{
         return $this->db->affected_rows();
     }  
     
-    //查询用户
+    //查询用户 返回data数组
     public function user_select($open_id){
-        $query = $this->db->get_where('user',);
+        $sql = 'SELECT * FROM `user` where `user`.open_id in ( '.$open_id.')';
+        $res = $pdo->query($sql);   
+        if(res != 'FALSE'){
+            $data = [];
+            while($row = $res->fetch(\PDO::FETCH_ASSOC)){
+                $data[] = $row;
+            }
+            return $data;
+        }else{
+            return 'FALSE';
+        }
+        
+        
     }
-    // 插入新用户
-    public function set_user($open_id){
-        $sql = ''
+    // 插入新用户 返回受影响的行数
+    public function user_set($open_id){
+        $sql = 'INSERT INTO user(openid) VALUES('.$open_id.')';
+        return $pdo->exec($sql);
     }
 
 

@@ -28,7 +28,7 @@ $config = [
         'pass' => 'wxdc3e0648f98f4400',
         'char' => 'utf8mb4'
     ],
-
+    
     'cos' => [
         /**
          * 区域
