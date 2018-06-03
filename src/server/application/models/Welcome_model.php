@@ -8,16 +8,17 @@ defined('BASEPATH') OR exit('NO direct stcript access allowed');
     public function __construct()
     {
         parent::__construct();
-        $Mysql = [
-            'host' => 'localhost',
-            'port' => 3306,
-            'user' => 'root',
-            'db'   => 'cAuth',
-            'pass' => '',
-            'char' => 'utf8mb4'
-        ];
-        $dsn = "mysql:host=$Mysql['host'];dbname=$Mysql['db'];port=$Mysql['port'];charset=$Mysql['char']";
-        $pdo = $conn = new PDO($dsn,$Mysql['user'],$Mysql['pass']);
+        $pdo = DB::getInstance();
+        // $Mysql = [
+        //     'host' => 'localhost',
+        //     'port' => 3306,
+        //     'user' => 'root',
+        //     'db'   => 'cAuth',
+        //     'pass' => '',
+        //     'char' => 'utf8mb4'
+        // ];
+        // $dsn = "mysql:host=$Mysql['host'];dbname=$Mysql['db'];port=$Mysql['port'];charset=$Mysql['char']";
+        // $pdo = $conn = new PDO($dsn,$Mysql['user'],$Mysql['pass']);
     }
 
     //查找是否存在该用户，不存在则存储该用户

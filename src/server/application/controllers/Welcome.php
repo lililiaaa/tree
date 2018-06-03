@@ -20,13 +20,14 @@ class Welcome extends CI_Controller {
 	 */
 	
 	//  by 袁庆龙 start
+	public	$app_id = 'wxdc3e0648f98f4400';
+	public	$secret = '3d5b400d1cf6ddf856e671c03c2a08ac';
 	public function __construct()
 	{
 		parent::__construct();
 		//Do your magic here
 		$this->load->model("Welcome_model");
-		$app_id = 'wxdc3e0648f98f4400';
-		$secret = '3d5b400d1cf6ddf856e671c03c2a08ac';
+		
 	}
 
 	//http ： get
@@ -60,6 +61,8 @@ class Welcome extends CI_Controller {
 	// way:post
 	public function askweixin(){
 		$code = $this->input->post('code');
+		$app_id = $this->$app_id;
+		$secret = $this->$secret;
 		$url = 'https://api.weixin.qq.com/sns/jscode2session?appid='.$app_id.'&secret='.$secret.'&js_code='.$code.'&grant_type=authorization_code';
 		$res = $this->doGet($url); 	//获得微信的反馈结果	
 		$row = $this->Welcome_model->user_select($res->openid);//查询用户侧是否存在
