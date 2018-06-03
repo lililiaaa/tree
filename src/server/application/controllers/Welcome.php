@@ -61,7 +61,7 @@ class Welcome extends CI_Controller {
 	public function askweixin(){
 		$code = $this->input->post('code');
 		$url = 'https://api.weixin.qq.com/sns/jscode2session?appid='.$app_id.'&secret='.$secret.'&js_code='.$code.'&grant_type=authorization_code';
-		$res = doGet($url); 	//获得微信的反馈结果	
+		$res = $this->doGet($url); 	//获得微信的反馈结果	
 		$row = $this->Welcome_model->user_select($res->openid);//查询用户侧是否存在
 		if($row != 'FALSE'){ //user中存在记录
 			$arr = [
