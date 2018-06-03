@@ -5,14 +5,30 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+
   },
 
+  
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    // for (var j = 0; j < oIcon.length; j++) {
+    //   oIcon[j].index = j;
+    //   oIcon[j].onmouseover = function () {
+    //     change(this.index)
+    //   }
+
+    //   function change(index) {
+    //     nowIndex = index;
+    //     for (var i = 0; i < oIcon.length; i++) {
+
+    //       oImg[i].className = "";
+    //     }
+
+    //     oImg[index].className = "active";
+    //   }
+    // }
   },
 
   /**

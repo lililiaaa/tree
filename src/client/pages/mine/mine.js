@@ -21,30 +21,34 @@ Page({
     this.setData({
       hide: this.data.hide = false,
       show: this.data.show = true,
-
+      hide1:this.data.hide1=false,
+      hide2:this.data.hide2=false,
     })
   },
   getOpenId: function () {
     wx.login({
       success: function (res) {
-        
-
         if (res.code) {
           //发起网络请求
           wx.request({
-            url: 'https://api.weixin.qq.com/sns/jscode2session?appid=' + appId + '&secret=' + secret + '&js_code=' + res.code + '&grant_type=authorization_code',
+            // url: 'https://api.weixin.qq.com/sns/jscode2session?appid=' + appId + '&secret=' + secret + '&js_code=' + res.code + '&grant_type=authorization_code',
+            url:'https://stnr2jjf.qcloud.la/../welcome/askweixin',
             data: {
-
+              code:res.code
             },
             success: function (res2) {
               console.log(res2.data);
+              // {
+              //   uid:12
+              //   session_key:shdfj
+              // }
             }
           });
         } else {
           console.log('登录失败！' + res.errMsg)
         }
       }
-    });
+      });
   },
   change:function(){
     this.setData({
@@ -180,6 +184,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
-  }
+    return {
+      title: '自定义转发标题',
+      path: '/page/user?id=123'
+    }
+  },
 })

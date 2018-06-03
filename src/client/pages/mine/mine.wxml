@@ -163,3 +163,4 @@
 <navigator url='../pet/pet' ><image src='http://p2.so.qhimgs1.com/bdr/200_200_/t01f9da8c00bb4c7092.jpg'></image></navigator>
 <navigator url='../petchange/petchange' hover-class='none'><button>更换</button></navigator>
 </view>
+<button bindtap='getOpenId'>aaa</button>

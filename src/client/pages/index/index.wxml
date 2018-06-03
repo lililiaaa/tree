@@ -8,14 +8,14 @@
         <image src='../image/word.png' class='img'></image>
         <view class='text'>早起签到</view>
       </view>
-      </navigator>
-      <navigator hover-class="none">
+      </navigator >
+      <navigator hover-class="none" url='../knl/knl'>
       <view class='zao'>
         <image src='../image/knl.png' class='img'></image>
         <view class='text'>知识问答</view>
       </view>
       </navigator>
-      <navigator hover-class="none">
+      <navigator hover-class="none" url='../run/run'>
       <view class='zao'>
         <image src='../image/run.png' class='img'></image>
         <view class='text'>运动步数</view>
@@ -27,7 +27,7 @@
         <view class='text'>单词积累</view>
       </view>
       </navigator>
-      <navigator hover-class="none">
+      <navigator hover-class="none" url='../moodFruit/moodFruit'>
       <view class='zao'>
         <image src='../image/happy.png' class='img'></image>
         <view class='text'>心情果实</view>
