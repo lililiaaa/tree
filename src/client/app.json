@@ -1,5 +1,7 @@
 {
   "pages":[
+    
+    "pages/moodFruit/moodFruit",
     "pages/index/index",
     "pages/friend/friend",
     "pages/mine/mine",
@@ -9,7 +11,6 @@
     "pages/pet/pet",
     "pages/petchange/petchange",
     "pages/housechange/housechange"
-
   ],
   "window":{
     "backgroundColor":"#F6F6F6",
