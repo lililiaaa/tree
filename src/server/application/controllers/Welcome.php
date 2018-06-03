@@ -68,12 +68,17 @@ class Welcome extends CI_Controller {
 //       "openid": "OPENID",
 //       "session_key": "SESSIONKEY",
 // }	
-		$row = $this->Welcome_model->user_exist($res->openid);
+		$row = $this->Welcome_model->user_select($res->openid);//查询用户侧是否存在
 		if($row>0){
-			
+			$arr = array(
+				'uid'=>$row->u_id,
+				'session_key'=>$row->session_key
+			);
+			echo json_encode($arr);
+		}else{
+			$this->Welcome_model->set_user($res->openid);
+			echo '未查询到此用户'
 		}
-		$this->Welcome_model->set_user($res->openid);
-
 		
 	}
 	
