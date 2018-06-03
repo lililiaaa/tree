@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : CrazyChat
-Source Server Version : 50505
+Source Server         : cccc
+Source Server Version : 50624
 Source Host           : localhost:3306
 Source Database       : tree
 
 Target Server Type    : MYSQL
-Target Server Version : 50505
+Target Server Version : 50624
 File Encoding         : 65001
 
-Date: 2018-06-02 17:19:03
+Date: 2018-06-03 15:14:02
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -86,27 +86,13 @@ CREATE TABLE `house` (
 -- ----------------------------
 
 -- ----------------------------
--- Table structure for `joke`
--- ----------------------------
-DROP TABLE IF EXISTS `joke`;
-CREATE TABLE `joke` (
-  `joke_id` int(11) NOT NULL AUTO_INCREMENT,
-  `joke_content` varchar(255) NOT NULL,
-  PRIMARY KEY (`joke_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of joke
--- ----------------------------
-
--- ----------------------------
 -- Table structure for `mind_fruit`
 -- ----------------------------
 DROP TABLE IF EXISTS `mind_fruit`;
 CREATE TABLE `mind_fruit` (
   `fruit_id` int(11) NOT NULL AUTO_INCREMENT,
   `u_id` varchar(255) NOT NULL DEFAULT '' COMMENT 'OpenID ',
-  `status` varchar(255) NOT NULL COMMENT '状态',
+  `content` varchar(255) NOT NULL COMMENT '果实内容',
   PRIMARY KEY (`fruit_id`,`u_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
