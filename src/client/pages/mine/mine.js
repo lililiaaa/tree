@@ -33,6 +33,7 @@ Page({
           wx.request({
             // url: 'https://api.weixin.qq.com/sns/jscode2session?appid=' + appId + '&secret=' + secret + '&js_code=' + res.code + '&grant_type=authorization_code',
             url:'https://stnr2jjf.qcloud.la/../welcome/askweixin',
+            method: POST,
             data: {
               code:res.code
             },
