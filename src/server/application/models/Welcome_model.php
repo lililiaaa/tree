@@ -20,6 +20,16 @@ class Welcome_model extends CI_Model{
         return $this->db->affected_rows();
     }  
     
+    //查询用户
+    public function user_select($open_id){
+        $query = $this->db->get_where('user',);
+    }
+    // 插入新用户
+    public function set_user($open_id){
+        $sql = ''
+    }
+
+
     // by 袁庆龙 end
 
 }  
