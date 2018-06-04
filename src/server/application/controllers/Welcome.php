@@ -83,8 +83,7 @@ class Welcome extends CI_Controller {
 					'uid'=>$row_2['u_id'],
 					'session_key'=>$row_2['session_key']
 				];
-				echo json_encode($arr);
-			
+				echo json_encode($arr);			
 			}
 		}
 		
