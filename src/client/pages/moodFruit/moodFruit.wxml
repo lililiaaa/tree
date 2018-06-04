@@ -1,0 +1,26 @@
+<!--pages/moodFruit/moodFruit.wxml-->
+<view class='mood_tree' >
+  <view class="remind" hidden="{{flag_msg}}">
+    <text class="ts">提示</text>
+    <text class='info'style='margin-top:80rpx'>{{message1}}</text>
+    <text class='info'>{{message2}}</text>
+    <button bindtap="hide">确定</button>
+  </view>
+  <view class='leaves_num tip'>叶子币数：{{leaves_num}}</view> 
+  <image class="tree " src='../image/mood-tree.jpeg'></image>
+  <image bindtap="joke" class="apple apple_1" src='../image/apple.png'></image>
+  <image bindtap="joke" class="apple apple_2" src='../image/apple.png'></image>
+  <image bindtap="joke" class="apple apple_3" src='../image/apple.png'></image>
+  <image bindtap="reward" class="apple apple_4" src='../image/apple.png'></image>
+  <image bindtap="reward" class="apple apple_5" src='../image/apple.png'></image>
+  <image bindtap="reward"class="apple apple_6" src='../image/apple.png'></image>
+  <view class="click_num tip">点击次数：{{click_num}}</view>
+  <button class='btn'>+</button>
+  <view class="reward" hidden="{{flag_re}}" bindtap="hide">
+    恭喜你中奖了
+  </view>
+  <view class="joke" hidden="{{flag_jo}}" bindtap="hide">
+    <text class='ts'>每日一笑</text>
+    <text class='info'>{{joke_content}}</text>
+  </view>
+</view>

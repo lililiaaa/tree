@@ -1,0 +1,45 @@
+<view class='run'>
+<view class='top'>
+<view class='h'> 今日步数</view>
+<view class='kuang'>
+   
+    
+      <view class='icon'>
+        
+        <view>15000</view> 
+            </view>
+  </view> 
+</view>
+  <view class='guan'>
+<scroll-view scroll-y class='gun'>
+ <view class='wenzi'>
+   <view class='h1'>兑换规则</view>
+  <view>
+  0~999步，可兑换0个叶子币
+  <view>
+  </view>
+  1000~5999步，可兑换5个叶子币
+  <view>
+  </view>
+  6000~9999步，可兑换10个叶子币
+  <view>
+  </view>
+  10000~15999步，可兑换15个叶子币
+  <view>
+  </view>
+  16000~19999步，可兑换25个叶子币
+  <view>
+  </view>
+  20000~25999步，可兑换35个叶子币
+  <view>
+  </view>
+  31999~50000步，可兑换50个叶子币
+  <view>
+  </view>
+  50000~步，可兑换100个叶子币
+  </view>
+</view>
+</scroll-view>
+</view>
+<button bindtap='buy'>兑换</button>
+</view>
