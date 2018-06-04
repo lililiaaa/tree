@@ -66,8 +66,14 @@ class Welcome extends CI_Controller {
 		$app_id = 'wxdc3e0648f98f4400';
 		$secret = '3d5b400d1cf6ddf856e671c03c2a08ac';
 		$url = 'https://api.weixin.qq.com/sns/jscode2session?appid='.$app_id.'&secret='.$secret.'&js_code='.$code.'&grant_type=authorization_code';
+<<<<<<< HEAD
 		$res = $this->doGet($url); 	//获得微信的反馈结果	
 		var_dump($res);
+=======
+		$res = $this->doGet($url); 	
+    var_dump($res);
+    //获得微信的反馈结果	
+>>>>>>> 8c7d8007833f1290fc3e01701fab92f5358b8e7a
 		$row = $this->Welcome_model->user_select($res->openid);//查询用户侧是否存在
 		if($row != 'FALSE'){ //user中存在记录
 			$arr = [
