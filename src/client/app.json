@@ -12,7 +12,8 @@
     "pages/run/run",
     "pages/moodFruit/moodFruit",
     "pages/word/word",
-    "pages/knl/knl"
+    "pages/knl/knl",
+    "pages/game/game"
   ],
   "window":{
     "backgroundColor":"#F6F6F6",
