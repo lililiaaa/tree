@@ -15,10 +15,8 @@ class Vocabulary_model extends CI_Model
       return $query->result();
   }
   
-
   //更新正确的单词数量
   public function update_word($u_id,$words){
-
     $res = DB::update('user ', ['words' => $words], ['u_id' => $u_id]);
     return $this->db->affected_rows();
   }

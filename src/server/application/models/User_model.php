@@ -6,7 +6,6 @@ use QCloud_WeApp_SDK\Mysql\Mysql as DB;
 class User_model extends CI_Model{
 	
 	// by 袁庆龙 start
-
     public function __construct()
     {
         parent::__construct();
@@ -25,7 +24,7 @@ class User_model extends CI_Model{
 		$res = $pdo->query($sql);
 		if($res != 'FALSE'){
             $data = [];
-            foreach($res->fetch(\PDO::FETCH_ASSOC) as $row){
+            while($row = $res->fetch(PDO::FETCH_ASSOC)){
                 $data[] = $row;
             }
             return $data;
@@ -89,7 +88,7 @@ class User_model extends CI_Model{
 		$res = $pdo->query($sql);
 		if($res != 'FALSE'){
 			$data = [];
-			foreach($res->fetch(\PDO::FETCH_ASSOC) as $row)){
+			while($row = $res->fetch(PDO::FETCH_ASSOC)){
 				$data[] = $row;
 			}
 			return $data;
@@ -116,7 +115,7 @@ class User_model extends CI_Model{
 		$res = $pdo->query($sql);
 		if($res != 'FALSE'){
 			$data = [];
-			foreach($res->fetch(\PDO::FETCH_ASSOC) as $row)){
+			while($row = $res->fetch(PDO::FETCH_ASSOC)){
 				$data[] = $row;
 			}
 			return $data;

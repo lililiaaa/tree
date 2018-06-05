@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('NO direct stcript access allowed');
         $res = $pdo->query($sql);   
         if($res != 'FALSE'){
             $data = [];
-            foreach($res->fetch(\PDO::FETCH_ASSOC) as $row){
+            while($row = $res->fetch(PDO::FETCH_ASSOC)){
                 $data[] = $row;
             }
             return $data;
