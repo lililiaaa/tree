@@ -1,0 +1,52 @@
+.contain{
+  height: 1100rpx;
+  width: 90%;
+  margin:0 auto;
+}
+.img{
+  width: 100%;
+  height: 300rpx;
+  border-radius: 10%;
+  margin-top: 20rpx;
+}
+.second{
+  width: 90%;
+  margin:0 auto;
+  margin-top: 30rpx;
+  overflow: hidden;
+}
+.title{
+  margin-top:10rpx;
+  font-weight: 600;
+}
+.condition{
+  text-align: center;
+   font-weight: 500;
+   margin-top:10rpx;
+}
+.content{
+  font-size: 30rpx;
+    margin-top:30rpx;
+
+}
+.biaoti{
+  font-size:34rpx;
+}
+.detil{
+  margin-top:30rpx;
+  line-height: 70rpx;
+    text-indent:30rpx;
+}
+.button{
+  margin-top:-90rpx;
+  color:#fff;
+  background:#f4ba3d;
+border-radius: 30rpx;
+  width: 200rpx;
+  height: 60rpx;
+  margin:30rpx auto;
+  border:1rpx solid #ccc;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 30rpx;
+}

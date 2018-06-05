@@ -1,0 +1,14 @@
+<view class="contain">
+<image src='../image/word.png' class='img'></image>
+<view class="second">
+<view class='title'>大赛名称：2018青春校园运动大赛</view>
+<view class='condition'>报名截止：2018年6月10日</view>
+<view class='content'>
+<view class='biaoti'>大家好：</view>
+<view class='detil'>为不断推进我市学生阳光体育运动，有效提高学生体质，特别是耐力素质水平，根据教育局2017年11月
+现将《2018年如皋市中小学生长跑比赛规程》印发给你们。希各单位抓紧冬季增强学生耐力素质的大好时机，积极组织校园锻炼和比赛，在此基础上认真选拔并组队参赛。</view>
+</view>
+<view class="button">立即报名</view>
+</view>
+
+</view>

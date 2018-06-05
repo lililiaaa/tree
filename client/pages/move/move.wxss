@@ -1,0 +1,60 @@
+.sport{
+  box-shadow: 4rpx 4rpx #c0c0c0;
+  width:88%;
+  margin:10rpx auto;
+  background:linear-gradient(#e3b082,#365462);
+  height:600rpx;
+  border-radius: 18rpx;
+  color:#fff;
+  text-align: center;
+}
+
+.font{
+  font-size:90rpx;
+  margin:34px 0 10rpx 0;
+}
+.circle{
+  width:50%;
+  height:340rpx;
+  border:13rpx solid #fff;
+  border-bottom:3rpx solid #fff;
+  border-radius:50%;
+  margin:20rpx auto 50rpx;
+}
+.father{
+  font-size:30rpx;
+  display:flex;
+}
+.son{
+  flex:1;
+}
+.b{
+  font-size:40rpx;
+  margin-top: 10rpx;
+}
+.bb{
+  box-shadow: 4rpx 4rpx #c0c0c0;
+  
+  font-size:30rpx;
+  color:#fff;
+  margin:30rpx auto;
+   width:88%;
+  height:200rpx;
+  border-radius: 5%;
+  overflow:hidden;
+}
+.cc{
+  background:#365462;
+}
+.dd{
+    background:linear-gradient(#395764,#707672);
+}
+.ee{
+  margin:20rpx 0 0 6%;
+}
+.ff{
+  width:30%;
+  height:40rpx;
+   margin: 0 0 10rpx 40%; 
+
+}

@@ -1,0 +1,166 @@
+<!--pages/mine/mine.wxml-->
+<view>
+  <image src='http://p0.so.qhimgs1.com/bdr/_240_/t01811180decdc7556a.jpg' class='img'></image>
+  <view bindtap="login" class='top' >
+  
+  <view class='yi'>
+   
+   <button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="login" class="userinfo-nickname">{{logged ? userInfo.nickName : '点击登录'}}</button>
+   <text class="userinfo-nickname" wx:if="{{logged}}">{{userInfo.lastLoginTime}}</text>
+   </view>
+   <image src="{{logged ? userInfo.avatarUrl : '../image/user-unlogin.png'}}" class='tu' background-size="cover"></image>
+  </view>
+</view>
+<view class='body' >
+  <view class='nav'>
+  <view class='kuai'  bindtap='rechange'>
+  <view class='h1'>2</view>
+  <view class='zi'>排行榜</view>
+  </view>
+
+
+  <view class='kuai' bindtap='change'>
+  <view class='h1'>889</view>
+  <view class='zi'>叶子币</view>
+  </view>
+
+  <view class='kuai' bindtap='change1'>
+  <view class='h1'>6</view>
+  <view class='zi'>我的树屋</view>
+  </view>
+
+
+  <view class='kuai' bindtap='change2'>
+  <view class='h1'>5</view>
+  <view class='zi'>我的精灵</view>
+  </view>
+
+  </view>
+
+</view>
+
+<view class='buttom'   wx:if='{{show}}'  >
+  <view class='in'>
+    <view class='friend'>
+      <view class='icon'>
+        <image class='buttom-img' src='http://img5.imgtn.bdimg.com/it/u=2869031647,3499077470&fm=27&gp=0.jpg'></image>
+      </view>
+    <view class='you'>
+    
+      <view class='shu'>
+      <view class='h'>夏天的风In</view>
+      <view class='buttom-text'>叶子币数：5200</view>
+        <view class='dian'>1</view>
+        
+        </view>
+      
+        
+    </view>
+    <button class='button' bindtap='buy'>加为好友</button>
+    </view>
+  </view>
+
+  <view class='in'>
+    <view class='friend'>
+      <view class='icon'>
+        <image class='buttom-img' src='http://img5.imgtn.bdimg.com/it/u=2869031647,3499077470&fm=27&gp=0.jpg'></image>
+      </view>
+    <view class='you'>
+      <view class='shu'>
+      <view class='h'>夏天的风In</view>
+      <view class='buttom-text'>叶子币数：5200</view>
+        <view class='dian'>1</view>
+        </view>
+    </view>
+    <button class='button'>加为好友</button>
+    </view>
+  </view>
+
+
+
+  <view class='in'>
+    <view class='friend'>
+      <view class='icon'>
+        <image class='buttom-img' src='http://img5.imgtn.bdimg.com/it/u=2869031647,3499077470&fm=27&gp=0.jpg'></image>
+      </view>
+    <view class='you'>
+      <view class='shu'>
+      <view class='h'>夏天的风In</view>
+      <view class='buttom-text'>叶子币数：5200</view>
+        <view class='dian'>1</view>
+        </view>
+    </view>
+    <button class='button'>加为好友</button>
+    </view>
+  </view>
+
+
+
+
+
+
+  <view class='in'>
+    <view class='friend'>
+      <view class='icon'>
+        <image class='buttom-img' src='http://img5.imgtn.bdimg.com/it/u=2869031647,3499077470&fm=27&gp=0.jpg'></image>
+      </view>
+    <view class='you'>
+      <view class='shu'>
+      <view class='h'>夏天的风In</view>
+      <view class='buttom-text'>叶子币数：5200</view>
+        <view class='dian'>1</view>
+        </view>
+    </view>
+    <button class='button' >加为好友</button>
+    </view>
+  </view>
+
+
+
+
+</view>
+
+<view class='money'  wx:if='{{hide}}' >
+  <view class='hh'>充值</view>
+  <view class='h1'>选择套餐</view>
+  <view class='change'>
+    <view class='re after'>
+    <view class='money1'>60币</view>
+    <view class='money2'>6元</view>
+    </view>
+
+    <view class='rechange ' >
+    <view class='money1'>150币</view>
+    <view class='money2'>15元</view>
+    </view>
+    
+     <view class='rechange'>
+    <view class='money1'>500币</view>
+    <view class='money2'>48元</view>
+    </view>
+    
+     <view class='rechange'>
+    <view class='money1'>800币</view>
+    <view class='money2'>75元</view>
+    </view>
+    
+    
+  </view>
+  <button bindtap='buybuy'>确认支付</button>
+  <view class='xia'>
+    <text>合作商家：微信</text> 
+    <image src='../image/wx.png'></image>
+      </view>
+</view>
+
+
+<view  class='myhouse' wx:if='{{hide1}}'>
+<navigator url='../house/house'><image src='http://p0.so.qhimgs1.com/bdr/_240_/t019dc82594b357f4da.jpg'></image></navigator>
+<navigator url='../housechange/housechange' hover-class='none'><button>更换</button></navigator>
+</view>
+
+<view  class='myhouse' wx:if='{{hide2}}'>
+<navigator url='../pet/pet' ><image src='http://p2.so.qhimgs1.com/bdr/200_200_/t01f9da8c00bb4c7092.jpg'></image></navigator>
+<navigator url='../petchange/petchange' hover-class='none'><button>更换</button></navigator>
+</view>
+<button bindtap='getOpenId'>aaa</button>
