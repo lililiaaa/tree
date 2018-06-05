@@ -1,0 +1,121 @@
+
+.mood_tree{
+  margin: auto 40rpx 40rpx;
+}
+.tip{
+  font-size: 30rpx;
+  line-height: 65rpx;
+  text-align: center;
+  border: 1rpx solid;
+  border-radius: 50rpx ;
+  border-color: rgb(210, 210, 210);
+  color: rgb(144, 144, 144);
+  width: 285rpx;
+  height: 65rpx;
+}
+.leaves_num{
+  margin: 15rpx 0rpx 22rpx auto;
+  border-color: rgb(210, 210, 210);
+  color: rgb(144, 144, 144);
+}
+.tree{
+  height: 1038rpx;
+  width: 100%;
+  border-radius: 50rpx;
+  position: relative;
+}
+.apple{
+  position: absolute;
+  width: 75rpx;
+  height: 75rpx;
+}
+.apple_1{
+  left: 405rpx;
+  top:448rpx;
+}
+.apple_2{
+  left: 213rpx;
+  top:634rpx;
+}
+.apple_3{
+  left: 147rpx;
+  top:452rpx;
+}
+.apple_4{
+  left: 271rpx;
+  top:418rpx;
+}
+.apple_5{
+  left: 455rpx;
+  top:738rpx;
+}
+.apple_6{
+  left: 494rpx;
+  top:571rpx;
+}
+.click_num{
+  position: absolute;
+  top: 1050rpx;
+  left: 65rpx;
+  color: rgb(255, 255, 255);
+  background-color:black;
+  opacity: 0.6;
+}
+ .btn{
+  position: absolute;
+  top: 1050rpx;
+  right: 65rpx;
+  width: 65rpx;
+  height: 65rpx;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  line-height: 60rpx;
+  text-align: center;
+  background-color:black;
+  opacity: 0.6;
+  color: rgb(255, 255, 255);
+  font-size: 55rpx;
+} 
+.joke,.reward,.remind{
+  
+  background-color: white;
+  width: 600rpx;
+  height: 550rpx;
+  position: absolute;
+  top: 320rpx; 
+  margin: 0 30rpx; 
+  border-radius: 50rpx;
+}
+.remind{
+  z-index: 2;
+  color:rgb(225, 225, 225);
+}
+.ts{
+  margin: auto 20rpx;
+  font-size: 50rpx;
+  display: block;
+  text-align: center;
+  line-height: 140rpx;
+  height: 140rpx;
+  color: black;
+  border-bottom: 1rpx solid rgb(210, 210, 210);
+}
+.info{
+  display: block;
+  margin: auto 20rpx;  
+  text-indent: 2rem;
+  line-height: 1.5rem;
+}
+.remind button{
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 50rpx;
+  margin-top: 20rpx;
+  color: white;
+  background-color: rgb(244, 186, 81);
+}
+
+

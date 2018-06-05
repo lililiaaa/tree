@@ -1,0 +1,11 @@
+<!--pages/game.wxml-->
+<text>pages/game.wxml</text>
+<view class='game'>
+<view class='tu'>
+<image></image>
+</view>
+<view class=''>
+<view class='name'>大赛名称：运动步数大比拼；</view>
+</view>
+
+</view>

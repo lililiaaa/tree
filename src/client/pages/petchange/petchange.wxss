@@ -1,0 +1,61 @@
+/* pages/housechange/housechange.wxss *//* pages/house/house.wxss */
+.buttom{
+  display: flex;
+}
+.habit{
+  display: flex;
+}
+.buttom image{
+  height: 160rpx;
+  width: 160rpx;
+  border-radius: 30rpx;
+}
+.icon{
+  margin: 20rpx;
+}
+.text{
+  font-size: 40rpx;
+  text-align: center;
+}
+.buttom{
+background: #f2f2f2;
+}
+.jieshao{
+  background: #f2f2f2;
+  padding-left: 20rpx;
+  width: 200rpx;
+ 
+}
+.house{
+  height: 24.3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 50rpx;
+  font-weight: 600;
+  color: #f4b941;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  
+}
+.timu{
+  margin-bottom: 40rpx;
+}
+.border{
+  padding: 80rpx 20rpx;
+  border-top: 5rpx #f4b941 solid;
+  border-bottom: 5rpx #f4b941 solid;
+}
+.bg{
+  background: #f2f2f2;
+}/* pages/petchange/petchange.wxss */
+button{
+   background-color:#f4ba3d; 
+  color: white;
+  width: 150rpx;
+  height: 65rpx;
+  border-radius: 30rpx;
+  line-height: 65rpx;
+  margin-top: 20rpx;
+}
