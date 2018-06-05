@@ -1,0 +1,53 @@
+<scroll-view>
+<view class='ge'>
+  <view class='body' >
+    <image src='http://img0.imgtn.bdimg.com/it/u=3540679571,3117755351&fm=27&gp=0.jpg' class='tu'></image>
+    <view class='nei'>
+    <view class='h1'> 完成21天养成任务！在冰激凌商店兑换到了东西哦！ </view>
+    <view class='wenzi'>李振婷已经坚持跑步21天，获得了50000叶子币，成功在冰激凌店兑换到美美的冰激凌，每天运动步数达到21500步，大家继续坚持哦！        </view>
+    <image src='https://i01piccdn.sogoucdn.com/fcfebcbf1fac0891' class='icon'></image>
+    </view>
+  </view>
+</view>
+
+<view class='ge'>
+  <view class='body' >
+    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525714891018&di=c5a863fa7cfd674d69b71a6d90b6aa5a&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01188158b6a00fa801219c778ab3ad.jpg%402o.jpg' class='tu'></image>
+    <view class='nei'>
+    <view class='h1'> 又出新商品啦！前五名完成21天养成任务即可获得萌宠！ </view>
+    <view class='wenzi'>世勋已经坚持跑步21天，获得了50000叶子币，并在宠物店兑换到了一只小狗，每天运动步数达到21500步，大家继续坚持哦！        </view>
+    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525715593885&di=745fee4f0357c313f2bfb029cf250dd9&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201508%2F02%2F20150802174935_KfHJ2.jpeg' class='icon'></image>
+    </view>
+  </view>
+</view>
+
+
+
+<view class='ge'>
+  <view class='body' >
+    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525714891018&di=c5a863fa7cfd674d69b71a6d90b6aa5a&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01188158b6a00fa801219c778ab3ad.jpg%402o.jpg' class='tu'></image>
+    <view class='nei'>
+    <view class='h1'> 又出新商品啦！前五名完成21天养成任务即可获得萌宠！ </view>
+    <view class='wenzi'>世勋已经坚持跑步21天，获得了50000叶子币，并在宠物店兑换到了一只小狗，每天运动步数达到21500步，大家继续坚持哦！        </view>
+    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525715593885&di=745fee4f0357c313f2bfb029cf250dd9&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201508%2F02%2F20150802174935_KfHJ2.jpeg' class='icon'></image>
+    </view>
+  </view>
+</view>
+
+
+
+<view class='ge'>
+  <view class='body' >
+    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525714891018&di=c5a863fa7cfd674d69b71a6d90b6aa5a&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01188158b6a00fa801219c778ab3ad.jpg%402o.jpg' class='tu'></image>
+    <view class='nei'>
+    <view class='h1'> 又出新商品啦！前五名完成21天养成任务即可获得萌宠！ </view>
+    <view class='wenzi'>世勋已经坚持跑步21天，获得了50000叶子币，并在宠物店兑换到了一只小狗，每天运动步数达到21500步，大家继续坚持哦！        </view>
+    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525715593885&di=745fee4f0357c313f2bfb029cf250dd9&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201508%2F02%2F20150802174935_KfHJ2.jpeg' class='icon'></image>
+    </view>
+  </view>
+</view>
+
+
+
+
+</scroll-view>

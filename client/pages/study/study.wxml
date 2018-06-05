@@ -1,0 +1,61 @@
+<view class='study'>
+<view class='xi'>今日学习</view>
+  <view class='top'>
+  
+    <view class='grade'>
+      <view class='fen'>85分</view>
+      <view class='zi'>学习状态：良好</view>
+    </view>
+   <view>
+    <view class='text'>距离学习目标还有: 30分钟</view>
+    <progress percent="60" color="#f4ba3d" />
+    </view>
+  </view>
+  <view>
+    <view>
+      <view>我的学习</view>
+    </view>
+    <view class='zhong'>
+      <view>单词积累</view>
+      <view class='xuexi'>
+        <view class='now'>
+          <view class='now-icon'> 正在学习:</view>
+          <view class='ci'>六级词汇</view>
+        </view>
+        <view class='now'>
+          <view class='now-icon'> 已学习:</view>
+          <view class='ci'>四级词汇</view>
+        </view>
+        <view class='now'>
+          <view class='now-icon'> 计划学习:</view>
+          <view class='ci'>考研词汇   雅思词汇</view>
+        </view>
+     </view>
+  
+    </view>
+
+  
+
+
+   <view class='zhong'>
+      <view>知识问答</view>
+      <view class='xuexi'>
+        <view class='now'>
+          <view class='now-icon'> 正在学习:</view>
+          <view class='ci'>科技题目</view>
+        </view>
+        <view class='now'>
+          <view class='now-icon'> 已学习:</view>
+          <view class='ci'>常识题目 历史题目</view>
+        </view>
+        <view class='now'>
+          <view class='now-icon'> 计划学习:</view>
+          <view class='ci'>数学题目   趣味题目</view>
+        </view>
+      </view>
+     
+
+    </view>
+
+</view> 
+</view>

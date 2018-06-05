@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50624
 File Encoding         : 65001
 
-Date: 2018-06-03 15:14:02
+Date: 2018-06-04 19:11:31
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -92,13 +92,32 @@ DROP TABLE IF EXISTS `mind_fruit`;
 CREATE TABLE `mind_fruit` (
   `fruit_id` int(11) NOT NULL AUTO_INCREMENT,
   `u_id` varchar(255) NOT NULL DEFAULT '' COMMENT 'OpenID ',
-  `content` varchar(255) NOT NULL COMMENT '果实内容',
+  `content` varchar(255) NOT NULL COMMENT '状态',
   PRIMARY KEY (`fruit_id`,`u_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of mind_fruit
 -- ----------------------------
+
+-- ----------------------------
+-- Table structure for `quiz`
+-- ----------------------------
+DROP TABLE IF EXISTS `quiz`;
+CREATE TABLE `quiz` (
+  `quiz_id` int(11) NOT NULL AUTO_INCREMENT COMMENT '知识问答题目ID',
+  `quiz_content` varchar(255) NOT NULL COMMENT '知识问答内容',
+  `right` varchar(255) NOT NULL COMMENT '正确答案',
+  `wrong_1` varchar(255) NOT NULL COMMENT '错误答案1',
+  `wrong_2` varchar(255) NOT NULL COMMENT '错误答案2',
+  `wrong_3` varchar(255) NOT NULL COMMENT '错误答案3',
+  PRIMARY KEY (`quiz_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of quiz
+-- ----------------------------
+INSERT INTO `quiz` VALUES ('1', 'Vocabulary', '词汇', 'a', 'b', 'c');
 
 -- ----------------------------
 -- Table structure for `share_competition`
@@ -169,8 +188,9 @@ CREATE TABLE `user` (
   `desire` varchar(255) DEFAULT NULL COMMENT '愿望',
   `leaves` int(255) NOT NULL DEFAULT '0' COMMENT '金叶子数',
   `words` int(255) NOT NULL DEFAULT '0' COMMENT '单词积累数',
+  `quizzes` int(255) NOT NULL DEFAULT '0' COMMENT '知识问答正确题数',
   PRIMARY KEY (`u_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user

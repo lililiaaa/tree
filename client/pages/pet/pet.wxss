@@ -1,0 +1,90 @@
+.leaves_num{
+  margin: 15rpx 0rpx 22rpx auto;
+  border: rgb(210, 210, 210) solid 2rpx;
+  color: rgb(144, 144, 144);
+}
+.tip{
+  font-size: 30rpx;
+  line-height: 65rpx;
+  text-align: center;
+  border: 1rpx solid;
+  border-radius: 50rpx ;
+  border-color: rgb(210, 210, 210);
+  color: rgb(144, 144, 144);
+  width: 285rpx;
+  height: 65rpx;
+}
+.xiao,.zhong,.da{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+}
+.progress{
+   display: flex;
+    
+   font-size: 50rpx;
+  font-weight: 600;
+  color: #f4b941;
+}
+.jingdu{
+  width: 500rpx;
+  height: 50rpx;
+  border-radius: 50rpx;
+  margin-left: 50rpx;
+}
+.tu{
+  /* height: 600rpx;
+  width: 435rpx; */
+  
+}
+button{
+   background-color:#f4ba3d; 
+  color: white;
+  width: 150rpx;
+  height: 65rpx;
+  border-radius: 30rpx;
+  line-height: 65rpx;
+}
+.wenzi{
+  text-indent: 30rpx;
+  font-size: 30rpx;
+  color: #f4ba3d;
+  font-family: "微软雅黑";
+  
+  margin: 20rpx;
+  background: #f2f2f2;
+}
+.anniu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ margin: 30rpx;
+}
+.progress button{
+  width: 132rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin:10rpx;
+   font-size: 30rpx;
+}
+.bg{
+ background: #f2f2f2;
+ height: 300rpx;
+ width: 100%;
+}
+.pet{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  height: 22.3rem;
+}
+.timu{
+  font-size: 100rpx;
+  font-weight: 600;
+  color: #f4b941;
+  margin-bottom: 50rpx;
+
+}

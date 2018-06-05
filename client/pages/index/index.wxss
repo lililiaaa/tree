@@ -1,0 +1,36 @@
+/**index.wxss**/
+.index{
+  margin: 40rpx 40rpx 0 40rpx ;
+  display: flex;
+  flex-direction: column;
+}
+.habit{
+  display: flex;
+  
+
+}
+.img{
+  height: 160rpx;
+  width: 160rpx;
+  border-radius: 30rpx;
+}
+.zao{
+  margin: 20rpx;
+}
+.text{
+  font-size: 30rpx;
+  padding-left: 20rpx;
+}
+.tu{
+  height: 333rpx;
+  width: 675rpx;
+  margin: 20rpx 0;
+}
+.imgg{
+   height: 271rpx;
+   width: 206rpx;
+   margin: 20rpx 10rpx 0 10rpx;
+}
+.qk{
+  display: flex;
+}

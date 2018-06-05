@@ -1,0 +1,202 @@
+/* pages/mine/mine.wxss */
+.img{
+  height: 400rpx;
+  width: 100%;
+  border-bottom: 5rpx #f1c55a solid;
+}
+.top{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  margin-top: -140rpx;
+}
+.userinfo-nickname{
+  color: white;
+  font-size: 1.4rem;
+  background: transparent;
+  
+}
+button::after{
+   border: none;
+}
+.yi{
+  margin-top: -50rpx;
+}
+.tu{
+  width: 180rpx;
+  height: 180rpx;
+  border: 8rpx solid #f1c55a;
+  border-radius: 50%;
+ 
+}
+.body{
+  margin: 0rpx 20rpx 20rpx 15rpx;
+  border-bottom: 2rpx #d2d2d2 solid;
+  padding-bottom: 10rpx;
+}
+.nav{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-left: -5rpx;
+  margin-bottom: 10rpx;
+}
+.h1{
+  font-size: 50rpx;
+}
+.kuai{
+  margin-left: 40rpx;
+}
+.h1{
+  text-align: center;
+}
+
+.in{
+  margin: 50rpx;
+}
+.friend{
+ display: flex;
+ margin-top: 30rpx;
+border-bottom: 1rpx solid #d7d7d7;
+}
+.buttom-img{
+  width: 110rpx;
+  height: 110rpx;
+  border: 8rpx solid #f1c55a;
+  border-radius: 50%;
+}
+.you{
+  margin-left: 30rpx;
+  
+  width: 100%;
+  display: flex;
+}
+.h{
+  font-size: 32rpx;
+  margin-bottom: 25rpx;
+  margin-top: 10rpx;
+ font-family: "微软雅黑"
+
+}
+.buttom-text{
+  font-size: 25rpx;
+  color: black;
+  
+  }
+.dian{
+  text-align: center;
+  background-color:#f1c55a;
+  height: 45rpx;
+  width: 45rpx;
+  border-radius: 50%;
+  margin-top: -15rpx;
+  margin-left: -75rpx;
+  color: white
+}
+.button{
+  border-radius: 30rpx;
+  background-color: #f4d280;
+  color: white;
+  width: 365rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  margin-top: 25rpx;
+  font-size: 30rpx;
+}
+.money{
+  display:flex;
+  flex-direction: column;
+  background: #f2f2f2;
+   border: 2rpx solid #dbdbdb;
+  border-radius: 30rpx;
+  box-shadow: 5rpx 5rpx 3rpx #d6d6d6;
+ 
+  margin: 30rpx
+}
+.change{
+  display: flex;
+   background:white;
+   border: 2rpx solid #dbdbdb;
+  border-radius: 30rpx;
+  box-shadow: 5rpx 5rpx 3rpx #d6d6d6;
+   height: 168rpx;
+  width: 590rpx;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-content: center;
+}
+.money .hh{
+  margin-top: 20rpx ;
+  margin-left: 30rpx;
+  font-size: 45rpx;
+  font-weight: 600;
+}
+.h1{
+  font-size: 40rpx;
+  margin-bottom: 20rpx;
+}
+.rechange{
+  text-align: center;
+  font-size: 40rpx;
+  border-left: 2rpx solid #dbdbdb;
+padding-left: 18rpx;
+  height: 100rpx;
+  opacity: 0.5
+}
+.re{
+  text-align: center;
+  font-size: 40rpx;
+  opacity: 0.5
+}
+.money2{
+  color: #f1c55a;
+  margin-top: 35rpx;
+}
+.money1{
+  margin-top: 10rpx;
+}
+.money button{
+  color: white;
+  background: #f1c55a;
+  margin-top: 40rpx;
+  width: 500rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  border-radius: 50rpx;
+}
+.xia{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: #a5a5a5;
+  font-size: 30rpx;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+.money image{
+  height: 40rpx;
+  width: 40rpx;
+}
+.after{
+  opacity: 1
+}
+.myhouse{
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.myhouse button{
+  border-radius: 30rpx;
+  background-color: #f4d280;
+  color: white;
+  width: 365rpx;
+  height: 54rpx;
+  line-height: 54rpx;
+  margin-top: 25rpx;
+  font-size: 30rpx;
+}
