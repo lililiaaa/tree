@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50505
 File Encoding         : 65001
 
-Date: 2018-06-04 19:11:31
+Date: 2018-06-05 22:09:56
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -231,6 +231,7 @@ DROP TABLE IF EXISTS `user_house`;
 CREATE TABLE `user_house` (
   `u_id` varchar(255) NOT NULL COMMENT '用户的u_id',
   `house_id` int(11) NOT NULL COMMENT '屋子id',
+  `use_status` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`u_id`,`house_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -246,6 +247,7 @@ CREATE TABLE `user_sprite` (
   `u_id` varchar(255) NOT NULL COMMENT '用户u_id',
   `sprite_id` int(11) NOT NULL COMMENT '使用中的精灵ID',
   `status` varchar(255) NOT NULL DEFAULT 'false' COMMENT '是否结婚',
+  `use_status` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`u_id`,`sprite_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

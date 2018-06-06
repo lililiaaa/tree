@@ -2,6 +2,21 @@
 
 	class Mindfruit_model extends CI_Model{
 
+		//
+		public function get_info($uid){
+			$sql = "select * from user where u_id=".$u_id;
+			$res = $pdo->query($sql);
+			if(res != 'FALSE'){
+	            $data = [];
+	            while($row = $res->fetch(\PDO::FETCH_ASSOC)){
+	                $data[] = $row;
+	            }
+	            return $data;
+	        }else{
+	            return 'FALSE';
+	        }
+		}
+
 		//获取心情果实的结果（是否中奖）
 		public function get_result(){
 			$sql = "select * from mind_fruit order by rand() limit 0,1";

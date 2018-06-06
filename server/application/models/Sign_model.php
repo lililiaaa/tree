@@ -17,9 +17,9 @@
 	        }
 		}
 
-		//当前用户叶子币+5
+		//当前用户叶子币+5,天数+1
 		public function succ($u_id){
-			$sql = "update user set leaves=leaves+5 where u_id=".$u_id;
+			$sql = "update user set leaves=leaves+5, mark=mark+1 where u_id=".$u_id;
 			return $pdo->exec($sql);
 		}
 	}
