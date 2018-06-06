@@ -49,5 +49,20 @@ App({
   //         });
   //       }
     
-    }
+    },
+    petData: {
+      petname: null,
+      petimg: null
+    },
+    houseData: {
+      housename: null,
+      houseimg: null
+    },
+    globalData: {
+      myopenid: null
+    },
+    dayData: {
+      todaydao: 0,
+      todaydui: 0
+    },
 })

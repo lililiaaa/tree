@@ -1,35 +1,37 @@
 <view class='house'>
-<view class='timu'>薰衣草庄园</view>
+<view class='timu'>{{housename[changeimg]}}</view>
+
 <view class='border'>
-<image src='http://www.civilcn.com/d/file/zhuangxiu/xiaoguotu/2011-06-15/5d0734b48e8f14c691e1f7fbff0e583f.jpg'></image>
+<image src='{{houseimg[changeimg]}}'></image>
+
 </view>
 </view>
-<button>确定更换</button>
+<button  data-name='{{housename[changeimg]}}' data-image='{{houseimg[changeimg]}}' bindtap='confirm'>确定更换</button>
 <view class='jieshao'>选择房屋</view>
 <view class='bg'>
 <scroll-view  style="width: 100%"  scroll-x class='scorll'>
 <view class='buttom'>
-  <view class='icon'>
+  <view class='icon' bindtap='change0'>
   <image src='http://p0.so.qhimgs1.com/bdr/_240_/t011350fdd391ddf88a.jpg'></image>
   <view class='text'>萌萌爱心</view>
   </view>
-  <view class='icon'>
+  <view class='icon' bindtap='change1'>
   <image src='http://p0.so.qhimgs1.com/bdr/_240_/t019dc82594b357f4da.jpg'></image>
   <view class='text'>少女时代</view>
   </view>
-  <view class='icon'>
+  <view class='icon' bindtap='change2'>
   <image src='http://p0.so.qhimgs1.com/bdr/_240_/t013d17fe4c0a05de70.jpg'></image>
   <view class='text'>蔚蓝海岸</view>
   </view>
-  <view class='icon'>
+  <view class='icon' bindtap='change3'>
   <image src='http://p3.so.qhimgs1.com/bdr/_240_/t01993b1eb53f2c3f73.jpg'></image>
   <view class='text'>蓝色梦乡</view>
   </view>
-   <view class='icon'>
+   <view class='icon' bindtap='change4'>
   <image src='http://www.civilcn.com/d/file/zhuangxiu/xiaoguotu/2011-06-15/5d0734b48e8f14c691e1f7fbff0e583f.jpg'></image>
   <view class='text'>薰衣草庄园</view>
   </view>
-   <view class='icon'>
+   <view class='icon' bindtap='change5'>
   <image src='http://p3.so.qhimgs1.com/bdr/_240_/t016d211e5680f4b223.jpg'></image>
   <view class='text'>热情似火</view>
   </view>
