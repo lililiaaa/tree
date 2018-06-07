@@ -1,38 +1,18 @@
 <view class='house'>
-<view class='timu'>少女时代</view>
+<view class='timu'>{{housename}}</view>
 <view class='border'>
-<image src='http://p0.so.qhimgs1.com/bdr/_240_/t019dc82594b357f4da.jpg'></image>
+<image src='{{houseimg}}'></image>
 </view>
 </view>
 <view class='jieshao'>室内景象</view>
 <view class='bg'>
 <scroll-view  style="width: 100%"  scroll-x class='scorll'>
-<view class='buttom'>
+<view class='buttom' ><!--wx:for="{{sentence}}" wx:key="{{index}} -->
   <view class='icon'>
-  <image src='http://p0.so.qhimgs1.com/bdr/_240_/t019dc82594b357f4da.jpg'></image>
-  <view class='text'>外形</view>
+  <image src='{{item.sentence_image}}'></image>
+  <view class='text'>{{item.sentence_name}}</view>
   </view>
-  <view class='icon'>
-  <image src='http://p0.so.qhimgs1.com/bdr/_240_/t014231fdb41409535a.jpg'></image>
-  <view class='text'>主卧</view>
-  </view>
-  <view class='icon'>
-  <image src='http://p2.so.qhimgs1.com/t01382863173edc8622.jpg'></image>
-  <view class='text'>副卧</view>
-  </view>
-  <view class='icon'>
-  <image src='http://p2.so.qhimgs1.com/t015519e171d06c3ad2.jpg'></image>
-  <view class='text'>浴室</view>
-  </view>
-   <view class='icon'>
-  <image src='http://p3.so.qhimgs1.com/bdr/_240_/t010437547f6ab52b73.jpg'></image>
-  <view class='text'>客厅</view>
-  </view>
-   <view class='icon'>
-  <image src='http://img1.gtimg.com/ln/pics/hv1/72/7/1594/103651707.jpg'></image>
-  <view class='text'>餐厅</view>
-  </view>
-  </view>
+</view>
 </scroll-view>
 </view>
 

@@ -31,7 +31,7 @@
 
 
   <view class='kuai' bindtap='change2'>
-  <view class='h1'>5</view>
+  <view class='h1'>6</view>
   <view class='zi'>我的精灵</view>
   </view>
 
@@ -92,11 +92,11 @@
 
 
 <view  class='myhouse' wx:if='{{hide1}}'>
-<navigator url='../house/house'><image src='{{houseimg}}'></image></navigator>
+<navigator url='../house/house?houseimg={{houseimg}}&housename={{housename}}'><image src='{{houseimg}}'></image></navigator>
 <navigator url='../housechange/housechange' hover-class='none'><button>更换</button></navigator>
 </view>
 
 <view  class='myhouse' wx:if='{{hide2}}'>
-<navigator url='../pet/pet'><image src='{{petimg}}'></image></navigator>
+<navigator url='../pet/pet?petimg={{petimg}}&petname={{petname}}'><image src='{{petimg}}'></image></navigator>
 <navigator url='../petchange/petchange' hover-class='none'><button>更换</button></navigator>
 </view>

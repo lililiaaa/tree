@@ -19,7 +19,9 @@ Page({
     hide1: false,
     hide2: false,
     petimg: 'http://p2.so.qhimgs1.com/bdr/200_200_/t01f9da8c00bb4c7092.jpg',
-    houseimg: 'http://p0.so.qhimgs1.com/bdr/_240_/t019dc82594b357f4da.jpg'
+    houseimg: 'http://p0.so.qhimgs1.com/bdr/_240_/t019dc82594b357f4da.jpg',
+    housename:'少女时代',
+    petname:'洛神'
   },
   rechange: function () {
     this.setData({
@@ -200,12 +202,14 @@ Page({
     var that = this;
     if (getApp().petData.petimg != null) {
       that.setData({
-        petimg: getApp().petData.petimg
+        petimg: getApp().petData.petimg,
+        petname:getApp().petData.petname
       })
     }
     if (getApp().houseData.houseimg != null) {
       that.setData({
-        houseimg: getApp().houseData.houseimg
+        houseimg: getApp().houseData.houseimg,
+        housename: getApp().houseData.housename,
       })
     }
   },

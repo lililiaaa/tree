@@ -3,8 +3,8 @@
     <view class='xiao' wx:if='{{xiao}}' >
 
     <view class='pet'>
-    <view class='timu'>洛神</view>
-    <image src='http://p3.so.qhimgs1.com/bdr/_240_/t01baccea1e61a9cf23.jpg' class='tu'></image>
+    <view class='timu'>{{petname}}</view>
+    <image src='{{petimg}}' class='tu'></image>
     </view>
     <view class='bg'>
     <view class='wenzi'>提示：喂养一次需要花费60叶子币哦！长大以后就可以对话喽！</view> 
@@ -21,8 +21,9 @@
 
    <view class='zhong' wx:if='{{zhong}}' >
    <view class='pet'>
-    <view class='timu'>洛神</view>
-    <image src='http://p0.so.qhimgs1.com/bdr/_240_/t01efa6052f1e0b80f0.jpg' class='tu'></image>
+    <view class='timu'>{{petname}}</view>
+    <!-- 此处更改 -->
+    <image src='{{item.sentence_image}}' class='tu'></image>
     </view>
     <view class='bg'>
     <view class='wenzi'>提示：喂养一次需要花费60叶子币哦！长大以后就可以结婚喽！</view> 
@@ -42,8 +43,9 @@
 
 <view class='zhong' wx:if='{{da}}' >
 <view class='pet'>
-<view class='timu'>洛神花仙</view>
-    <image src='../image/woman.png' class='tu'></image>
+<view class='timu'>{{petname}}</view>
+<!-- 此处更改 -->
+    <image src='{{item.sentence_image}}' class='tu'></image>
      
     </view>
     <view class='bg'>

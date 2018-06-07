@@ -65,4 +65,7 @@ App({
       todaydao: 0,
       todaydui: 0
     },
+    duihuan:{
+      duihuan:0
+    }
 })
