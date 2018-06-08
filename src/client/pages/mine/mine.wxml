@@ -1,6 +1,6 @@
 <!--pages/mine/mine.wxml-->
 <view>
-  <image src='http://p0.so.qhimgs1.com/bdr/_240_/t01811180decdc7556a.jpg' class='img'></image>
+  <image src='http://p0.so.qhimgs1.com/bdr/_240_/t01811180decdc7556a.jpg' class='img' ></image>
   <view bindtap="login" class='top' >
   
   <view class='yi'>
@@ -14,13 +14,13 @@
 <view class='body' >
   <view class='nav'>
   <view class='kuai'  bindtap='rechange'>
-  <view class='h1'>2</view>
+  <view class='h1'>{{mynum}}</view>
   <view class='zi'>排行榜</view>
   </view>
 
 
   <view class='kuai' bindtap='change'>
-  <view class='h1'>889</view>
+  <view class='h1'>{{mylmoney}}</view>
   <view class='zi'>叶子币</view>
   </view>
 
@@ -40,19 +40,19 @@
 </view>
 
 <view class='buttom'   wx:if='{{show}}'  >
-     <view class='in' ><!--wx:for="{{sentence}}" wx:key="{{index}} -->
+     <view class='in' wx:for="{{sentence}}" wx:key="{{index}}"><!--wx:for="{{sentence}}" wx:key="{{index}}" -->
     <view class='friend'>
       <view class='icon'>
-      <image class='buttom-img' src="{{item.sentence_headimg}}"></image><!--获取后台数据库排行榜用户列表的用户头像--><!--'http://img5.imgtn.bdimg.com/it/u=2869031647,3499077470&fm=27&gp=0.jpg' -->
+      <image class='buttom-img' src="{{item.user_headimg}}"></image><!--获取后台数据库排行榜用户列表的用户头像--><!--'http://img5.imgtn.bdimg.com/it/u=2869031647,3499077470&fm=27&gp=0.jpg' -->
       </view>
       <view class='you'>
         <view class='shu'>
-          <view class='h'>{{item.sentence_name}}</view><!--获取后台数据库排行榜用户列表的用户名 -->
-          <view class='buttom-text'>叶子币数：{{item.sentence_money}}</view><!--获取后台数据库排行榜用户列表的叶子币数 -->
-          <view class='dian'>{{item.sentence_ranking}}</view><!--获取后台数据库排行榜用户列表的排名 -->
+          <view class='h'>{{item.user_name}}</view><!--获取后台数据库排行榜用户列表的用户名 -->
+          <view class='buttom-text'>叶子币数：{{item.user_lmoney}}</view><!--获取后台数据库排行榜用户列表的叶子币数 -->
+          <view class='dian'>{{item.rowNo}}</view><!--获取后台数据库排行榜用户列表的排名 -->
         </view>    
       </view>
-      <button class='button' bindtap='addfriend' data-addheadimg="{{item.sentence_headimg}}" data-addname="{{item.sentence_name}}" data-addmoney="{{item.sentence_money}}" data-addranking="{{item.sentence_ranking}}">加为好友</button>
+      <button class='button' bindtap='addfriend' data-addheadimg="{{item.user_headimg}}" data-addname="{{item.user_name}}" data-addmoney="{{item.user_lmoney}}">加为好友</button>
     </view>
   </view>
 </view>

@@ -4,7 +4,7 @@
   <image src='../image/morning.png'></image></view>
   <view class='day'>连续签到：{{oday}}天</view>
   <view class='money'>叶子币数：{{omoney}}</view>
-  <button bindtap='qiandao'>签到</button>
+  <button bindtap='qiandao' data-oday='{{oday}}' data-omoney='{{omoney}}'>签到</button>
 </view>
 <view class='tip'>提示：每天七点前签到，即可获得5个叶子币</view>
 </view>

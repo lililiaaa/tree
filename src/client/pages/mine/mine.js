@@ -21,7 +21,9 @@ Page({
     petimg: 'http://p2.so.qhimgs1.com/bdr/200_200_/t01f9da8c00bb4c7092.jpg',
     houseimg: 'http://p0.so.qhimgs1.com/bdr/_240_/t019dc82594b357f4da.jpg',
     housename:'少女时代',
-    petname:'洛神'
+    petname:'洛神',
+    mynum:0,
+    mylmoney:0
   },
   rechange: function () {
     this.setData({
@@ -62,24 +64,22 @@ Page({
     var that = this;
     var oname = e.currentTarget.dataset.addname;
     var omoney = e.currentTarget.dataset.addmoney;
-    var oranking = e.currentTarget.dataset.addranking;
     var oheadimg = e.currentTarget.dataset.addheadimg;
     var oopenid = getApp().globalData.myopenid;
     if (oopenid) {
       wx.request({
-        url: 'https://stnr2jjf.qcloud.la/index.php/',//后台查找该用户数据，找到返回“此人已添加”，找不到加入好友数据库中
+        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/add_friend_list',//后台查找该用户数据，找到返回“此人已添加”，找不到加入好友数据库中
         data: {
           oheadimg: oheadimg,
           oname: oname,
           omoney: omoney,
-          oranking: oranking,
           oopenid: oopenid
         },
         header: {
           'Content-Type': 'application/json'
         },
         success: function (res) {//后台在好友数据库中查找此人信息，如果找到返回“此人您已添加”
-          // console.log(res.data);
+           console.log(res.data);
           if (res.data == '此人您已添加') {
             wx.showModal({
               title: '提示',
@@ -120,7 +120,7 @@ Page({
 
   },
   // 用户登录示例
-  login: function () {
+  login: function (e) {
     var that = this;
     var openId = (wx.getStorageSync('openId'));
     //console.log(e.detail.userInfo)
@@ -133,7 +133,18 @@ Page({
         })
         console.log("登陆成功");
         getApp().globalData.myopenid = openId;//全局变量获取openid
-
+        wx.request({
+          url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_list', //获取排行榜数据
+          header: {
+            'content-type': 'application/json' // 默认值
+          },
+          success: function (res){
+            that.setData({
+              mynum: res.data[0].rowNo,
+              mylmoney: res.data[0].user_lmoney
+            })
+          }
+        })
       }
       else {//之前没有获取过openId，
         wx.login({
@@ -144,8 +155,10 @@ Page({
               wx.getUserInfo({
                 success: function (res_user) {
                   wx.request({
-                    url: 'https://stnr2jjf.qcloud.la/index.php/',//后台获取openid返回出来，并将openid放入用户表中
+                    url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_user_list',//后台获取openid返回出来，并将openid放入用户表中
                     data: {
+                      oonickName:res_user.userInfo.nickName,
+                      ooheadimg:res_user.userInfo.avatarUrl,
                       oocode: ocode
                     },
                     header: {
@@ -183,7 +196,7 @@ Page({
    */
   onLoad: function (options) {
     wx.request({
-      url: 'https://stnr2jjf.qcloud.la/index.php/', //获取排行榜数据
+      url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_list', //获取排行榜数据
       header: {
         'content-type': 'application/json' // 默认值
       },

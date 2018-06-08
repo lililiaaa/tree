@@ -8,8 +8,10 @@ Page({
     omoney: 520,
     oday: 99
   },
-  qiandao: function () {
+  qiandao: function (e) {
     var that = this;
+    var oday = e.currentTarget.dataset.oday;
+    var omoney = e.currentTarget.dataset.omoney;
     var oopenid = getApp().globalData.myopenid;
     var otodaydao = getApp().dayData.todaydao;
     if (oopenid) {
@@ -29,12 +31,14 @@ Page({
           })
           getApp().dayData.todaydao = d;
           that.setData({
-            omoney: omoney + 5,
-            oday: oday + 1,
+            omoney: parseInt(omoney)+5,
+            oday: parseInt(oday)+1,
           })
           wx.request({
-            url: '/index.php/',//根据openid修改用户叶子币数he签到天数（叶子币数+5，签到天数+1）
+            url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/modify_user_list',//根据openid修改用户叶子币数he签到天数（叶子币数+5，签到天数+1）
             data: {
+              omoney: parseInt(omoney)+5,
+              oday: parseInt(oday)+1,
               oopenid: oopenid,
             },
             header: {
@@ -71,7 +75,7 @@ Page({
     var oopenid = getApp().globalData.myopenid;
     if (oopenid) {
       wx.request({
-        url: '/index.php/',//根据openid获取用户叶子币数he签到天数
+        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_signin_list',//根据openid获取用户叶子币数he签到天数
         data: {
           oopenid: oopenid
         },
@@ -79,10 +83,10 @@ Page({
           'Content-Type': 'application/json'
         },
         success: function (res) {
-          // console.log(res.data);
+          //console.log(res.data[0].user_lmoney);
           that.setData({
-            omoney: res.data,
-            oday: res.data
+            omoney: res.data[0].user_lmoney,
+            oday: res.data[0].user_sday
           })
         }
       })
