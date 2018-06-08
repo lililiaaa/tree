@@ -85,7 +85,7 @@ Page({
               title: '提示',
               content: '此人您已添加',
             })
-          }
+           } 
           else {
             wx.showToast({
               title: '添加成功',
