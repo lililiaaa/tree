@@ -14,16 +14,12 @@ class Vocabulary_model extends CI_Model
               WHERE (word_id >= ((SELECT MAX(word_id) FROM `word`)-(SELECT MIN(word_id) FROM `word`)) * RAND() 
               + (SELECT MIN(word_id) FROM `word`) ) LIMIT 12' ;          
       $sql_p = $pdo->prepare($sql);
-      $res = $sql_p->execute();
-      if($res != 'FALSE'){
-        $data = [];
-        while($row = $res->fetch(\PDO::FETCH_ASSOC)){
-          $data[] = $row;
-        }
-			  return $data;
-		  }else{
-		  	return 'FALSE';
-		  }
+      $res = $sql_p->execute(); 
+      if($res == 'TRUE'){
+        return $res->fetchAll(PDO::FETCH_ASSOC);
+      }else{
+        return 'FALSE';
+      }
   }
   
   //更新正确的单词数量
