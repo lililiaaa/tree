@@ -11,100 +11,59 @@ class User_model extends CI_Model{
 	 //params: openid
 	 //http: post 
 	 //return: 结果数组 或者 'FALSE'
-    public function get_M_H_S($u_id){
-		$pdo = DB::getInstance();
-		$sql = 'SELECT leaves,COUNT("house_id"),COUNT("sprite_id") FROM `user`
-					LEFT JOIN `user_house` on `user_house`.u_id = `user`.u_id
-					LEFT JOIN `user_sprite` on `user_sprite`.sprite_id = `user`.u_id 
-					WHERE `user`.u_id in ( '. $u_id.' )';
-		$res = $pdo->query($sql);
-		if($res != 'FALSE'){
-            $data = [];
-            while($row = $res->fetch(PDO::FETCH_ASSOC)){
-                $data[] = $row;
-            }
-            return $data;
-        }else{
-            return 'FALSE';
-        }
-	}
+    // public function get_M_H_S($u_id){
+	// 	$pdo = DB::getInstance();
+	// 	$sql = 'SELECT leaves,COUNT("house_id"),COUNT("sprite_id") FROM `user`
+	// 				LEFT JOIN `user_house` on `user_house`.u_id = `user`.u_id
+	// 				LEFT JOIN `user_sprite` on `user_sprite`.sprite_id = `user`.u_id 
+	// 				WHERE `user`.u_id in ( '. $u_id.' )';
+	// 	$sql_p = $pdo->prepare($sql);
+    //     $res = $sql_p->execute(); 
+		// if($res == 'TRUE'){
+		// 	return $res->fetchAll(PDO::FETCH_ASSOC);
+		// }else{
+		// 	return 'FALSE';
+		// } 
+	// }
 
-	// 添加朋友 
-	//params : $receiver,$sender
-	//return 数组$row['$row_1','$row_2']
-	public function add_fri($receiver,$sender){
-		$row_1 = DB::insert('friend', [
-			'u_id' => $sender,
-			'f_u_id' => $receiver
-		]);
-		$row_2 = DB::insert('friend', [
-			'u_id' => $receiver,
-			'f_u_id' => $sender
-		]);
-		$row = [
-			'row_1'=>$row_1,
-			'row_2'=>$row_2
-		];
-		return $row;
-	}
 
 	//params : $receiver,$sender
 	//return 受影响行数 
-	public function del_fri($receiver,$sender){
-		$rows = DB::delete('friend', [
-			'u_id' => $receiver,
-			'f_u_id' =>$sender
-		]);
-		return 
-	}
+	// public function del_fri($receiver,$sender){
+	// 	$rows = DB::delete('friend', [
+	// 		'u_id' => $receiver,
+	// 		'f_u_id' =>$sender
+	// 	]);
+	// 	return $row;
+	// }
 
-	// 查找某个好友的资料
-	//params: $u_name
-	//return 结果数组 或者 [] 数组
-	public function search_fri($u_name){
-		$rows = DB::select('user', ['name' => $u_name]);
-		return $rows;
-	}
 
-	//所有好友
-	//params :$uid;
-	//return 
-	public function search_all_fri($u_id){
-		$rows = DB::select('friend', ['u_id' => $u_id]);
-		return $rows;
-	}
-
-	//获得用户的所有精灵
+	// 获得用户的所有精灵
 	// param ：$u_id
-	//return: 结果数组 或者 'FALSE'
+	// return: 结果数组 或者 'FALSE'
     public function get_all_sprite($u_id){
 		$pdo = DB::getInstance();
-		$sql = 'SELECT * FROM `user_sprite`
+		$sql = 'SELECT COUNT(*) FROM `user_sprite`
 				LEFT JOIN `sprite`.sprite_id = `user_sprite`.sprite_id 
 				WHERE `user`.u_id in ( '.$u_id.' )';
-		$res = $pdo->query($sql);
-		if($res != 'FALSE'){
-			$data = [];
-			while($row = $res->fetch(PDO::FETCH_ASSOC)){
-				$data[] = $row;
-			}
-			return $data;
+		$sql_p = $pdo->prepare($sql);
+		$res = $sql_p->execute();
+		if($res == 'TRUE'){
+			return $res->fetchAll(PDO::FETCH_ASSOC);
 		}else{
 			return 'FALSE';
-		}
+		} 
 	}
 
-	// 获取精灵的对话
-	public function ($sprite_id){
+	// // 获取精灵的对话
+	// FALSE 或者 数组
+	public function sprite_dialog($sprite_id){
 		$pdo = DB::getInstance();
 		$sql = 'SELECT * FROM `sprite_dialog`  WHERE `sprite_id` IN ('.$sprite_id.')';
-		$res = $pdo->query($sql);
-		if($res != 'FALSE'){
-			$data = [];
-			while($row = $res->fetch(PDO::FETCH_ASSOC)){
-				$data[] = $row;
-			}
-			return $data;
+		$sql_p = $pdo->prepare($sql);
+        $res = $sql_p->execute(); 
+		if($res == 'TRUE'){
+			return $res->fetchAll(PDO::FETCH_ASSOC);
 		}else{
 			return 'FALSE';
 		}
@@ -125,13 +84,10 @@ class User_model extends CI_Model{
 	public function get_own_sprite($uid,$sprite_id){
 		$sql = 'SELECT * FROM `user_sprite` 
 				LEFT JOIN `sprite` on `user_sprite`.u_id = `sprite.u_id`';
-		$res = $pdo->query($sql);
-		if($res != 'FALSE'){
-			$data = [];
-			while($row = $res->fetch(PDO::FETCH_ASSOC)){
-				$data[] = $row;
-			}
-			return $data;
+		$sql_p = $pdo->prepare($sql);
+        $res = $sql_p->execute(); 
+		if($res == 'TRUE'){
+			return $res->fetchAll(PDO::FETCH_ASSOC);
 		}else{
 			return 'FALSE';
 		}
@@ -142,16 +98,13 @@ class User_model extends CI_Model{
 	//return: 结果数组 或者 'FALSE'
     public function get_all_sprite($u_id){
 		$pdo = DB::getInstance();
-		$sql = 'SELECT * FROM `user_house`
+		$sql = 'SELECT COUNT(*) FROM `user_house`
 				LEFT JOIN `house`.house_id = `user_house`.house_id 
 				WHERE `user`.u_id in ( '.$u_id.' )';
-		$res = $pdo->query($sql);
-		if($res != 'FALSE'){
-			$data = [];
-			while($row = $res->fetch(PDO::FETCH_ASSOC)){
-				$data[] = $row;
-			}
-			return $data;
+		$sql_p = $pdo->prepare($sql);
+        $res = $sql_p->execute(); 
+		if($res == 'TRUE'){
+			return $res->fetchAll(PDO::FETCH_ASSOC);
 		}else{
 			return 'FALSE';
 		}
@@ -182,7 +135,8 @@ class User_model extends CI_Model{
     // public function grow($sprite_id){
 	// 	$pdo = DB::getInstance();
 	// 	$sql = 'UPDATE ';
-	// 	$res = $pdo->exec($sql);
+	// 	$sql_p = $pdo->prepare($sql);
+        // $res = $sql_p->execute();
 	// 	return $res; 
 	// }
 	

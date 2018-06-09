@@ -1,5 +1,6 @@
 <?php
 
+// use \PDO;
 use QCloud_WeApp_SDK\Mysql\Mysql as DB;
 
 class Vocabulary_model extends CI_Model 
@@ -11,11 +12,12 @@ class Vocabulary_model extends CI_Model
     	$pdo = DB::getInstance();
       $sql = 'SELECT  * FROM `word`
               WHERE (word_id >= ((SELECT MAX(word_id) FROM `word`)-(SELECT MIN(word_id) FROM `word`)) * RAND() 
-                + (SELECT MIN(word_id) FROM `word`) )LIMIT 12' ;          
-      $query = $pdo->query($sql);
+              + (SELECT MIN(word_id) FROM `word`) ) LIMIT 12' ;          
+      $sql_p = $pdo->prepare($sql);
+      $res = $sql_p->execute();
       if($res != 'FALSE'){
         $data = [];
-        while($row = $res->fetch(PDO::FETCH_ASSOC)){
+        while($row = $res->fetch(\PDO::FETCH_ASSOC)){
           $data[] = $row;
         }
 			  return $data;
