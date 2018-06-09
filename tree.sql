@@ -147,7 +147,7 @@ CREATE TABLE `sprite` (
   `sprite_name` varchar(255) DEFAULT NULL COMMENT '精灵的名字',
   `sex` varchar(8) NOT NULL DEFAULT 'man' COMMENT '性别 man/woman',
   `levels` int(255) NOT NULL DEFAULT '0' COMMENT '等级',
-  `price` varchar(255) NOT NULL DEFAULT `0` COMMENT '精灵价格',
+  `price` varchar(255) NOT NULL DEFAULT '0' COMMENT '精灵价格',
   `intro` varchar(255) NOT NULL COMMENT '精灵介绍',
   `img_child` varchar(255) NOT NULL COMMENT '精灵图片（幼年）',
   `img_young` varchar(255) NOT NULL COMMENT '精灵图片（青年）',
