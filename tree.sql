@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : CrazyChat
-Source Server Version : 50505
+Source Server         : cccc
+Source Server Version : 50624
 Source Host           : localhost:3306
 Source Database       : tree
 
 Target Server Type    : MYSQL
-Target Server Version : 50505
+Target Server Version : 50624
 File Encoding         : 65001
 
-Date: 2018-06-05 22:09:56
+Date: 2018-06-10 02:00:03
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -189,12 +189,20 @@ CREATE TABLE `user` (
   `leaves` int(255) NOT NULL DEFAULT '0' COMMENT '金叶子数',
   `words` int(255) NOT NULL DEFAULT '0' COMMENT '单词积累数',
   `quizzes` int(255) NOT NULL DEFAULT '0' COMMENT '知识问答正确题数',
+  `steps` int(255) DEFAULT NULL COMMENT '运动步数',
   PRIMARY KEY (`u_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
+INSERT INTO `user` VALUES ('1', '', '用户', 'man', null, '', '0', null, '20', '0', '0', '1234');
+INSERT INTO `user` VALUES ('2', '', '用户', 'man', null, '', '0', null, '0', '0', '0', null);
+INSERT INTO `user` VALUES ('3', '', '用户', 'man', null, '', '0', null, '0', '0', '0', null);
+INSERT INTO `user` VALUES ('4', '', '用户', 'man', null, '', '0', null, '0', '0', '0', null);
+INSERT INTO `user` VALUES ('5', '', '用户', 'man', null, '', '0', null, '0', '0', '0', null);
+INSERT INTO `user` VALUES ('6', '', '用户', 'man', null, '', '0', null, '20', '0', '0', null);
+INSERT INTO `user` VALUES ('7', '', '用户', 'man', null, '', '0', null, '5', '0', '0', null);
 
 -- ----------------------------
 -- Table structure for `user_car`
@@ -246,14 +254,16 @@ DROP TABLE IF EXISTS `user_sprite`;
 CREATE TABLE `user_sprite` (
   `u_id` varchar(255) NOT NULL COMMENT '用户u_id',
   `sprite_id` int(11) NOT NULL COMMENT '使用中的精灵ID',
-  `status` varchar(255) NOT NULL DEFAULT 'false' COMMENT '是否结婚',
-  `use_status` varchar(255) DEFAULT NULL,
+  `use_status` varchar(255) NOT NULL DEFAULT 'false' COMMENT '是否使用',
+  `status` varchar(255) NOT NULL DEFAULT 'child' COMMENT '成长阶段',
+  `percent` varchar(255) NOT NULL DEFAULT '0',
   PRIMARY KEY (`u_id`,`sprite_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user_sprite
 -- ----------------------------
+INSERT INTO `user_sprite` VALUES ('1', '1', 'false', 'child ', '20');
 
 -- ----------------------------
 -- Table structure for `word`
