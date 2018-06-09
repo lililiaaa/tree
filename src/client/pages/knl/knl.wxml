@@ -39,3 +39,21 @@
 <view class='text'>交响乐，交响曲，谐音</view>
 <button bindtap='re'>下一题</button>
 </view>
+
+
+<view class='right'  wx:if="{{hidedui}}">
+<view class='text'>恭喜你！</view>
+<image src='../image/right.png'></image>
+<view class='text'>答对啦</view>
+<button bindtap='re'>下一题</button>
+</view>
+
+
+
+<view class='right'  wx:if="{{hidecuo}}">
+<view class='text'>很遗憾！</view>
+<image src='../image/wrong.png'></image>
+<view class='retext'>正确答案</view>
+<view class='text'>{{rightAnswer[subjectnum]}}</view>
+<button bindtap='re'>下一题</button>
+</view>

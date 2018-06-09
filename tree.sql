@@ -1,13 +1,13 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : cccc
-Source Server Version : 50624
+Source Server         : CrazyChat
+Source Server Version : 50505
 Source Host           : localhost:3306
 Source Database       : tree
 
 Target Server Type    : MYSQL
-Target Server Version : 50624
+Target Server Version : 50505
 File Encoding         : 65001
 
 Date: 2018-06-05 22:09:56

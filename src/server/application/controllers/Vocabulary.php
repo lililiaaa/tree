@@ -15,10 +15,10 @@ class Vocabulary extends CI_Controller {
   //获取单词id，词汇文本和正确、错误选项
   public function get_vocabulary(){
     $result = $this->vocabulary_model->get_answer_by_vocabulary();
-    if(count($result)>0){
-      echo json_encode($res);
+    if($result!='FALSE'){
+      echo json_encode($result);
     }else{
-      echo "no data"
+      echo "no data";
     }
   }
 

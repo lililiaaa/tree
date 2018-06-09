@@ -1,36 +1,35 @@
 <view class='house'>
-<view class='timu'>索菲娜</view>
+<view class='timu'>{{name[changeimg]}}</view>
 <view class='border'>
-<image src='http://p3.so.qhimgs1.com/bdr/_240_/t01baccea1e61a9cf23.jpg'></image>
-
+<image src='{{image[changeimg]}}'></image>
 </view>
 </view>
-<button>确定更换</button>
+<button bindtap='confirm' data-name='{{name[changeimg]}}' data-image='{{image[changeimg]}}'>确定更换</button>
 <view class='jieshao'>选择精灵</view>
 <view class='bg'>
 <scroll-view  style="width: 100%"  scroll-x class='scorll'>
 <view class='buttom'>
-  <view class='icon'>
+  <view class='icon' bindtap='change0'>
   <image src='http://p3.so.qhimgs1.com/bdr/_240_/t016745331ddbd5acc3.jpg'></image>
   <view class='text'>依诺</view>
   </view>
-  <view class='icon'>
+  <view class='icon' bindtap='change1'>
   <image src='http://p0.so.qhimgs1.com/bdr/_240_/t01ff77dcbd9a607cf0.jpg'></image>
   <view class='text'>爱丽</view>
   </view>
-  <view class='icon'>
+  <view class='icon'  bindtap='change2'>
   <image src='http://ent.chinadaily.com.cn/img/attachement/jpg/site1/20170719/448a5bd66a811ad93f9d26.jpg'></image>
   <view class='text'>梅丽莎</view>
   </view>
-  <view class='icon'>
+  <view class='icon'  bindtap='change3'>
   <image src='http://img.zcool.cn/community/0120e956ad92eb32f875520f7b4156.jpg'></image>
   <view class='text'>梦莎</view>
   </view>
-   <view class='icon'>
+   <view class='icon' bindtap='change4'>
   <image src='http://p3.so.qhimgs1.com/bdr/_240_/t01baccea1e61a9cf23.jpg'></image>
   <view class='text'>索菲娜</view>
   </view>
-   <view class='icon'>
+   <view class='icon' bindtap='change5'>
   <image src='http://p1.so.qhimgs1.com/bdr/_240_/t01a02d0c4bfbae41d1.jpg'></image>
   <view class='text'>诺兰</view>
   </view>

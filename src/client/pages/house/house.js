@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    houseimg: 'http://p0.so.qhimgs1.com/bdr/_240_/t019dc82594b357f4da.jpg',
+    housename: "少女时代",
+    sentence: []
   },
 
   
@@ -13,6 +15,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that=this;
+    this.setData({
+      houseimg: options.houseimg,
+      housename: options.housename
+    }) 
+    wx.request({
+      url: '', //由房屋链接后台获取房屋数据列表
+      data: {
+        houseimg: houseimg
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function(res){
+        //console.log(res.data)
+        that.setData({
+          sentence: res.data
+        })
+      }
+    })
     // for (var j = 0; j < oIcon.length; j++) {
     //   oIcon[j].index = j;
     //   oIcon[j].onmouseover = function () {

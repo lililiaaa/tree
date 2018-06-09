@@ -13,16 +13,41 @@ Page({
     hidefive: false,
     xiao: true,
     zhong: false,
-    da: false
+    da: false,
+    petname:"洛神",
+    petimg:'http://p2.so.qhimgs1.com/bdr/200_200_/t01f9da8c00bb4c7092.jpg',
+    petimg2: 'http://p2.so.qhimgs1.com/bdr/200_200_/t01f9da8c00bb4c7092.jpg',
+    petimg3: 'http://p2.so.qhimgs1.com/bdr/200_200_/t01f9da8c00bb4c7092.jpg',
   },
 
   duihuan: function () {
-    wx.showToast({
-      title: '获得600叶子币',
-      icon: 'warn',
-      duration: 2000
-    })
-
+    var that=this;
+    var oopenid = getApp().globalData.myopenid;
+    var huan = getApp().duihuan.duihuan;
+    if (huan!=0){
+      wx.showToast({
+        title: '获得600叶子币',
+        icon: 'warn',
+        duration: 2000
+      })
+      wx.request({
+        url: '/index.php/',//根据openid修改用户叶子币数
+        data: {
+          oopenid: oopenid,
+          changenmoney: 600
+        },
+        header: {
+          'Content-Type': 'application/json'
+        },
+      })
+     getApp().duihuan.duihuan= 0
+    }
+    else{
+      wx.showModal({
+        title: '提示',
+        content: '您已兑换过',
+      })
+    }
   },
 
   duihua: function () {
@@ -45,7 +70,16 @@ Page({
       hideth: this.data.hideth = false,
       hidefo: this.data.hidefo = false,
       hidefive: this.data.hidefive = false,
-
+    })
+    wx.request({
+      url: '/index.php/',//根据openid修改用户叶子币数
+      data: {
+        oopenid: oopenid,
+        changenmoney: -60
+      },
+      header: {
+        'Content-Type': 'application/json'
+      },
     })
   },
   two: function () {
@@ -57,6 +91,16 @@ Page({
       hidefo: this.data.hidefo = false,
       hidefive: this.data.hidefive = false,
     })
+    wx.request({
+      url: '/index.php/',//根据openid修改用户叶子币数
+      data: {
+        oopenid: oopenid,
+        changenmoney: -60
+      },
+      header: {
+        'Content-Type': 'application/json'
+      },
+    })
   },
   three: function () {
     this.setData({
@@ -66,6 +110,16 @@ Page({
       hideth: this.data.hideth = true,
       hidefo: this.data.hidefo = false,
       hidefive: this.data.hidefive = false,
+    })
+    wx.request({
+      url: '/index.php/',//根据openid修改用户叶子币数
+      data: {
+        oopenid: oopenid,
+        changenmoney: -60
+      },
+      header: {
+        'Content-Type': 'application/json'
+      },
     })
   },
   four: function () {
@@ -77,6 +131,16 @@ Page({
       hidefo: this.data.hidefo = true,
       hidefive: this.data.hidefive = false,
     })
+    wx.request({
+      url: '/index.php/',//根据openid修改用户叶子币数
+      data: {
+        oopenid: oopenid,
+        changenmoney: -60
+      },
+      header: {
+        'Content-Type': 'application/json'
+      },
+    })
   },
   five: function () {
     this.setData({
@@ -86,6 +150,16 @@ Page({
       hideth: this.data.hideth = false,
       hidefo: this.data.hidefo = false,
       hidefive: this.data.hidefive = true,
+    })
+    wx.request({
+      url: '/index.php/',//根据openid修改用户叶子币数
+      data: {
+        oopenid: oopenid,
+        changenmoney: -60
+      },
+      header: {
+        'Content-Type': 'application/json'
+      },
     })
   },
   success: function () {
@@ -131,7 +205,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    getApp().duihuan.duihuan = 1
+    this.setData({
+      petimg: options.petimg,
+      petname: options.petname
+    })
+    wx.request({
+      url: '', //由精灵图片链接后台获取两个精灵图片
+      data: {
+        petimg: petimg
+      },
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        //console.log(res.data)
+        that.setData({
+          petimg2: res.data,
+          petimg3: res.data
+        })
+      }
+    })
   },
 
   /**
