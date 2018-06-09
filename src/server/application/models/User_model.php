@@ -124,7 +124,7 @@ class User_model extends CI_Model{
 		$sql = 'SELECT * FROM `user_sprite` 
 				LEFT JOIN `sprite` on `user_sprite`.u_id = `sprite.u_id`';
 		$sql_p = $pdo->prepare($sql);
-        $res = $sql_p->execute();
+        $res = $sql_p->execute(); 
 		if($res == 'TRUE'){
 			return $res->fetchAll(PDO::FETCH_ASSOC);
 		}else{

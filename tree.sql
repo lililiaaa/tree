@@ -92,6 +92,7 @@ DROP TABLE IF EXISTS `mind_fruit`;
 CREATE TABLE `mind_fruit` (
   `fruit_id` int(11) NOT NULL AUTO_INCREMENT,
   `u_id` varchar(255) NOT NULL DEFAULT '' COMMENT 'OpenID ',
+  `chance` varchar(5) NOT NULL DEFAULT '5' COMMENT '剩余机会 ',
   `content` varchar(255) NOT NULL COMMENT '状态',
   PRIMARY KEY (`fruit_id`,`u_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -146,9 +147,12 @@ CREATE TABLE `sprite` (
   `sprite_name` varchar(255) DEFAULT NULL COMMENT '精灵的名字',
   `sex` varchar(8) NOT NULL DEFAULT 'man' COMMENT '性别 man/woman',
   `levels` int(255) NOT NULL DEFAULT '0' COMMENT '等级',
+  `price` varchar(255) NOT NULL DEFAULT `0` COMMENT '精灵价格',
+  `intro` varchar(255) NOT NULL COMMENT '精灵介绍',
   `img_child` varchar(255) NOT NULL COMMENT '精灵图片（幼年）',
   `img_young` varchar(255) NOT NULL COMMENT '精灵图片（青年）',
   `img_old` varchar(255) NOT NULL COMMENT '精灵图片(老年)',
+  `img` varchar(255) NOT NULL COMMENT '商店展示图',
   `dialog` varchar(255) NOT NULL DEFAULT '很高兴见到你！' COMMENT '对话',
   `kinds` varchar(255) NOT NULL COMMENT '精灵种类',
   PRIMARY KEY (`sprite_id`)
