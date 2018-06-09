@@ -39,7 +39,7 @@ CREATE TABLE `car` (
 -- ----------------------------
 DROP TABLE IF EXISTS `friend`;
 CREATE TABLE `friend` (
-  `friend_id` int(11) NOT NULL,
+  `friend_id` int(11) NOT NULL AUTO_INCREMENT,
   `u_id` varchar(255) NOT NULL DEFAULT '' COMMENT '用户自己的OpenID ',
   `f_u_id` varchar(255) NOT NULL DEFAULT '' COMMENT '朋友的OpenID ',
   PRIMARY KEY (`friend_id`,`u_id`)
