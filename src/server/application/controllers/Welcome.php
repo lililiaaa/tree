@@ -59,10 +59,9 @@ class Welcome extends CI_Controller {
 	//代理请求 
 	// http: post
 	// way:post
+
 	public function askweixin(){
 		$code = $this->input->post('code');
-		// $app_id = $this->$app_id;
-		// $secret = $this->$secret;
 		$app_id = 'wxdc3e0648f98f4400';
 		$secret = '3d5b400d1cf6ddf856e671c03c2a08ac';
 		$url = 'https://api.weixin.qq.com/sns/jscode2session?appid='.$app_id.'&secret='.$secret.'&js_code='.$code.'&grant_type=authorization_code';
@@ -87,7 +86,8 @@ class Welcome extends CI_Controller {
 			}
 		}
 		
-	}
+	// }
+
 	
 	// by 袁庆龙 end
 }
