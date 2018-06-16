@@ -107,6 +107,7 @@
   margin: auto 20rpx;  
   text-indent: 2rem;
   line-height: 1.5rem;
+  color: #a5a5a5;
 }
 .remind button{
   width: 200rpx;
@@ -117,5 +118,29 @@
   color: white;
   background-color: rgb(244, 186, 81);
 }
+.reward{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+.zhong{
+  font-size: 55rpx;
+  font-weight: 600;
+  color: #383838
+}
+.zi{
+  font-size: 40rpx;
 
+}
+.add{
+  font-size: 140rpx;
+  color: #f1c75e;
 
+}
+.text{
+  font-size: 30rpx;
+  color: #909090;
+  margin: 0 20rpx;
+}

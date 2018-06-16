@@ -1,17 +1,17 @@
 <view class='word'  wx:if="{{show}}" >
-  <view class='num'>叶子币数：520</view>
+  <view class='num'>叶子币数：{{omoney}}</view>
   <view class='question'>
   <view class='class'>四级词汇</view>
-  <view class='q-word'>symphony</view>
+  <view class='q-word' wx:for="{{vocabulary}}" wx:key="{{index}}">{{item.vocabulary_content}}</view>
   <view class='tip'>答对10题即可获得3个叶子币哦</view>
   </view>
 
   <view class='answer'>
-  <radio-group class="radio-group" bindchange="radioChange">
-    <label class="radio" wx:for="{{items}}" wx:key="{{index}}">
-      <button value="{{item.name}}"  bindtap='right' >{{item.value}}</button>
+  <view class="radio-group"   wx:for="{{vocabulary}}" wx:key="{{index}}">
+    <label class="radio"  wx:for="{{item.answer}}" wx:key="{{index}}">
+     <button bindtap="radioChange" id="{{item.answer_id}}">{{item.answer}}</button> 
     </label>
-  </radio-group>
+  </view>
   </view>
 
 
@@ -36,6 +36,6 @@
 <view class='text'>很遗憾！</view>
 <image src='../image/wrong.png'></image>
 <view class='retext'>正确答案</view>
-<view class='text'>交响乐，交响曲，谐音</view>
+<view class='text'>{{right}}</view>
 <button bindtap='re'>下一题</button>
 </view>

@@ -20,9 +20,7 @@ defined('BASEPATH') OR exit('NO direct stcript access allowed');
             return $data;
         }else{
             return 'FALSE';
-        }
-        
-        
+        }        
     }
     // 添加新用户 
     //return 返回受影响的行数
@@ -32,13 +30,21 @@ defined('BASEPATH') OR exit('NO direct stcript access allowed');
         return $pdo->exec($sql);
     }
 
+    
     //排行榜
     public function compare_list(){
         $pdo = DB::getInstance();
-        $sql = 'SELECT * FROM `user`  ORDER BY `user`.leaves LIMIT(30)';
+        $sql = 'SELECT * FROM `user` 
+          ORDER BY `user`.leaves LIMIT(30)';
         $res = $pdo->query($sql);
-        foreach ($res->fetch(\PDO::FETCH_ASSOC) as $row ) {
-            # code...
+        if($res != 'FALSE'){
+            $data = [];
+            while($row = $res->fetch(PDO::FETCH_ASSOC)){
+                $data[] = $row;
+            }
+            return $data;
+        }else{
+            return 'FALSE';
         }
     }
 

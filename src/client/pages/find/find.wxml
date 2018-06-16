@@ -9,8 +9,9 @@
     </swiper> 
 
 <view class='h1'>比赛推送</view>
-<image src='../image/game.png' class='tu'></image>
+
+<navigator url='../cmessage/cmessage'><image src='../image/game.png' class='tu'></image></navigator>
 
 <view class='h1'>奖品推送</view>
-<image src='../image/award.png' class='tu'></image>
+<navigator url='../award/award'><image src='../image/award.png' class='tu'></image></navigator>
 </view>

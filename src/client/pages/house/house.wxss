@@ -1,4 +1,4 @@
-/* pages/house/house.wxss */
+/* pages/housechange/housechange.wxss *//* pages/house/house.wxss */
 .buttom{
   display: flex;
 }
@@ -49,4 +49,13 @@ background: #f2f2f2;
 }
 .bg{
   background: #f2f2f2;
+}
+button{
+   background-color:#f4ba3d; 
+  color: white;
+  width: 150rpx;
+  height: 65rpx;
+  border-radius: 30rpx;
+  line-height: 65rpx;
+  margin-top: 20rpx;
 }

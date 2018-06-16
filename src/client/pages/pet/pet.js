@@ -13,30 +13,37 @@ Page({
     hidefive: false,
     xiao: true,
     zhong: false,
-    da: false
+    da: false,
+    petname:"洛神",
+    petimg: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1529031775&di=f2d73b08750bcbcfb47031f6e93d7dd3&imgtype=jpg&er=1&src=http%3A%2F%2Fimgq.duitang.com%2Fuploads%2Fitem%2F201501%2F17%2F20150117203244_aHKHx.jpeg',
+    petimg2: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1529031790&di=9c4b509bfb5bebc16747f0f4d662d3fd&imgtype=jpg&er=1&src=http%3A%2F%2Fimages.17173.com%2F2015%2Fnews%2F2015%2F03%2F12%2Fmj0312dl01s.jpg',
+    petimg3: 'http://p3.so.qhimgs1.com/bdr/_240_/t01baccea1e61a9cf23.jpg',
   },
-
   duihuan: function () {
-    wx.showToast({
-      title: '获得600叶子币',
-      icon: 'warn',
-      duration: 2000
-    })
-
+    var that = this;
+    var oopenid = getApp().globalData.myopenid;
+    var huan = getApp().duihuan.duihuan;
+    if (huan != 0) {
+      wx.showToast({
+        title: '获得600叶子币',
+        icon: 'warn',
+        duration: 2000
+      })
+    }
+    else {
+      wx.showModal({
+        title: '提示',
+        content: '您已兑换过',
+      })
+    }
   },
 
   duihua: function () {
     wx.showModal({
       title: '洛神',
       content: '亲，你今天还没有喂食哦，小洛神在等你呀，快去运动学习喽',
-      // success: function (res) {
-      //   if (res.confirm) {
-      //     console.log('用户点击确定')
-      //   } 
     })
   },
-
-
   one: function () {
     this.setData({
       hideone: this.data.hideone = true,
@@ -45,7 +52,6 @@ Page({
       hideth: this.data.hideth = false,
       hidefo: this.data.hidefo = false,
       hidefive: this.data.hidefive = false,
-
     })
   },
   two: function () {
@@ -58,6 +64,7 @@ Page({
       hidefive: this.data.hidefive = false,
     })
   },
+  
   three: function () {
     this.setData({
       hideone: this.data.hideone = false,
@@ -131,7 +138,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      petimg: options.petimg,
+      petimg2: options.petimg,
+      petimg3: options.petimg,
+      petname: options.petname
+    })
+    // wx.request({
+    //   url: '', //由精灵图片链接后台获取两个精灵图片
+    //   data: {
+    //     petimg: petimg
+    //   },
+    //   header: {
+    //     'content-type': 'application/json'
+    //   },
+    //   success: function (res) {
+    //     //console.log(res.data)
+    //     that.setData({
+    //       petimg2: res.data,
+    //       petimg3: res.data
+    //     })
+    //   }
+    // })
   },
 
   /**

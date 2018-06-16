@@ -5,37 +5,51 @@ use \QCloud_WeApp_SDK\Auth\LoginService as LoginService;
 use QCloud_WeApp_SDK\Constants as Constants;
 
 class Vocabulary extends CI_Controller {
+	// public function __construct(){
+	// 		parent::__construct();
+	// 		$this->load->model('Vocabulary_model');
+	// 	}
+   /* public function index() {
+        $result = LoginService::check();
 
-  public function __construct(){
-    parent::__construct();
-    $this->load->model("vocabulary_model");
-  } 
-  // by 袁庆龙 start
+        if ($result['loginState'] === Constants::S_AUTH) {
+            $this->json([
+                'code' => 0,
+                'data' => $result['userinfo']
+            ]);
+        } else {
+            $this->json([
+                'code' => -1,
+                'data' => []
+            ]);
+        }
+    }*/
+    
+    
 
-  //获取单词id，词汇文本和正确、错误选项
-  public function get_vocabulary(){
-    $result = $this->vocabulary_model->get_answer_by_vocabulary();
-    if(count($result)>0){
-      echo json_encode($res);
-    }else{
-      echo "no data"
+    // 	$query=$this->Vocabulary_model->get_vocabulary();
+    //   $result=json_encode($query);
+    //   echo $result;
+    // }
+
+      public function get_vocabulary() {
+      $start = $this -> input -> get('start');
+       $limit = $this -> input -> get('limit');
+
+      $this->load->model('vocabulary_model');
+      // 查询题目
+      $vocabulary=$this->vocabulary_model->get_lisfind_by_describe_answert($start, $limit);
+
+      foreach($vocabulary as $v){
+       
+        $v -> answer = $this->vocabulary_model->get_answer_by_vocabulary($v->vocabulary_id);
+      };
+      echo json_encode($vocabulary);
     }
-  }
 
-  // ability： 更新数据库正确单词的数量
-  // params： openid， words_number
-  // http:  post
-  public function update_word_num(){
-    $u_id = $this->input->post('u_id');
-    $words = $this->input->post('words_number');
-    $result = $this->Welcome_model->update_word($u_id,$words);
-    if($result>0){
-      echo 'success';
-    }else{
-      echo 'false';
-    }
-  }
 
-  // by 袁庆龙 end
+
+
+   
 
 }

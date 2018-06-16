@@ -1,0 +1,16 @@
+<view class='contain'>
+
+<view class='title'>
+<view class="xieshi" bindtap='xie'>写实</view>
+<view class="manhua" bindtap="man">漫画</view>
+</view>
+<view class='nav'>
+<view class='pic' wx:if="{{show}}">
+<image wx:for="{{pic1}}" src="{{item.img_inside}}" class='img'data-index="{{index}}" bindtap='look'></image>
+
+</view>
+<view class='pic' wx:if="{{hide}}">
+<image wx:for="{{pic2}}" src="{{item.img_inside}}" class='img'data-index="{{index}}" bindtap='look'></image>
+</view>
+</view>
+</view>

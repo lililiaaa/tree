@@ -1,0 +1,35 @@
+<!--pages/haoyou/haoyou.wxml-->
+<view>
+  <image src='http://mpic.tiankong.com/729/9d0/7299d0d5f45b1ed3f58a84e63831688e/640.jpg@!670w' class='img'></image>
+  <view class='top' >
+    <view class='yi'>
+      <view open-type="getUserInfo" lang="zh_CN" class="userinfo-nickname">{{username}}</view>
+    </view>
+    <image src="{{headimg}}" class='tu' background-size="cover"></image>
+    <!-- http://p2.so.qhimgs1.com/bdr/_240_/t0153cb0b9a151c24c2.jpg -->
+  </view>
+</view>
+
+<view class='body' >
+  <view class='nav'>  
+    <view class='kuai' bindtap='rechange'>
+      <view class='h1'>3</view>
+      <view class='zi'>我的树屋</view>
+    </view>
+    <view class='kuai' bindtap='change'>
+      <view class='h1'>3</view>
+      <view class='zi'>我的精灵</view>
+    </view>
+  </view>
+</view>
+<view  class='myhouse' wx:if='{{show}}'>
+<navigator><image src='{{petimg}}'></image></navigator>
+<!-- url='../house/house' -->
+<!-- <navigator url='../housechange/housechange' hover-class='none'><button>更换</button></navigator> -->
+</view>
+
+<view  class='myhouse' wx:if='{{hide}}'>
+<navigator ><image src='{{houseimg}}'></image></navigator>
+<!-- url='../pet/pet' -->
+<!-- <navigator url='../petchange/petchange' hover-class='none'><button>更换</button></navigator> -->
+</view>

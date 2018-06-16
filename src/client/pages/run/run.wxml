@@ -2,11 +2,10 @@
 <view class='top'>
 <view class='h'> 今日步数</view>
 <view class='kuang'>
-   
-    
+
       <view class='icon'>
         
-        <view>15000</view> 
+        <view>{{step}}</view> 
             </view>
   </view> 
 </view>
@@ -41,5 +40,5 @@
 </view>
 </scroll-view>
 </view>
-<button bindtap='buy'>兑换</button>
+<button bindtap='buy' data-step='{{step}}'>兑换</button>
 </view>

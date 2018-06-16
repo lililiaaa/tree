@@ -1,0 +1,36 @@
+.contain{
+margin: 0 20rpx;
+
+}
+.wraper{
+  margin-top:50rpx;
+  overflow: hidden;
+  background: #F6F6F6;
+  border-radius: 30rpx;
+  border:1rpx solder #000;
+  height: 330rpx;
+  box-shadow: 5rpx 5rpx 3rpx #d6d6d6
+}
+.title{
+font-size: 37rpx;
+margin-left:30rpx;
+margin-top: 30rpx;
+}
+.img{
+  height: 180rpx;
+  width: 180rpx;
+  border-radius: 30rpx;
+}
+.fang{
+  display: flex;
+   justify-content: space-around; 
+   margin: 10rpx;
+}
+.text{
+  font-size: 30rpx;
+  margin-left: 550rpx;
+  margin-top: 15rpx;
+
+
+}
+

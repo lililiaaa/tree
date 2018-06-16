@@ -1,0 +1,41 @@
+<view class='contain'>
+
+<view class='title'>
+<view class="xieshi" bindtap='xie'>写实</view>
+<view class="manhua" bindtap="man">漫画</view>
+</view>
+<view class='nav'>
+<view class='pic' wx:if="{{show}}">
+<image src='http://p0.so.qhimgs1.com/bdr/_240_/t011350fdd391ddf88a.jpg' class='img' bindtap='look'></image>
+<image src='http://p3.so.qhimgs1.com/bdr/_240_/t016d211e5680f4b223.jpg' class='img' bindtap='look'></image>
+<image src='http://www.civilcn.com/d/file/zhuangxiu/xiaoguotu/2011-06-15/5d0734b48e8f14c691e1f7fbff0e583f.jpg' class='img' bindtap='look'></image>
+<image src='http://p3.so.qhimgs1.com/bdr/_240_/t01993b1eb53f2c3f73.jpg' class='img' bindtap='look'></image>
+<image src='http://p0.so.qhimgs1.com/bdr/_240_/t019dc82594b357f4da.jpg' class='img' bindtap='look'></image>
+<image src='http://guangxi.sinaimg.cn/2015/0507/U12182P1402DT20150507154035.jpg' class='img' bindtap='look'></image>
+<image src='http://file30.mafengwo.net/M00/32/DD/wKgBpVU07q-AUmK7AAKaJ8mUkUM95.groupinfo.w600.jpeg' class='img' bindtap='look'></image>
+<image src='http://bpic.588ku.com/element_origin_min_pic/20/16/02/0556b4688210014.jpg' class='img' bindtap='look'></image>
+<image src='http://p0.so.qhimgs1.com/bdr/_240_/t013d17fe4c0a05de70.jpg' class='img' bindtap='look'></image>
+<image src='http://bbsimg.ali213.net/data/attachment/forum/201503/05/102515zgs6uusumgaqygru.jpg' class='img' bindtap='look'></image>
+<image src='http://pic1.win4000.com/wallpaper/4/59cda5b92c432.jpg' class='img' bindtap='look'></image>
+<image src='http://p0.so.qhimgs1.com/bdr/_240_/t010e1a484d955bb28c.jpg' class='img' bindtap='look'></image>
+</view>
+
+
+
+
+<view class='pic' wx:if="{{hide}}">
+<image src='https://thumbnail0.baidupcs.com/thumbnail/e297beb219217020ef7ce040ad8670e7?fid=2790675993-250528-921872812843388&time=1528423200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-Hwf0KfdTAYLtGj5%2BRuENi0Wh3Qk%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=216015643218819653&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video' class='img' bindtap='look'></image>
+<image src='https://thumbnail0.baidupcs.com/thumbnail/5aa042843e13871231b6813177835d07?fid=2790675993-250528-432809912904906&time=1528423200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-e%2F1Nxl8YiIeq%2F%2BTPpjsMxqe8sCw%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=215943589463203062&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video' class='img' bindtap='look'></image>
+<image src='https://thumbnail0.baidupcs.com/thumbnail/5f882b54bf8f3678ca174a7b0330f909?fid=2790675993-250528-472024087931501&time=1528423200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-f7XE6b2pwh9Swq%2BQYtVH7%2F4%2F%2FuI%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=215952813147902990&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video' class='img' bindtap='look'></image>
+<image src='https://thumbnail0.baidupcs.com/thumbnail/02569998f39f5b37eaf5168ee7e9e34c?fid=2790675993-250528-556949103509646&time=1528423200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-ztZPotmc3XZ5o2YszzJZTSlAjSw%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=215967884234280595&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video' class='img' bindtap='look'></image>
+<image src='https://thumbnail0.baidupcs.com/thumbnail/d6cbca3d9ce6473b7d4b44666f9c497b?fid=2790675993-250528-526756478931069&time=1528423200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-KAX7CJUMxjmY8LoBUWHtBiGqBDA%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=215976069388510012&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video' class='img' bindtap='look'></image>
+<image src='https://thumbnail0.baidupcs.com/thumbnail/6f19b46e19f836481e7de36afa6531d6?fid=2790675993-250528-489646367816028&time=1528423200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-09jJfi90r5CV3BTYN5RZ1ZEumqc%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=215984715766766067&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video' class='img' bindtap='look'></image>
+<image src='https://thumbnail0.baidupcs.com/thumbnail/33d104330aaa61dcb0b6e1abcd2fd5fa?fid=2790675993-250528-552244468415662&time=1528423200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-ZC8AbHBlMoQviMA680RM1DC%2Fpb8%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=215995114341531298&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video' class='img' bindtap='look'></image>
+<image src='https://thumbnail0.baidupcs.com/thumbnail/268c141f2542c17fd3fce18f59931f8e?fid=2790675993-250528-1047713388872243&time=1528423200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-WyA4eWVwFTtfHBfqsF0JfcT%2FpQo%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=215904239705423438&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video' class='img' bindtap='look'></image>
+<image src='https://thumbnail0.baidupcs.com/thumbnail/e1b7f6299c2f459964f4d3af6187f044?fid=2790675993-250528-19926678854365&time=1528423200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-nO4eHTFudYj8JENL9c5YXrriVCc%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=216025298329597733&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video' class='img' bindtap='look'></image>
+<image src='https://thumbnail0.baidupcs.com/thumbnail/624f0ebb5122cfc67a01bf2d4fc65d88?fid=2790675993-250528-195086178638723&time=1528423200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-Vu9VUbPJx0k9pAtGqVHaRx5dKrk%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=216039771752524818&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video' class='img' bindtap='look'></image>
+<image src='https://thumbnail0.baidupcs.com/thumbnail/56d9982cadf74c1d283dc47824b3b52c?fid=2790675993-250528-249802324204450&time=1528423200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-ARnSan%2FgqoKvn4wUyoujq9apZfo%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=216050069815268523&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video' class='img' bindtap='look'></image>
+<image src='https://thumbnail0.baidupcs.com/thumbnail/b8b309813cb5ddaac9264b8bc94e12ce?fid=2790675993-250528-1006632411754310&time=1528423200&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-%2BEm0cqzgDks%2ButSJMGmYf%2BTlRmg%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=216060053616630636&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video' class='img' bindtap='look'></image>
+</view>
+</view>
+</view>

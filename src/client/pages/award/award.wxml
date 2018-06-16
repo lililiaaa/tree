@@ -1,0 +1,53 @@
+<scroll-view>
+<view class='ge'>
+  <view class='body' >
+    <image src='http://img0.imgtn.bdimg.com/it/u=3540679571,3117755351&fm=27&gp=0.jpg' class='tu'></image>
+    <view class='nei'>
+    <view class='h1'> 完成21天养成任务！在冰激凌商店兑换到了东西哦！ </view>
+    <view class='wenzi'>李振婷已经坚持跑步21天，获得了50000叶子币，成功在冰激凌店兑换到美美的冰激凌，每天运动步数达到21500步，大家继续坚持哦！        </view>
+    <image src='https://i01piccdn.sogoucdn.com/fcfebcbf1fac0891' class='icon'></image>
+    </view>
+  </view>
+</view>
+
+<view class='ge'>
+  <view class='body' >
+    <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525714891018&di=c5a863fa7cfd674d69b71a6d90b6aa5a&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01188158b6a00fa801219c778ab3ad.jpg%402o.jpg' class='tu'></image>
+    <view class='nei'>
+    <view class='h1'> 萌宠集结令！前五名完成21天养成任务即可获得萌宠！ </view>
+    <view class='wenzi'>坚持跑步21天，获得了50000叶子币，并在宠物店兑换到了一只小狗，每天运动步数达到21500步，大家继续坚持哦！        </view>
+    <image src='https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=200599496,778934892&fm=27&gp=0.jpg' class='icon'></image>
+    </view>
+  </view>
+</view>
+
+
+
+<view class='ge'>
+  <view class='body' >
+    <image src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3617631715,2976486960&fm=27&gp=0.jpg' class='tu'></image>
+    <view class='nei'>
+    <view class='h1'> 又出新商品啦！前五名完成21天养成任务即可获得冷饮！ </view>
+    <view class='wenzi'>世勋已经坚持跑步21天，获得了50000叶子币，并在宠物店兑换到了一只小狗，每天运动步数达到21500步，大家继续坚持哦！        </view>
+    <image src='https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3470696801,1512185866&fm=27&gp=0.jpg' class='icon'></image>
+    </view>
+  </view>
+</view>
+
+
+
+<view class='ge'>
+  <view class='body' >
+    <image src='https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3608403101,3734834884&fm=27&gp=0.jpg' class='tu'></image>
+    <view class='nei'>
+    <view class='h1'> 商品打折活动！前五名完成15天养成任务即可获得八折卡！ </view>
+    <view class='wenzi'>世勋已经坚持跑步21天，获得了50000叶子币，并在宠物店兑换到了一只小狗，每天运动步数达到21500步，大家继续坚持哦！        </view>
+    <image src='https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=489423423,2450269323&fm=27&gp=0.jpg' class='icon'></image>
+    </view>
+  </view>
+</view>
+
+
+
+
+</scroll-view>

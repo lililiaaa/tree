@@ -1,0 +1,80 @@
+/* pages/jl/jl.wxss */.tip{
+  color: #f4ba3d;
+  font-size: 35rpx;
+  margin-top: 20rpx;
+}
+.contain{
+  margin: 0 40rpx;
+  background: #fff;
+}
+.img{
+  width: 100%;
+  height: 350rpx;
+}
+.pic{
+margin-top: 50rpx;
+border-radius: 10rpx;
+
+}
+.second{
+  display:flex;
+  border-radius: 30rpx;
+  border:1rpx solid #f6f6ff;
+  height: 120rpx;
+  width: 100%;
+  background: #f6f6f6;
+  margin-top: 40rpx;
+  box-shadow: 5rpx 5rpx 3rpx #d6d6d6;
+}
+.price{
+  margin-left:30rpx;
+}
+.buy{
+  margin-left:40rpx;
+  margin-top:35rpx;
+  border-radius: 35rpx;
+  background: #f4ba3d;
+  width:240rpx;
+  height: 60rpx;
+  font-size: 38rpx;
+  text-align: center;
+  line-height: 60rpx;
+  color: #fff
+}
+
+.name{
+  width: 350rpx;
+  font-size: 35rpx;
+  margin-top: 15rpx;
+}
+.gong{
+  font-size: 35rpx;
+   margin-top: 10rpx;
+}
+.last{
+  background: #f6f6f6;
+  border-radius: 30rpx;
+  margin-top:60rpx;
+  width:100%;
+  height: 525rpx;
+  box-shadow: 5rpx 5rpx 3rpx #d6d6d6;
+
+}
+.wrap{
+  margin: 0 30rpx;
+  overflow: hidden;
+
+}
+.detil{
+  margin-top: 20rpx;
+  font-size: 35rpx;
+}
+.content{
+  font-size: 34rpx;
+  margin-top: 20rpx;
+  text-indent: 20rpx
+}
+.wenzi{
+  font-size: 34rpx;
+  text-indent: 20rpx;
+}

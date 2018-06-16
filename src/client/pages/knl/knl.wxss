@@ -38,7 +38,7 @@ Page{
 }
 .q-word{
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1rem;
   margin-bottom: 130rpx;
 }
 .tip{

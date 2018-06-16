@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/friend/friend",
     "pages/mine/mine",
@@ -13,14 +13,28 @@
     "pages/moodFruit/moodFruit",
     "pages/word/word",
     "pages/knl/knl",
-    "pages/game/game"
+    "pages/award/award",
+    "pages/haoyou/haoyou",
+    
+   
+    "pages/study/study",
+    "pages/room/room",
+    "pages/lroom/lroom",
+    
+    "pages/shuwu/shuwu",
+    "pages/cmessage/cmessage",
+    "pages/move/move",
+    
+ 
+    "pages/jingling/jingling",
+    "pages/jl/jl"
   ],
-  "window":{
-    "backgroundColor":"#F6F6F6",
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "习惯树",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#8a8a8a",

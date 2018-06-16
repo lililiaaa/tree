@@ -1,6 +1,6 @@
 <view class="contain">
 
-<view class='pic'><image src='../image/word.png' class='img' ></image></view>
+<view class='pic'><image src="{{pic}}" class='img' ></image></view>
 
 <view class='second'>
 <view class="price">
@@ -13,7 +13,7 @@
 <view class='last'>
 <view class="wrap">
 <view class="detil">商品详情:</view>
-<view class="content">进口宝马X6外观个性动感，车身侧面比例优雅，从车顶滑到车后部的线条流畅柔和，凸显轿跑车的动感轻盈。它的变化主要集中于前脸部分，前保险杠的三维框架造型，新设计的板条以及下部的倾角，让宝马标志性的双深前格栅更为突出。</view>
+<view class="content">{{detail}}</view>
 <view class='tip'>提示：只有购买商品后才能查看内部细节。</view>
 </view>
 </view>

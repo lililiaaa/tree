@@ -1,0 +1,29 @@
+<view class='contain'>
+<view class="wraper" data-shopName="house" bindtap="search1">
+<view class='title'>房子</view>
+<view class='fang'>
+        <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528576630809&di=ea29f0fdd0da77f725b9a4e885dcf584&imgtype=0&src=http%3A%2F%2Fdimg02.c-ctrip.com%2Fimages%2Ffd%2Ftg%2Fg4%2FM00%2F84%2F8C%2FCggYHlX5iwWAdcKEAAFWwHvqf5o229_R_1024_10000.jpg' class='img'></image>
+        <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1529169936&di=8c589e3d9938cb99d7589e80e62c36cd&imgtype=jpg&er=1&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201512%2F31%2F20151231212334_G5fwt.thumb.700_0.jpeg' class='img'></image>
+        <image src='http://www.civilcn.com/d/file/zhuangxiu/xiaoguotu/2011-06-15/5d0734b48e8f14c691e1f7fbff0e583f.jpg' class='img'></image>
+        </view>
+     <view class='text'>查询更多</view>
+</view>
+<view class="wraper"data-shopName="elf" bindtap="search1">
+<view class='title'>精灵</view>
+<view class='fang'>
+        <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1528569633&di=1378501ecafb966ff92930fc61b13f06&src=http://img4.duitang.com/uploads/item/201409/28/20140928014947_EB4SP.png' class='img'></image>
+        <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1529172275&di=782241943f1334ec72ebcdd80c3d3c6a&imgtype=jpg&er=1&src=http%3A%2F%2Fimg4q.duitang.com%2Fuploads%2Fitem%2F201409%2F28%2F20140928014703_5HScQ.thumb.700_0.png' class='img'></image>
+        <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1529172253&di=df5c8a370ae30f0dc1f1d80659df8a4b&imgtype=jpg&er=1&src=http%3A%2F%2Fimg5q.duitang.com%2Fuploads%2Fitem%2F201409%2F28%2F20140928014251_5jnVj.jpeg' class='img'></image>
+        </view>
+     <view class='text'>查询更多</view>
+</view>
+<view class="wraper">
+<view class='title'>车</view>
+<view class='fang'>
+        <image src='https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1182766295,3125418792&fm=200&gp=0.jpg' class='img'></image>
+        <image src='http://img05.tooopen.com/images/20150520/tooopen_sy_125299632475.jpg' class='img'></image>
+        <image src='https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2703554010,459914015&fm=27&gp=0.jpg' class='img'></image>
+        </view>
+     <view class='text' bindtap="hou">查询更多</view>
+</view>
+ </view>

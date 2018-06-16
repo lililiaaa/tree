@@ -9,20 +9,86 @@ Page({
     flag_jo:true,
     flag_msg:false,
   },
+  open(){
+    var that=this;
+    var that=this;
+      console.log(this.data.click_num);
+      if (this.data.click_num==0){
+        wx.showModal({
+          content: '机会用完了',
+          showCancel: false, //不显示取消按钮
+          confirmText: '确定'
+        })
+      } else{
+        this.setData({
+          click_num: that.data.click_num - 1
+        });
+        wx.request({
+          url: 'https://aresiadb.qcloud.la/mindfruit/ud_chance',
+          method: 'GET',
+          data: { u_id: 1,
+            chance: that.data.click_num
+            },
+          header: { 'Content-Type': 'application/json' },
+          success: function (res) {
+        
+      }
+    })
+    var random = Math.round(Math.random()*10);
+    if(random<2){
+       this.setData({ flag_re: false });
+       wx.request({
+         url: 'https://aresiadb.qcloud.la/mindfruit/add_leaves',
+         method: 'GET',
+         data: {
+           u_id: 1,
+         },
+         header: { 'Content-Type': 'application/json' },
+         success: function (res) {
+           that.setData({
+             leaves_num: res.data.leaves,
+           })
+         }
+       })
+    }else{
+      this.setData({ 
+        flag_jo: false,
+        joke_content:"从前有个剑客，他心是冷的，剑是冷的，手是冷的，于是他冻死了……"
+        })
+
+    }
+     }
+  },
   joke: function () {
 
-    this.setData({ 
-      flag_jo: false,
-      joke_content:"从前有个剑客，他心是冷的，剑是冷的，手是冷的，于是他冻死了……"
-      })
 
   },
   reward: function () {
 
-    this.setData({ flag_re: false })
 
   },
   hide: function () {
     this.setData({ flag_re: true, flag_jo: true, flag_msg: true})
   },
+  onLoad: function (options) {
+    var that=this;
+    wx.request({
+      url: 'https://aresiadb.qcloud.la/mindfruit/get_leaves',
+      method: 'GET',
+      data: { u_id: 1 },
+      header: { 'Content-Type': 'application/json' },
+      success: function (res) {
+        console.log(res.data.leaves);
+        that.setData({
+          leaves_num: res.data.leaves,
+          click_num: res.data.chance
+        })
+      }
+    });
+
+
+  }
+  
+  
 })
+  

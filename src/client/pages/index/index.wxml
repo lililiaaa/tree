@@ -23,7 +23,7 @@
       </navigator>
       <navigator hover-class="none" url="../word/word">
       <view class='zao'>
-        <image src='http://p2.so.qhimgs1.com/bdr/_240_/t01407754e95f7f791e.jpg' class='img'></image>
+        <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1528563825&di=f979d85c2067dd870077b825329bc99b&src=http://www.cridao.com/uploads/allimg/151125/6-15112515034U04.jpg' class='img'></image>
         <view class='text'>单词积累</view>
       </view>
       </navigator>
@@ -38,12 +38,12 @@
 
 
 <view>树屋商城</view>
-<navigator hover-class="none"><image src='../image/tree.png' class='tu'> </image></navigator>
+<navigator hover-class="none" url='../shuwu/shuwu'><image src='../image/tree.png' class='tu'> </image></navigator>
 
 <view>坚持情况</view>
   <view class='qk'>
-      <navigator hover-class="none"><image src='../image/qk.png' class='imgg'></image></navigator>
-      <navigator hover-class="none"><image src='../image/qk1.png' class='imgg'></image></navigator>
+      <navigator hover-class="none" url='../move/move'><image src='../image/qk.png' class='imgg'></image></navigator>
+      <navigator hover-class="none" url='../study/study'><image src='../image/qk1.png' class='imgg'></image></navigator>
       <navigator hover-class="none"><image src='../image/qk2.png' class='imgg'></image></navigator>
   </view>
 </view>
