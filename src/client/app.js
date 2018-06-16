@@ -49,23 +49,5 @@ App({
   //         });
   //       }
     
-    },
-    petData: {
-      petname: null,
-      petimg: null
-    },
-    houseData: {
-      housename: null,
-      houseimg: null
-    },
-    globalData: {
-      myuserid: null
-    },
-    dayData: {
-      todaydao: 0,
-      todaydui: 0
-    },
-    duihuan:{
-      duihuan:0
     }
 })
