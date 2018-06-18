@@ -14,7 +14,7 @@
 <view class="wrap">
 <view class="detil">商品详情:</view>
 <view class="content">{{detail}}</view>
-<view class='tip'>提示：只有购买商品后才能查看内部细节。</view>
+<view class='tip'>{{tip}}</view>
 </view>
 </view>
 

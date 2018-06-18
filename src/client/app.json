@@ -15,26 +15,23 @@
     "pages/knl/knl",
     "pages/award/award",
     "pages/haoyou/haoyou",
-    
-   
     "pages/study/study",
     "pages/room/room",
     "pages/lroom/lroom",
-    
     "pages/shuwu/shuwu",
     "pages/cmessage/cmessage",
     "pages/move/move",
-    
- 
     "pages/jingling/jingling",
     "pages/jl/jl"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
+    "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "习惯树",
+    "navigationBarTitleText": "树一树",
     "navigationBarTextStyle": "black"
+
+    
   },
   "tabBar": {
     "color": "#8a8a8a",

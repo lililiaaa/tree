@@ -1,11 +1,11 @@
 // pages/petchange/petchange.js
 Page({
-
+ 
   /**
    * 页面的初始数据
    */
   data: {
-    step: 1380
+    step: 0
   },
   buy: function (e) {
     var that = this; 
@@ -31,7 +31,7 @@ Page({
     
     if (otodaydui != d) {
       wx.request({
-        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/modify_lmoney',//根据openid修改用户叶子币数
+        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/modify_lmoney',//根据userid修改用户叶子币数
         data: {
           ouserid: ouserid,
           changenmoney: changenmoney
@@ -50,7 +50,7 @@ Page({
     else if (otodaydui == d) {
       wx.showModal({
         title: '提示',
-        content: '您已兑换',
+        content: '您今天已兑换',
       })
     }
     }
@@ -66,6 +66,8 @@ Page({
    */
   //获取运动步数
   onLoad: function (options) {
+    var ouserid = getApp().globalData.myuserid;
+    if (ouserid) {
     let that = this
     wx.login({
       success: function (res) {
@@ -81,6 +83,7 @@ Page({
         })
       }
     })
+  }
   },
   get3rdSession: function () {
     let that = this
@@ -99,17 +102,18 @@ Page({
     })
   },
   decodeUserInfo: function () {
-    let that = this
+    let that = this;
     wx.request({
       url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_step', //解密的数据；
       data: {
         encryptedData: that.data.encryptedData,
         iv: that.data.iv,
-        session: wx.getStorageSync('sessionId')
+        session: wx.getStorageSync('sessionId'),
       },
       method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
       success: function (res) {
+        //console.log(res.data.stepInfoList.pop().step);
         let todayStep = res.data.stepInfoList.pop()
         that.setData({
           step: todayStep.step
@@ -117,6 +121,8 @@ Page({
       }
     })
   },
+   
+  
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

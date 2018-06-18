@@ -1,7 +1,7 @@
 <view class="sport">
 <view>今日运动</view>
 <view class="circle">
-<view class="font">15400</view>
+<view class="font">{{step}}</view>
 <view class="total">目标 27223</view>
 </view>
 <view class="father">
@@ -25,6 +25,6 @@
 </view>
 <view class="bb cc">
 <view class="ee">运动收益</view>
-<image src="../image/find.png" class="ff"></image>
+<image src="../image/awardcup.png" class="ff"></image>
 </view>
 

@@ -9,7 +9,9 @@ Page({
     hidedui: false,
     hidecuo: false,
     right: '',
-    omoney: ''
+    omoney: '',
+    sum: 0,
+    rightsum: 0
     // vocabulary_content:''
   },
 
@@ -54,19 +56,20 @@ Page({
           }
 
         }
-        if (res.data.length > 0) {
+        if (res.data.length > 0 ) {
           this.setData({
             knl: res.data,
             start: this.data.start + 1
           })
-        } else {
+        } 
+        else {
           wx.showToast({
             title: '已经最后一题了',
             icon: 'warn',
             duration: 2000
           })
         }
-
+       
       },
     })
   },
@@ -103,6 +106,9 @@ Page({
   },
   re: function () {
     this.fanhui();
+
+
+   
     this.loadData();
 
   },
@@ -118,13 +124,30 @@ Page({
   },
   panDuan: function () {
 
-    if (this.data.userAnswer == this.data.rightAnswer) {
-      this.setData({
-        hidedui: this.data.hidedui = true,
-        show: this.data.show = false,
-        hidecuo: this.data.hidecuo = false,
-      })
-    }
+    this.setData({
+      sum: parseInt(this.data.sum) + 1
+    })
+    var ouserid = getApp().globalData.myuserid; console.log(ouserid);
+    if (ouserid) {
+      if (this.data.userAnswer == this.data.rightAnswer) {
+        this.setData({
+          hidedui: this.data.hidedui = true,
+          show: this.data.show = false,
+          hidecuo: this.data.hidecuo = false,
+          omoney: parseInt(this.data.omoney) + 1,
+          rightsum: parseInt(this.data.rightsum) + 1
+        })
+        wx.request({
+          url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/modify_user_list',//根据openid修改用户叶子币数he签到天数（叶子币数+5，签到天数+1）
+          data: {
+            omoney: parseInt(this.data.omoney) + 1,
+            ouserid: ouserid,
+          },
+          header: {
+            'Content-Type': 'application/json'
+          },
+        })
+      }
     else {
       this.setData({
         hidedui: this.data.hidedui = false,
@@ -132,7 +155,16 @@ Page({
         hidecuo: this.data.hidecuo = true,
       })
     }
+  }
+    else {
+      wx.showModal({
+        title: '提示',
+        content: '未登录，请先登录',
+      })
+    }
   },
+  
+
   fanhui: function () {
     this.setData({
       hidecuo: this.data.hidedui = false,

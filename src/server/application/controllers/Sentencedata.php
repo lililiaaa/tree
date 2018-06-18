@@ -1,7 +1,22 @@
 <?php 
+include_once "wxBizDataCrypt.php";
+include_once "errorCode.php";
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Sentencedata extends CI_Controller {
+  public function get_myuserinhouse_list(){
+    $ourseid = $this->input->get('ourseid');
+    $this->load->model('sentence_model');
+    $result=$this->sentence_model->getmyuserinhouselist($ourseid);
+    echo json_encode($result);
+  }
+  //获取精灵列表
+  public function get_userpet_list(){
+    $ourseid = $this->input->get('ourseid');
+    $this->load->model('sentence_model');
+    $result=$this->sentence_model->getuserpetlist($ourseid);
+    echo json_encode($result);
+  }
   //获取排行
   public function get_list()//获取排行
   {
@@ -13,6 +28,29 @@ class Sentencedata extends CI_Controller {
   public function get_paimon_list(){
     $this->load->model('sentence_model');
     $result=$this->sentence_model->getpaimonlist();
+    echo json_encode($result);
+  }
+  //获取树屋数和精灵数
+  public function get_houseand_num(){
+    $ouserid = $this->input->get('ouserid');
+    $this->load->model('sentence_model');
+    $result=$this->sentence_model->gethapnum($ouserid);
+    echo json_encode($result);
+  }
+  //获取好友树屋和精灵个数
+  public function getfriend_hap_num(){
+    $oheadimg= $this->input->get('headimg');
+    $oname= $this->input->get('username');
+    $omoney= $this->input->get('usermoney');
+    $this->load->model('sentence_model');
+    $result=$this->sentence_model->getfriendhapnum($oheadimg,$oname,$omoney);
+    echo json_encode($result);
+  }
+  //获取房屋图片和精灵图片
+  public function get_house_pet(){
+    $ouserid = $this->input->get('ouserid');
+    $this->load->model('sentence_model');
+    $result=$this->sentence_model->gethousepet($ouserid);
     echo json_encode($result);
   }
   // //获取叶子币数和签到天数
@@ -101,6 +139,26 @@ class Sentencedata extends CI_Controller {
     $result=$this->sentence_model->getpersonlist($ourseid);
     echo json_encode($result);
   }
+  //修改用户房屋
+  public function update_user_house(){
+    $ourseid = $this->input->get('ourseid');
+    $housename = $this->input->get('housename');
+    $houseimg = $this->input->get('houseimg');
+    $this->load->model('sentence_model');
+    $result=$this->sentence_model->updateuserhouse($ourseid,$housename,$houseimg);
+    echo json_encode($result);
+  }
+  //修改用户精灵
+  public function update_user_pet(){
+    $ourseid = $this->input->get('ourseid');
+    $housename = $this->input->get('housename');
+    $houseimg = $this->input->get('houseimg');
+    $this->load->model('sentence_model');
+    $result=$this->sentence_model->updateuserpet($ourseid,$housename,$houseimg);
+    echo json_encode($result);
+  }
+
+
   // ////由code获取sessionId
   public function get_sessionId(){
     $appid = 'wxdc3e0648f98f4400';
@@ -112,6 +170,10 @@ class Sentencedata extends CI_Controller {
   }
   //解密的数据
   public function get_step(){
+    $appid = 'wxdc3e0648f98f4400';
+    $sessionKey = $this->input->get('session');
+    $iv = $this->input->get('iv');
+    $encryptedData = $this->input->get('encryptedData');
     $pc = new WXBizDataCrypt($appid, $sessionKey);
     $errCode = $pc->decryptData($encryptedData, $iv, $data );
     if ($errCode == 0) {
@@ -119,6 +181,13 @@ class Sentencedata extends CI_Controller {
     } else {
     print($errCode . "\n");
     }
+  }
+  //房屋内部
+  public function get_userinhouse_list(){
+    $ourseid = $this->input->get('ourseid');
+    $this->load->model('sentence_model');
+    $result=$this->sentence_model->getuserinhouselist($ourseid);
+    echo json_encode($result);
   }
 }
 ?>

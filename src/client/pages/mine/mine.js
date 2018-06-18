@@ -5,9 +5,13 @@ var util = require('../../utils/util.js')
 var appId = 'wxdc3e0648f98f4400'; //填写微信小程序appid 
 var secret = '4cff70639c92bbefc5a47859c41cd6a3'; //填写微信小程序secret 
 Page({
+  
   data: {
     sentence: [],
+    index:0,
     _num: 0,
+    hounum:0,
+    petnum:0,
     userInfo: {},
     logged: false,
     takeSession: false,
@@ -18,9 +22,9 @@ Page({
     show: true,
     hide1: false,
     hide2: false,
-    petimg: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1529031775&di=f2d73b08750bcbcfb47031f6e93d7dd3&imgtype=jpg&er=1&src=http%3A%2F%2Fimgq.duitang.com%2Fuploads%2Fitem%2F201501%2F17%2F20150117203244_aHKHx.jpeg',
+    petimg: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1541844883,2396913807&fm=27&gp=0.jpg',
     houseimg: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1529169936&di=8c589e3d9938cb99d7589e80e62c36cd&imgtype=jpg&er=1&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201512%2F31%2F20151231212334_G5fwt.thumb.700_0.jpeg',
-    housename:'少女时代',
+    housename:'别墅',
     petname:'洛神',
     mynum:0,
     mylmoney:0
@@ -153,7 +157,37 @@ Page({
                 })
               }
             }
-            
+          }
+        })
+        wx.request({
+          url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_houseand_num', //获取树屋数和精灵数
+          data: {
+            ouserid: userId
+          },
+          header: {
+            'content-type': 'application/json' // 默认值
+          },
+          success: function (res) {
+            that.setData({
+              hounum: res.data[0][0],
+              petnum: res.data[1][0],
+            })
+          }
+        })
+        wx.request({
+          url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_house_pet',//获取房屋图片和精灵图片
+          data: {
+            ouserid: userId
+          },
+          header: {
+            'content-type': 'application/json' // 默认值
+          },
+          success: function (res) {
+            console.log(res.data);
+            that.setData({
+              petimg: res.data[1][0],
+              houseimg: res.data[0][0]
+            })
           }
         })
       }
@@ -196,9 +230,24 @@ Page({
                               })
                             }
                           }
-
                         }
                       })
+                      wx.request({
+                        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_houseand_num', //获取树屋数和精灵数
+                        data: {
+                          ouserid: res.data
+                        },
+                        header: {
+                          'content-type': 'application/json' // 默认值
+                        },
+                        success: function (res_i) {
+                          that.setData({
+                            hounum: res_i.data[0][0],
+                            petnum: res_i.data[1][0],
+                          })
+                        }
+                      })
+
                     },
                     fail: function () {
                       console.log("失败");
@@ -233,6 +282,7 @@ Page({
         })
       }
     })
+
   },
 
   /**

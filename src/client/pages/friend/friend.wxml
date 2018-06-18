@@ -1,6 +1,6 @@
 <!--pages/friend/friend.wxml-->
 <view class='body'>
-  <view class='friend' wx:for="{{sentence}}" wx:key="{{index}}"><!--wx:for="{{sentence}}" wx:key="{{index}} -->
+  <view class='friend' wx:for="{{sentence}}" wx:key="{{oindex}}"><!--wx:for="{{sentence}}" wx:key="{{index}} -->
      <navigator url='../haoyou/haoyou?headimg={{item.avatarUrl}}&username={{item.name}}&usermoney={{item.leaves}}'>
       <view class='icon'>
         <image class='img' src='{{item.avatarUrl}}'></image>

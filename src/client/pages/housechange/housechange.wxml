@@ -11,7 +11,7 @@
 <view class='bg'>
 <scroll-view  style="width: 100%"  scroll-x class='scorll'>
 <view class='buttom'>
-  <view class='icon' bindtap='change' wx:for="{{sentence}}" wx:key="index" data-index="{{index}}">
+  <view class='icon' bindtap='change' wx:for="{{sentence}}" wx:key="oindex" data-index="{{index}}">
   <image src='{{item.img_inside}}'></image>
   <view class='text'>{{item.house_name}}</view>
   </view>

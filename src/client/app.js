@@ -2,52 +2,35 @@
 var qcloud = require('./vendor/wafer2-client-sdk/index')
 var config = require('./config')
 
-App({
-  // globalData: {
-  //   appid: 'wxdc3e0648f98f4400',//appid需自己提供，此处的appid我随机编写  
-  //   secret: '3d5b400d1cf6ddf856e671c03c2a08ac',//secret需自己提供，此处的secret我随机编写  
-
-  // },  
+App({ 
     onLaunch: function () {
         qcloud.setLoginUrl(config.service.loginUrl)
-
-  //       var that = this
-  //       var user = wx.getStorageSync('user') || {};
-  //       var userInfo = wx.getStorageSync('userInfo') || {};
-  //       if ((!user.openid || (user.expires_in || Date.now()) < (Date.now() + 600)) && (!userInfo.nickName)) {
-  //         wx.login({
-  //           success: function (res) {
-  //             if (res.code) {
-  //               wx.getUserInfo({
-  //                 success: function (res) {
-  //                   var objz = {};
-  //                   objz.avatarUrl = res.userInfo.avatarUrl;
-  //                   objz.nickName = res.userInfo.nickName;
-  //                   //console.log(objz);  
-  //                   wx.setStorageSync('userInfo', objz);//存储userInfo  
-  //                 }
-  //               });
-  //               var d = that.globalData;//这里存储了appid、secret、token串    
-  //               var l = 'https://api.weixin.qq.com/sns/jscode2session?appid=' + d.appid + '&secret=' + d.secret + '&js_code=' + res.code + '&grant_type=authorization_code';
-  //               wx.request({
-  //                 url: l,
-  //                 data: {},
-  //                 method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT    
-  //                 // header: {}, // 设置请求的 header    
-  //                 success: function (res) {
-  //                   var obj = {};
-  //                   obj.openid = res.data.openid;
-  //                   obj.expires_in = Date.now() + res.data.expires_in;
-  //                   //console.log(obj);  
-  //                   wx.setStorageSync('user', obj);//存储openid    
-  //                 }
-  //               });
-  //             } else {
-  //               console.log('获取用户登录态失败！' + res.errMsg)
-  //             }
-  //           }
-  //         });
-  //       }
     
+    },
+    petData: {
+      petname: null,
+      petimg: null
+    },
+    houseData: {
+      housename: null,
+      houseimg: null
+    },
+    globalData: {
+      myuserid: null
+    },
+    dayData: {
+      todaydao: 0,
+      todaydui: 0
+    },
+    duihuan:{
+      duihuan:0
+    },
+    fangwu:{
+      pname:'洛神',
+      pimg:'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1541844883,2396913807&fm=27&gp=0.jpg',
+      fname:'少女时代',
+      fimg:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1529169936&di=8c589e3d9938cb99d7589e80e62c36cd&imgtype=jpg&er=1&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201512%2F31%2F20151231212334_G5fwt.thumb.700_0.jpeg',
+      fflg:1,
+      pflg:1
     }
 })

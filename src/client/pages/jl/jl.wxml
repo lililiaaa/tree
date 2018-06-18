@@ -1,21 +1,20 @@
 <view class="contain">
 
-<view class='pic'><image src='https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1528569633&di=1378501ecafb966ff92930fc61b13f06&src=http://img4.duitang.com/uploads/item/201409/28/20140928014947_EB4SP.png' class='img' ></image></view>
+<view class='pic'><image src="{{pic}}" class='img' ></image></view>
 
 <view class='second'>
 <view class="price">
 <view class="name">商品名称: {{name}}</view>
 <view class="gong">价格: {{price}}</view>
 </view>
-<view class="buy" bindtap='buybuy'>立即购买</view>
+<view class="buy" bindtap='buy'>立即购买</view>
 </view>
 
 <view class='last'>
 <view class="wrap">
 <view class="detil">商品详情:</view>
-<view class="content">购买即可获得洛神花守护精灵，洛神性格温顺，贤惠善良，温文尔雅，一笑倾城，但没有喂养生气起来也是非常难哄的哦！</view>
- <view class='wenzi'>花语:希望,宁静,矜持,等待,信仰.洛神花象那好看的颜色，犹如爱情的表面；酸酸甜甜味道，犹如恋爱时的感觉</view>
-<view class='tip'>提示：只有购买商品后才能喂养，长大，对话。</view>
+<view class="content">{{detail}}</view>
+<view class='tip'>{{tip}}</view>
 </view>
 </view>
 

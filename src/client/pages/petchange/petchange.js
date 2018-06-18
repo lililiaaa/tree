@@ -6,7 +6,7 @@ Page({
    */
   data: {
     index: 0,
-    housename: "蓝冰仙女",
+    housename: "洛神",
     houseimg:
     "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1529031775&di=f2d73b08750bcbcfb47031f6e93d7dd3&imgtype=jpg&er=1&src=http%3A%2F%2Fimgq.duitang.com%2Fuploads%2Fitem%2F201501%2F17%2F20150117203244_aHKHx.jpeg",
     sentence: []
@@ -16,11 +16,40 @@ Page({
     var oimage = e.currentTarget.dataset.image;
     getApp().petData.petname = oname;
     getApp().petData.petimg = oimage;
-    wx.showToast({
-      title: '更换成功',
-      icon: 'warn',
-      duration: 2000
-    })
+    var ourseid = getApp().globalData.myuserid;
+    var that = this;
+    if (ourseid) {
+      wx.request({
+        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/update_user_pet',//修改用户精灵
+        data: {
+          ourseid: ourseid,
+          housename: oname,
+          houseimg: oimage
+        },
+        header: {
+          'Content-Type': 'application/json'
+        },
+        success: function (res) {
+          wx.showToast({
+            title: '更换成功',
+            icon: 'warn',
+            duration: 2000
+          })
+        }
+      })
+    }
+    else {
+      wx.showModal({
+        title: '提示',
+        content: '未登录，请先登录',
+      })
+    }
+    // wx.showToast({
+    //   title: '更换成功',
+    //   icon: 'warn',
+    //   duration: 2000
+    // })
+    getApp().fangwu.pflg = 0;
   },
   change: function (e) {
     var index = parseInt(e.currentTarget.dataset.index);
@@ -47,12 +76,19 @@ Page({
           'Content-Type': 'application/json'
         },
         success: function (res) {
-          console.log(res.data);
-          that.setData({
-            sentence: res.data,
-            houseimg: res.data[0].img,
-            housename: res.data[0].sprite_name,
-          })
+          if (res.data == false) {
+            wx.showModal({
+              title: '提示',
+              content: '您还没有精灵',
+            })
+          }
+          else {
+            that.setData({
+              sentence: res.data,
+              houseimg: res.data[0].img,
+              housename: res.data[0].sprite_name,
+            })
+          }
         }
       })
     }

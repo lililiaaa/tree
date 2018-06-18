@@ -138,28 +138,50 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      petimg: options.petimg,
-      petimg2: options.petimg,
-      petimg3: options.petimg,
-      petname: options.petname
-    })
-    // wx.request({
-    //   url: '', //由精灵图片链接后台获取两个精灵图片
-    //   data: {
-    //     petimg: petimg
-    //   },
-    //   header: {
-    //     'content-type': 'application/json'
-    //   },
-    //   success: function (res) {
-    //     //console.log(res.data)
-    //     that.setData({
-    //       petimg2: res.data,
-    //       petimg3: res.data
-    //     })
-    //   }
-    // })
+    // var that = this;
+    // if (getApp().fangwu.pflg == 1) {
+    //   that.setData({
+    //     petname: getApp().fangwu.pname,
+    //     petimg: getApp().fangwu.pimg,
+    //     petimg1: getApp().fangwu.pimg,
+    //     petimg2: getApp().fangwu.pimg,
+    //   })
+    // }
+    // else {
+    //   wx.showToast({
+    //     title: '敬请期待',
+    //     icon: 'warn',
+    //     duration: 2000
+    //   })
+    // }
+    var ourseid = getApp().globalData.myuserid;
+    var that = this;
+    if (ourseid) {
+      wx.request({
+        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_userpet_list',//获取精灵列表
+        data: {
+          ourseid: ourseid
+        },
+        header: {
+          'Content-Type': 'application/json'
+        },
+        success: function (res) {
+          console.log(res.data);
+          that.setData({
+            petname: res.data[0].sprite_name,
+            petimg: res.data[0].img_child,
+            petimg2: res.data[0].img_young,
+            petimg3: res.data[0].img_old,
+          })
+        }
+      })
+    }
+    else {
+      wx.showModal({
+        title: '提示',
+        content: '未登录，请先登录',
+      })
+    }
   },
 
   /**

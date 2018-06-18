@@ -16,8 +16,8 @@
 
 
   <view class='situation'>
-  <view class='sum'>答题总数：50</view>
-  <view class='sum'>答对题数：40</view>
+  <view class='sum'>答题总数：{{sum}}</view>
+  <view class='sum'>答对题数：{{rightsum}}</view>
   </view>
 </view>
 

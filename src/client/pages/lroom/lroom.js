@@ -1,6 +1,6 @@
 // pages/lroom/lroom.js
 Page({
-
+ 
   /**
    * 页面的初始数据
    */
@@ -11,6 +11,8 @@ Page({
     name:'',
     price:'',
     id:'',
+    tip:'',
+  
   },
 // json2Form(json){  
 //     var str = [];  
@@ -20,11 +22,12 @@ Page({
 // return str.join("&");  
 // },
   buy(){
+    var ouserid = getApp().globalData.myuserid;
     var that=this;
     wx.request({
       url: 'https://stnr2jjf.qcloud.la/house/get_leaves',
       method: 'GET',
-      data: { u_id: 1 },
+      data: { u_id: ouserid },
       header: { 'Content-Type': 'application/json' },
       success: function (res){
           var leaves=res.data.leaves;
@@ -34,7 +37,7 @@ Page({
               wx.request({
                 url: 'https://stnr2jjf.qcloud.la/house/buy',
                 method: 'GET',
-                data: { user_id: 1, house_id: that.data.id, leaves:left},
+                data: { user_id: ouserid, house_id: that.data.id, leaves:left},
                 header: { 'Content-Type': 'application/json' },
                 success: function (res) { 
                   wx.showToast({
@@ -56,7 +59,7 @@ Page({
               wx.request({
                 url: 'https://stnr2jjf.qcloud.la/sprite/buy',
                 method: 'GET',
-                data: { user_id: 1, sprite_id: that.data.id, leaves: left },
+                data: { user_id: ouserid, sprite_id: that.data.id, leaves: left },
                 header: { 'Content-Type': 'application/json' },
                 success: function (res) { 
                   wx.showToast({
@@ -83,6 +86,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var ourseid = getApp().globalData.myuserid;console.log(ourseid);
     var that = this;
     var id = options.id;
     var name = options.name;
@@ -102,7 +106,8 @@ Page({
             pic:res.data.img_inside,
             name: res.data.house_name,
             detail: res.data.intro,
-            price: res.data.price
+            price: res.data.price,
+            tip:'提示：只有购买商品后才能查看内部细节'
           })
         }
       })
@@ -119,7 +124,9 @@ Page({
           that.setData({
             name: res.data.sprite_name,
             detail: res.data.intro,
-            price: res.data.price
+            price: res.data.price,
+             pic: res.data.img,
+             tip: '提示：精灵分为幼年，青年，成年，购买前查看成年，购买后由幼年开始喂养'
           })
         }
       })

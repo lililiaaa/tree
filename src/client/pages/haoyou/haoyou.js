@@ -1,6 +1,6 @@
 // pages/haoyou/haoyou.js
 Page({
-
+  
   /**
    * 页面的初始数据
    */
@@ -8,10 +8,12 @@ Page({
     headimg:'',
     username:'',
     usermoney:0,
-    petimg: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1529031790&di=9c4b509bfb5bebc16747f0f4d662d3fd&imgtype=jpg&er=1&src=http%3A%2F%2Fimages.17173.com%2F2015%2Fnews%2F2015%2F03%2F12%2Fmj0312dl01s.jpg',
-    houseimg: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528576630809&di=ea29f0fdd0da77f725b9a4e885dcf584&imgtype=0&src=http%3A%2F%2Fdimg02.c-ctrip.com%2Fimages%2Ffd%2Ftg%2Fg4%2FM00%2F84%2F8C%2FCggYHlX5iwWAdcKEAAFWwHvqf5o229_R_1024_10000.jpg',
+    petimg: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528561278860&di=65de0451543f39a94dbae90e04402541&imgtype=0&src=http%3A%2F%2Fstatic-xiaoguotu.17house.com%2F000%2F170%2F201406190858211687.jpg',
+    houseimg: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528573567334&di=4ef72aa4373aafe45165314a7539ff91&imgtype=jpg&src=http%3A%2F%2Fimg4.imgtn.bdimg.com%2Fit%2Fu%3D1545202919%2C536120645%26fm%3D214%26gp%3D0.jpg',
     hide: false,
-    show: true
+    show: true,
+    housenum:0,
+    petnum:0
   },
   rechange: function () {
     this.setData({
@@ -44,6 +46,24 @@ Page({
       usermoney: options.usermoney
     })
     wx.request({
+      url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/getfriend_hap_num', //获取好友树屋和精灵个数
+      data: {
+        headimg: options.headimg,
+        username: options.username,
+        usermoney: options.usermoney
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        //console.log(res.data);
+        that.setData({
+          housenum: res.data[0][0],
+          petnum: res.data[1][0]
+        })
+      }
+    })
+    wx.request({
       url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_houseandpet', //获取好友树屋和精灵
       data:{
         headimg: options.headimg,
@@ -54,11 +74,11 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function(res) {
-        console.log(res.data);
-        // that.setData({
-        //   petimg: res.data[0].user_house,
-        //   houseimg: res.data[0].user_pet
-        // })
+        // console.log(res.data[0][0] + "   " + res.data[1][0]);
+        that.setData({
+          petimg: res.data[0][0],
+          houseimg: res.data[1][0]
+        })
       }
     })
   },

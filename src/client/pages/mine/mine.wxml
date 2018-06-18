@@ -1,6 +1,6 @@
 <!--pages/mine/mine.wxml-->
 <view>
-  <image src='http://mpic.tiankong.com/729/9d0/7299d0d5f45b1ed3f58a84e63831688e/640.jpg@!670w' class='img' ></image>
+  <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1529326693&di=0debcd638d5162561706d917c6a83569&src=http://pic20.photophoto.cn/20110927/0034034802983209_b.jpg' class='img' ></image>
   <!-- http://p0.so.qhimgs1.com/bdr/_240_/t01811180decdc7556a.jpg -->
   <view bindtap="login" class='top' >
   <view class='yi'>
@@ -25,13 +25,13 @@
   </view>
 
   <view class='kuai' bindtap='change1'>
-  <view class='h1'>3</view>
+  <view class='h1'>{{hounum}}</view>
   <view class='zi'>我的树屋</view>
   </view>
 
 
   <view class='kuai' bindtap='change2'>
-  <view class='h1'>3</view>
+  <view class='h1'>{{petnum}}</view>
   <view class='zi'>我的精灵</view>
   </view>
 

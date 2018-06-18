@@ -1,6 +1,6 @@
 // pages/housechange/housechange.js
 Page({
-
+ 
   /**
    * 页面的初始数据
    */
@@ -16,18 +16,42 @@ Page({
     var oimage = e.currentTarget.dataset.image;
     getApp().houseData.housename = oname;
     getApp().houseData.houseimg = oimage;
-    wx.showToast({
-      title: '更换成功',
-      icon: 'warn',
-      duration: 2000
-    })
-    
+
+    var ourseid = getApp().globalData.myuserid;
+    var that = this;
+    if (ourseid) {
+      wx.request({
+        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/update_user_house',//修改用户房屋
+        data: {
+          ourseid: ourseid,
+          housename: oname,
+          houseimg: oimage
+        },
+        header: {
+          'Content-Type': 'application/json'
+        },
+        success: function (res) {
+          wx.showToast({
+            title: '更换成功',
+            icon: 'warn',
+            duration: 2000
+          })
+        }
+      })
+    }
+    else {
+      wx.showModal({
+        title: '提示',
+        content: '未登录，请先登录',
+      })
+    }
+    getApp().fangwu.fflg = 0;
   },
   change: function (e) {
     var index = parseInt(e.currentTarget.dataset.index);
     this.setData({
       houseimg: this.data.sentence[index].img_inside,
-      housename: this.data.sentence[index].housename
+      housename: this.data.sentence[index].house_name
     })
     
   },
@@ -48,11 +72,19 @@ Page({
         },
         success: function (res) {
           console.log(res.data);
-          that.setData({
-            sentence: res.data,
-            houseimg: res.data[0].img_inside,
-            housename: res.data[0].house_name,
-          })
+          if (res.data==false){
+            wx.showModal({
+              title: '提示',
+              content: '您还没有房屋',
+            })
+          }
+          else{
+            that.setData({
+              sentence: res.data,
+              houseimg: res.data[0].img_inside,
+              housename: res.data[0].house_name,
+            })
+          }
         }
       })
     }

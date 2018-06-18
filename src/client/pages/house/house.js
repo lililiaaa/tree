@@ -1,23 +1,27 @@
 // pages/housechange/housechange.js
 Page({
-
+ 
   /**
    * 页面的初始数据
    */
   data: {
     index: 0,
     housename: "少女时代",
+    omyhouseimg: "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528576011732&di=26e7922a6919f5b6f0987bcfa0df16ff&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201512%2F07%2F20151207094037_vhU4j.jpeg",
     houseimg:
-    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1529169936&di=8c589e3d9938cb99d7589e80e62c36cd&imgtype=jpg&er=1&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201512%2F31%2F20151231212334_G5fwt.thumb.700_0.jpeg",
+    "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528576011732&di=26e7922a6919f5b6f0987bcfa0df16ff&imgtype=0&src=http%3A%2F%2Fimg3.duitang.com%2Fuploads%2Fitem%2F201512%2F07%2F20151207094037_vhU4j.jpeg",
     sentence: []
   },
   change: function (e) {
     var index = parseInt(e.currentTarget.dataset.index);
     this.setData({
-      houseimg: this.data.sentence[index].img_inside,
-      housename: this.data.sentence[index].housename
+      houseimg: this.data.sentence[index].housein_img,
     })
-
+  },
+  ochange:function(e){
+    this.setData({
+      houseimg: e.currentTarget.dataset.omyh,
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -27,7 +31,23 @@ Page({
     var that = this;
     if (ourseid) {
       wx.request({
-        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_house_list',//获取房屋列表
+        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_userinhouse_list',//获取房屋列表
+        data: {
+          ourseid: ourseid
+        },
+        header: {
+          'Content-Type': 'application/json'
+        },
+        success: function (res) {
+          that.setData({
+            houseimg: res.data[0].img_inside,
+            omyhouseimg:res.data[0].img_inside,
+            housename: res.data[0].house_name
+          })
+        }
+      })
+      wx.request({
+        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_myuserinhouse_list',//获取房屋列表
         data: {
           ourseid: ourseid
         },
@@ -38,8 +58,6 @@ Page({
           console.log(res.data);
           that.setData({
             sentence: res.data,
-            houseimg: res.data[0].img_inside,
-            housename: res.data[0].house_name,
           })
         }
       })

@@ -4,6 +4,7 @@ var config = require('../../config')
 var util = require('../../utils/util.js')
 
 Page({
+  
     data: {
         userInfo: {},
         logged: false,

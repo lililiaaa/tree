@@ -1,12 +1,33 @@
 // pages/room/room.js
 Page({
-
+  
   /**
    * 页面的初始数据
    */
   data: {
+    pic1: [],
+    pic2: [],
+    name: '',
     hide: false,
     show: true,
+  },
+  look: function (e) {
+    var id;
+    if (this.data.show) {
+      id = this.data.pic1[e.currentTarget.dataset.index].sprite_id;
+    } else {
+      id = this.data.pic2[e.currentTarget.dataset.index].sprite_id;
+    }
+    wx.navigateTo({
+      url: '../lroom/lroom?id=' + id + '&name=' + this.data.name + '',
+    })
+    // console.log(e.currentTarget.dataset.index);
+  },
+  man: function () {
+    this.setData({
+      hide: this.data.hide = true,
+      show: this.data.show = false,
+    })
   },
   xie: function () {
     this.setData({
@@ -14,23 +35,35 @@ Page({
       show: this.data.show = true,
     })
   },
-  look: function () {
-    wx.navigateTo({
-      url: '../jl/jl',
-    })
-  },
-  man: function () {
-    wx.showLoading({
-      title: '敬请期待',
-    })
-    setTimeout(function () {
-      wx.hideLoading()
-    }, 1000)
-  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({ classify: [options.classify1, options.classify2], name: options.name });
+    var that = this
+    wx.request({
+      url: 'https://stnr2jjf.qcloud.la/sprite/shop',
+      data: {},
+      header: { 'Content-Type': 'application/json' },
+      success: function (res) {
+        var urlArr1 = [];
+        var urlArr2 = [];
+        for (var i = 0; i < res.data.length; i++) {
+          if (res.data[i].sex == 'man') {
+            urlArr1.push(res.data[i]);
+          } else {
+            urlArr2.push(res.data[i])
+          }
+        }
+        that.setData({
+          pic1: urlArr1,
+          pic2: urlArr2,
+        });
+        console.log(that.data.pic1);
+        console.log(that.data.pic2);
+
+      }
+    });
 
   },
 
@@ -38,7 +71,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    // console.log(this.data.name)
   },
 
   /**

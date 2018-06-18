@@ -1,6 +1,6 @@
 // pages/friend/friend.js
 Page({
-
+ 
   /**
    * 页面的初始数据
    */
@@ -23,7 +23,6 @@ Page({
           'content-type': 'application/json'
         },
         success: function(res){
-          // console.log(res.data)
           that.setData({
             sentence: res.data
           })
