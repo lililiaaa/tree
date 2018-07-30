@@ -25,7 +25,36 @@ class Knl extends CI_Controller {
         }
     }*/
     
-    
+        public function get_user_list()
+  {
+    $ouserid = $this->input->get('ouserid');
+    $this->load->model('knl_model');
+    $result=$this->knl_model->get_user_list($ouserid);
+    echo json_encode($result);
+  }
+public function user_list_words()
+  {
+    $words= $this->input->get('words');
+   
+    $ouserid = $this->input->get('ouserid');
+    $this->load->model('knl_model');
+    $result=$this->knl_model->user_list_words($words,$ouserid);
+  }
+  public function user_list_omoney()
+  {
+    $omoney= $this->input->get('omoney');
+    $ouserid = $this->input->get('ouserid');
+    $this->load->model('knl_model');
+    $result=$this->knl_model->user_list_omoney($omoney,$ouserid);
+  }
+  public function user_list_rights()
+  {
+   
+   $rights= $this->input->get('rights');
+    $ouserid = $this->input->get('ouserid');
+    $this->load->model('knl_model');
+    $result=$this->knl_model->user_list_rights($rights,$ouserid);
+  }
 
     // 	$query=$this->Vocabulary_model->get_vocabulary();
     //   $result=json_encode($query);

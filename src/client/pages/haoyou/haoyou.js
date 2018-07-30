@@ -46,7 +46,7 @@ Page({
       usermoney: options.usermoney
     })
     wx.request({
-      url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/getfriend_hap_num', //获取好友树屋和精灵个数
+      url: 'https://408665640.shuyishu.club/index.php/sentencedata/getfriend_hap_num', //获取好友树屋和精灵个数
       data: {
         headimg: options.headimg,
         username: options.username,
@@ -64,7 +64,7 @@ Page({
       }
     })
     wx.request({
-      url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_houseandpet', //获取好友树屋和精灵
+      url: 'https://408665640.shuyishu.club/index.php/sentencedata/get_houseandpet', //获取好友树屋和精灵
       data:{
         headimg: options.headimg,
         username: options.username,

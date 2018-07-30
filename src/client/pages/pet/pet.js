@@ -158,7 +158,7 @@ Page({
     var that = this;
     if (ourseid) {
       wx.request({
-        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_userpet_list',//获取精灵列表
+        url: 'https://408665640.shuyishu.club/index.php/sentencedata/get_userpet_list',//获取精灵列表
         data: {
           ourseid: ourseid
         },

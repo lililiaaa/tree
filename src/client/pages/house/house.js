@@ -31,7 +31,7 @@ Page({
     var that = this;
     if (ourseid) {
       wx.request({
-        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_userinhouse_list',//获取房屋列表
+        url: 'https://408665640.shuyishu.club/index.php/sentencedata/get_userinhouse_list',//获取房屋列表
         data: {
           ourseid: ourseid
         },
@@ -47,7 +47,7 @@ Page({
         }
       })
       wx.request({
-        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_myuserinhouse_list',//获取房屋列表
+        url: 'https://408665640.shuyishu.club/index.php/sentencedata/get_myuserinhouse_list',//获取房屋列表
         data: {
           ourseid: ourseid
         },

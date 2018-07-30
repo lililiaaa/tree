@@ -45,12 +45,7 @@
         "selectedIconPath": "pages/image/index-click.png",
         "text": "首页"
       },
-      {
-        "pagePath": "pages/find/find",
-        "iconPath": "pages/image/find.png",
-        "selectedIconPath": "pages/image/find-click.png",
-        "text": "发现"
-      },
+      
       {
         "pagePath": "pages/friend/friend",
         "iconPath": "pages/image/friend.png",
@@ -63,6 +58,7 @@
         "selectedIconPath": "pages/image/mine-click.png",
         "text": "我的"
       }
+  
     ]
   }
 }

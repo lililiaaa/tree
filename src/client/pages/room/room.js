@@ -41,7 +41,7 @@ Page({
     var that = this
     if (options.name == 'house') {
       wx.request({
-        url: 'https://stnr2jjf.qcloud.la/house/shop',
+        url: 'https://408665640.shuyishu.club/house/shop',
         data: {},
         header: { 'Content-Type': 'application/json' },
         success: function (res) {

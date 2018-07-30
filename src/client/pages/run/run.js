@@ -31,7 +31,7 @@ Page({
     
     if (otodaydui != d) {
       wx.request({
-        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/modify_lmoney',//根据userid修改用户叶子币数
+        url: 'https://408665640.shuyishu.club/index.php/sentencedata/modify_lmoney',//根据userid修改用户叶子币数
         data: {
           ouserid: ouserid,
           changenmoney: changenmoney
@@ -88,7 +88,7 @@ Page({
   get3rdSession: function () {
     let that = this
     wx.request({
-      url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_sessionId',//由code获取sessionId
+      url: 'https://408665640.shuyishu.club/index.php/sentencedata/get_sessionId',//由code获取sessionId
       data: {
         code: this.data.code
       },
@@ -104,7 +104,7 @@ Page({
   decodeUserInfo: function () {
     let that = this;
     wx.request({
-      url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_step', //解密的数据；
+      url: 'https://408665640.shuyishu.club/index.php/sentencedata/get_step', //解密的数据；
       data: {
         encryptedData: that.data.encryptedData,
         iv: that.data.iv,

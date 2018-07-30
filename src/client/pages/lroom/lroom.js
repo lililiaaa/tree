@@ -25,7 +25,7 @@ Page({
     var ouserid = getApp().globalData.myuserid;
     var that=this;
     wx.request({
-      url: 'https://stnr2jjf.qcloud.la/house/get_leaves',
+      url: 'https://408665640.shuyishu.club/house/get_leaves',
       method: 'GET',
       data: { u_id: ouserid },
       header: { 'Content-Type': 'application/json' },
@@ -35,7 +35,7 @@ Page({
           if (that.data.kind == 'house') {
             if(leaves-that.data.price>=0){
               wx.request({
-                url: 'https://stnr2jjf.qcloud.la/house/buy',
+                url: 'https://408665640.shuyishu.club/house/buy',
                 method: 'GET',
                 data: { user_id: ouserid, house_id: that.data.id, leaves:left},
                 header: { 'Content-Type': 'application/json' },
@@ -57,7 +57,7 @@ Page({
           } else if (that.data.kind == 'elf'){
             if (leaves - that.data.price >= 0) {
               wx.request({
-                url: 'https://stnr2jjf.qcloud.la/sprite/buy',
+                url: 'https://408665640.shuyishu.club/sprite/buy',
                 method: 'GET',
                 data: { user_id: ouserid, sprite_id: that.data.id, leaves: left },
                 header: { 'Content-Type': 'application/json' },
@@ -96,7 +96,7 @@ Page({
     })
     if (name=='house'){
       wx.request({
-        url: 'https://stnr2jjf.qcloud.la/house/get_details',
+        url: 'https://408665640.shuyishu.club/house/get_details',
         method: 'GET',
         data: { id: id },
         header: { 'Content-Type': 'application/json' },
@@ -115,7 +115,7 @@ Page({
     }else if(name=='elf'){
       console.log(this.data.id);
       wx.request({
-        url: 'https://stnr2jjf.qcloud.la/sprite/get_details',
+        url: 'https://408665640.shuyishu.club/sprite/get_details',
         method: 'GET',
         data: { id: id },
         header: { 'Content-Type': 'application/json' },

@@ -35,7 +35,7 @@ Page({
             oday: parseInt(oday)+1,
           })
           wx.request({
-            url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/modify_user_list',//根据openid修改用户叶子币数he签到天数（叶子币数+5，签到天数+1）
+            url: 'https://408665640.shuyishu.club/index.php/sentencedata/modify_user_list',//根据openid修改用户叶子币数he签到天数（叶子币数+5，签到天数+1）
             data: {
               omoney: parseInt(omoney)+5,
               oday: parseInt(oday)+1,
@@ -75,7 +75,7 @@ Page({
     var ouserid = getApp().globalData.myuserid;
     if (ouserid) {
       wx.request({
-        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_signin_list',//根据openid获取用户叶子币数he签到天数
+        url: 'https://408665640.shuyishu.club/index.php/sentencedata/get_signin_list',//根据openid获取用户叶子币数he签到天数
         data: {
           ouserid: ouserid
         },

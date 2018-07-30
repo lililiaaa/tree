@@ -10,7 +10,7 @@ Page({
     hidecuo: false,
     right: '',
     omoney: '',
-    sum: 0,
+    words: 0,
     rightsum: 0
     // vocabulary_content:''
   },
@@ -36,7 +36,7 @@ Page({
   // 自定义的方法，加载数据
   loadData: function () {
     wx.request({
-      url: 'https://stnr2jjf.qcloud.la/../knl/get_knl',
+      url: 'https://408665640.shuyishu.club/../knl/get_knl',
       data: {
         start: this.data.start,
         limit: this.data.limit
@@ -83,7 +83,7 @@ Page({
     var ouserid = getApp().globalData.myuserid;
     if (ouserid) {
       wx.request({
-        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_signin_list',//根据openid获取用户叶子币数he签到天数
+        url: 'https://408665640.shuyishu.club/index.php/knl/get_user_list',//根据openid获取用户叶子币数he单词数，对题数,start
         data: {
           ouserid: ouserid
         },
@@ -93,7 +93,10 @@ Page({
         success: function (res) {
           //console.log(res.data[0].user_lmoney);
           that.setData({
-            omoney: res.data[0].leaves
+            omoney: res.data[0].leaves,
+            words: res.data[0].knl,
+            rightsum: res.data[0].right_knl,
+
           })
         }
       })
@@ -106,9 +109,6 @@ Page({
   },
   re: function () {
     this.fanhui();
-
-
-   
     this.loadData();
 
   },
@@ -124,9 +124,22 @@ Page({
   },
   panDuan: function () {
 
+    var ouserid = getApp().globalData.myuserid;
     this.setData({
-      sum: parseInt(this.data.sum) + 1
+      words: parseInt(this.data.words) + 1
     })
+    wx.request({
+      url: 'https://408665640.shuyishu.club/index.php/knl/user_list_words',//根据openid修改用户单词数
+      data: {
+        words: parseInt(this.data.words) + 1,
+        
+        ouserid: ouserid,
+      },
+      header: {
+        'Content-Type': 'application/json'
+      },
+    })
+
     var ouserid = getApp().globalData.myuserid; console.log(ouserid);
     if (ouserid) {
       if (this.data.userAnswer == this.data.rightAnswer) {
@@ -138,7 +151,7 @@ Page({
           rightsum: parseInt(this.data.rightsum) + 1
         })
         wx.request({
-          url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/modify_user_list',//根据openid修改用户叶子币数he签到天数（叶子币数+5，签到天数+1）
+          url: 'https://408665640.shuyishu.club/index.php/knl/user_list_omoney',//根据openid修改用户yezi数
           data: {
             omoney: parseInt(this.data.omoney) + 1,
             ouserid: ouserid,
@@ -147,15 +160,26 @@ Page({
             'Content-Type': 'application/json'
           },
         })
+
+        wx.request({
+          url: 'https://408665640.shuyishu.club/index.php/knl/user_list_rights',//根据openid修改用户duide单词数
+          data: {
+            rights: parseInt(this.data.rightsum) + 1,
+            ouserid: ouserid,
+          },
+          header: {
+            'Content-Type': 'application/json'
+          },
+        })
       }
-    else {
-      this.setData({
-        hidedui: this.data.hidedui = false,
-        show: this.data.show = false,
-        hidecuo: this.data.hidecuo = true,
-      })
+      else {
+        this.setData({
+          hidedui: this.data.hidedui = false,
+          show: this.data.show = false,
+          hidecuo: this.data.hidecuo = true,
+        })
+      }
     }
-  }
     else {
       wx.showModal({
         title: '提示',
@@ -163,7 +187,6 @@ Page({
       })
     }
   },
-  
 
   fanhui: function () {
     this.setData({

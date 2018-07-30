@@ -1,6 +1,6 @@
 // pages/friend/friend.js
 Page({
- 
+
   /**
    * 页面的初始数据
    */
@@ -15,7 +15,7 @@ Page({
     var ouserid = getApp().globalData.myuserid;
     if (ouserid) {
       wx.request({
-        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_friend_list', //后台获取好友数据列表
+        url: 'https://408665640.shuyishu.club/index.php/sentencedata/get_friend_list', //后台获取好友数据列表
         data: {
           ouserid: ouserid
         },
@@ -52,7 +52,7 @@ Page({
     var ouserid = getApp().globalData.myuserid;
     if (ouserid) {
       wx.request({
-        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_friend_list', //后台获取好友数据列表
+        url: 'https://408665640.shuyishu.club/index.php/sentencedata/get_friend_list', //后台获取好友数据列表
         data: {
           ouserid: ouserid
         },

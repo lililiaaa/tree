@@ -26,16 +26,43 @@ class Vocabulary extends CI_Controller {
     }*/
     
     
-
     // 	$query=$this->Vocabulary_model->get_vocabulary();
     //   $result=json_encode($query);
     //   echo $result;
     // }
-
+     public function get_user_list()
+  {
+    $ouserid = $this->input->get('ouserid');
+    $this->load->model('vocabulary_model');
+    $result=$this->vocabulary_model->get_user_list($ouserid);
+    echo json_encode($result);
+  }
+public function user_list_words()
+  {
+    $words= $this->input->get('words');
+   
+    $ouserid = $this->input->get('ouserid');
+    $this->load->model('vocabulary_model');
+    $result=$this->vocabulary_model->user_list_words($words,$ouserid);
+  }
+  public function user_list_omoney()
+  {
+    $omoney= $this->input->get('omoney');
+    $ouserid = $this->input->get('ouserid');
+    $this->load->model('vocabulary_model');
+    $result=$this->vocabulary_model->user_list_omoney($omoney,$ouserid);
+  }
+  public function user_list_rights()
+  {
+   
+   $rights= $this->input->get('rights');
+    $ouserid = $this->input->get('ouserid');
+    $this->load->model('vocabulary_model');
+    $result=$this->vocabulary_model->user_list_rights($rights,$ouserid);
+  }
       public function get_vocabulary() {
       $start = $this -> input -> get('start');
        $limit = $this -> input -> get('limit');
-
       $this->load->model('vocabulary_model');
       // 查询题目
       $vocabulary=$this->vocabulary_model->get_lisfind_by_describe_answert($start, $limit);

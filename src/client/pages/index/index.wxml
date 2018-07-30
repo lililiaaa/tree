@@ -23,16 +23,16 @@
       </navigator>
       <navigator hover-class="none" url="../word/word">
       <view class='zao'>
-        <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b10000_10000&sec=1528563825&di=f979d85c2067dd870077b825329bc99b&src=http://www.cridao.com/uploads/allimg/151125/6-15112515034U04.jpg' class='img'></image>
+        <image src='https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=793282084,192731426&fm=27&gp=0.jpg' class='img'></image>
         <view class='text'>单词积累</view>
       </view>
       </navigator>
-      <navigator hover-class="none" url='../moodFruit/moodFruit'>
+      <!-- <navigator hover-class="none" url='../moodFruit/moodFruit'>
       <view class='zao'>
         <image src='../image/happy.png' class='img'></image>
         <view class='text'>心情果实</view>
       </view>
-      </navigator>
+      </navigator> -->
     </view>
   </scroll-view> 
 

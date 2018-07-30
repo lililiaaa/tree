@@ -11,7 +11,7 @@ Page({
   },
   open(){
     var that=this;
-    var that=this;
+    var ouserid = getApp().globalData.myuserid;
       console.log(this.data.click_num);
       if (this.data.click_num<=0){
         wx.showModal({
@@ -23,17 +23,18 @@ Page({
         this.setData({
           click_num: that.data.click_num - 1
         });
-        wx.request({
-          url: 'https://stnr2jjf.qcloud.la/mindfruit/ud_chance',
-          method: 'GET',
-          data: { u_id: 1,
-            chance: that.data.click_num
-            },
-          header: { 'Content-Type': 'application/json' },
-          success: function (res) {
+    //     wx.request({
+    //       url: 'https://stnr2jjf.qcloud.la/mindfruit/ud_chance',
+    //       method: 'GET',
+    //       data: {
+    //         u_id: ouserid,
+    //         chance: that.data.click_num
+    //         },
+    //       header: { 'Content-Type': 'application/json' },
+    //       success: function (res) {
         
-      }
-    })
+    //   }
+    // })
     var random = Math.round(Math.random()*10);
     if(random<2){
        this.setData({ flag_re: false });
@@ -41,7 +42,7 @@ Page({
          url: 'https://stnr2jjf.qcloud.la/mindfruit/add_leaves',
          method: 'GET',
          data: {
-           u_id: 1,
+           u_id: ouserid,
          },
          header: { 'Content-Type': 'application/json' },
          success: function (res) {
@@ -80,17 +81,19 @@ Page({
   },
   
   onLoad: function (options) {
+    var ouserid = getApp().globalData.myuserid;
     var that=this;
+    console.log(ouserid);
     wx.request({
       url: 'https://stnr2jjf.qcloud.la/mindfruit/get_leaves',
       method: 'GET',
-      data: { u_id: 1 },
+      data: { u_id: ouserid },
       header: { 'Content-Type': 'application/json' },
       success: function (res) {
         console.log(res.data.leaves);
         that.setData({
           leaves_num: res.data.leaves,
-          click_num: res.data.chance
+          // click_num: res.data.chance
         })
       }
     });

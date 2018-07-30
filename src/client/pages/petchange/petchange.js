@@ -20,7 +20,7 @@ Page({
     var that = this;
     if (ourseid) {
       wx.request({
-        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/update_user_pet',//修改用户精灵
+        url: 'https://408665640.shuyishu.club/index.php/sentencedata/update_user_pet',//修改用户精灵
         data: {
           ourseid: ourseid,
           housename: oname,
@@ -68,7 +68,7 @@ Page({
     var that = this;
     if (ourseid) {
       wx.request({
-        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_person_list',//获取精灵列表
+        url: 'https://408665640.shuyishu.club/index.php/sentencedata/get_person_list',//获取精灵列表
         data: {
           ourseid: ourseid
         },

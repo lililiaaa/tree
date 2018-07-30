@@ -5,7 +5,7 @@ var util = require('../../utils/util.js')
 var appId = 'wxdc3e0648f98f4400'; //填写微信小程序appid 
 var secret = '4cff70639c92bbefc5a47859c41cd6a3'; //填写微信小程序secret 
 Page({
-  
+ 
   data: {
     sentence: [],
     index:0,
@@ -72,7 +72,7 @@ Page({
     var ourseid = getApp().globalData.myuserid;
     if (ourseid) {
       wx.request({
-        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/add_friend_list',//后台查找该用户数据，找到返回“此人已添加”，找不到加入好友数据库中
+        url: 'https://408665640.shuyishu.club/index.php/sentencedata/add_friend_list',//后台查找该用户数据，找到返回“此人已添加”，找不到加入好友数据库中
         data: {
           oheadimg: oheadimg,
           oname: oname,
@@ -144,7 +144,7 @@ Page({
         console.log("登陆成功");
         getApp().globalData.myuserid = userId;//全局变量获取openid
         wx.request({
-          url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_paimon_list', //获取排行和叶子币
+          url: 'https://408665640.shuyishu.club/index.php/sentencedata/get_paimon_list', //获取排行和叶子币
           header: {
             'content-type': 'application/json' // 默认值
           },
@@ -160,7 +160,7 @@ Page({
           }
         })
         wx.request({
-          url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_houseand_num', //获取树屋数和精灵数
+          url: 'https://408665640.shuyishu.club/index.php/sentencedata/get_houseand_num', //获取树屋数和精灵数
           data: {
             ouserid: userId
           },
@@ -175,7 +175,7 @@ Page({
           }
         })
         wx.request({
-          url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_house_pet',//获取房屋图片和精灵图片
+          url: 'https://408665640.shuyishu.club/index.php/sentencedata/get_house_pet',//获取房屋图片和精灵图片
           data: {
             ouserid: userId
           },
@@ -200,7 +200,7 @@ Page({
               wx.getUserInfo({
                 success: function (res_user) {
                   wx.request({
-                    url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_user_list',//后台获取openid返回userid，并将openid放入用户表中
+                    url: 'https://408665640.shuyishu.club/index.php/sentencedata/get_user_list',//后台获取openid返回userid，并将openid放入用户表中
                     data: {
                       oonickName:res_user.userInfo.nickName,
                       ooheadimg:res_user.userInfo.avatarUrl,
@@ -217,7 +217,7 @@ Page({
                       wx.setStorageSync('userId', res.data);
                       getApp().globalData.myuserid = res.data;//将openid赋给全局变量
                       wx.request({
-                        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_paimon_list', //获取排行和叶子币
+                        url: 'https://408665640.shuyishu.club/index.php/sentencedata/get_paimon_list', //获取排行和叶子币
                         header: {
                           'content-type': 'application/json' // 默认值
                         },
@@ -233,7 +233,7 @@ Page({
                         }
                       })
                       wx.request({
-                        url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_houseand_num', //获取树屋数和精灵数
+                        url: 'https://408665640.shuyishu.club/index.php/sentencedata/get_houseand_num', //获取树屋数和精灵数
                         data: {
                           ouserid: res.data
                         },
@@ -272,7 +272,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     wx.request({
-      url: 'https://stnr2jjf.qcloud.la/index.php/sentencedata/get_list', //获取排行榜数据
+      url: 'https://408665640.shuyishu.club/index.php/sentencedata/get_list', //获取排行榜数据
       header: {
         'content-type': 'application/json' // 默认值
       },

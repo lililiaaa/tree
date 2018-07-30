@@ -19,7 +19,7 @@
   </view>
 
 
-  <view class='kuai' bindtap='change'>
+  <view class='kuai' >
   <view class='h1'>{{mylmoney}}</view>
   <view class='zi'>叶子币</view>
   </view>

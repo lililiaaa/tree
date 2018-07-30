@@ -42,7 +42,7 @@ Page({
     this.setData({ classify: [options.classify1, options.classify2], name: options.name });
     var that = this
     wx.request({
-      url: 'https://stnr2jjf.qcloud.la/sprite/shop',
+      url: 'https://408665640.shuyishu.club/sprite/shop',
       data: {},
       header: { 'Content-Type': 'application/json' },
       success: function (res) {

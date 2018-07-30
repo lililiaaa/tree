@@ -72,6 +72,8 @@
       $stmt =$pdo->prepare($strSql);
       $stmt->execute();
 		}
+    
+   
     //  //添加好友
     public function addfriendlist($oheadimg,$oname,$omoney,$ourseid){
 		  $ouseraut = DB::row('user', ['u_id'], 'avatarUrl = "'.$oheadimg.'" and name="'.$oname.'" and leaves="'.$omoney.'"');
