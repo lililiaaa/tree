@@ -17,30 +17,39 @@
 项目页面截图：
  
  1.首页
+ 
  ![Image text](http://img.hb.aicdn.com/b1c31adfd630307e39469b8123447b4b3cb921e46f7a-i6nkjc_fw658)
  
 2.单词积累
+
  ![Image text](http://img.hb.aicdn.com/836307afa02e453b7a1fa206c1f826c5f61ea51a7060-jbSdBu_fw658)
  
 3.运动步数
+
  ![Image text](http://img.hb.aicdn.com/da04c7ce8a7058be02a51a521079d343fff17876b83f-kgsEzc_fw658)
  
 4.心情果实
+
   ![Image text](http://img.hb.aicdn.com/c70d1c7fe6150f3c276c71a9df13532af9cf6dcf3fea9-SFlSHB_fw658)
   
 5.知识问答
+
  ![Image text](http://img.hb.aicdn.com/6555033caa38e74af7cdb6c0891f6d0c53fcd77862ad-AOwcci_fw658)
  
 6.商城
+
  ![Image text](http://img.hb.aicdn.com/715e7a863b1820864dd6b8ed5605510fa251788b2a194-ycw5D0_fw658)
 
 7.好友
+
  ![Image text](http://img.hb.aicdn.com/33fd10b73f548197e8ae171978c62398a1156455136f0-modV9D_fw658)
  
 8.我的
+
  ![Image text](http://img.hb.aicdn.com/047ba1c33e0e303484ff255532018ebfc6aa424f3af76-qWzwzd_fw658)
  
 9.早起签到
+
  ![Image text](http://img.hb.aicdn.com/47ce0b5376b3f52ac5e33917ec970ef09b2ade7f211be-5udUTt_fw658)
 
    
